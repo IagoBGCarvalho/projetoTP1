@@ -39,3 +39,7 @@
 
 # debug information files
 *.dwo
+
+# Diretórios de compilação
+bin
+obj
