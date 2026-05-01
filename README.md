@@ -11,10 +11,10 @@ Projeto realizado no âmbito da matéria de Técnicas de Programação 1 da Univ
 Iago:
 
 * Estado (OK)
-* Papel
-* Email
-* Senha
-* Data
+* Papel (OK)
+* Email (OK)
+* Senha (OK)
+* Data (OK)
 
 Pedro:
 
