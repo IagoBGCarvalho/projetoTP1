@@ -92,5 +92,77 @@ int main()
 
     delete senha;
 
+    Prioridade prioridade;
+    Codigo codigo;
+    Nome nome;
+    Tempo tempo;
+    Texto texto;
+
+    string minhaPrioridade;
+    string meuCodigo;
+    string meuNome;
+    int meuTempo;
+    string meuTexto;
+
+    cout << "Digite sua prioridade: ";
+    cin >> minhaPrioridade;
+
+    cout << "Digite seu codigo: ";
+    cin >> meuCodigo;
+
+    cout << "Digite seu nome: ";
+    getline(cin >> ws, meuNome);
+
+    cout << "Digite seu tempo: ";
+    cin >> meuTempo;
+
+    cout << "Digite seu texto: ";
+    getline(cin >> ws, meuTexto);
+
+    //CLASS PRIORIDADE - TESTE UNITARIO
+    try {
+        prioridade.setPrioridade(minhaPrioridade);
+        cout << "Sucesso: " << prioridade.getPrioridade() << endl;
+    }
+    catch (const  invalid_argument& e) {
+        cerr << "Erro de validacao: " << e.what() << endl;
+    }
+
+    //CLASS CODIGO - TESTE UNITARIO
+    try {
+        codigo.setCodigo(meuCodigo);
+        cout << "Sucesso: " << codigo.getCodigo() << endl;
+    }
+    catch (const  invalid_argument& e) {
+        cerr << "Erro de validacao: " << e.what() << endl;
+    }
+
+    //CLASS NOME - TESTE UNITARIO
+    try {
+        nome.setNome(meuNome);
+        cout << "Sucesso: " << nome.getNome() << endl;
+    }
+    catch (const  invalid_argument& e) {
+        cerr << "Erro de validacao: " << e.what() << endl;
+    }
+
+    //CLASS TEMPO - TESTE UNITARIO
+        try {
+            tempo.setTempo(meuTempo);
+            cout << "Sucesso: " << tempo.getTempo() << endl;
+        }
+        catch (const  invalid_argument& e) {
+            cerr << "Erro de validacao: " << e.what() << endl;
+        }
+
+    //CLASS TEXTO - TESTE UNITARIO
+        try {
+            texto.setTexto(meuTexto);
+            cout << "Sucesso: " << texto.getTexto() << endl;
+        }
+        catch (const  invalid_argument& e) {
+            cerr << "Erro de validacao: " << e.what() << endl;
+        }
+
     return 0;
 }

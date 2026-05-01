@@ -4,36 +4,28 @@
 #include <regex>
 #include "dominios.hpp"
 
-// ESTADO
-const string Estado::A_FAZER = "A FAZER";
-const string Estado::FAZENDO = "FAZENDO";
-const string Estado::FEITO = "FEITO";
+//Class Codigo
+void Codigo::validar(string codigoFornecido){
+    if (codigoFornecido.length() != 5) {
+        throw invalid_argument("Código deve ter 5 caracteres.");
+    }
 
-void Estado::validar(string estadoFornecido){
-    if((estadoFornecido != A_FAZER) && (estadoFornecido != FAZENDO) && (estadoFornecido != FEITO)){
-        throw invalid_argument("Argumento invalido para ESTADO");
+    for (int i = 0; i < 2; i++) {
+        if (!isupper(codigoFornecido[i])) {
+            throw invalid_argument("Os dois primeiros caracteres devem ser letras maiuscular");
+        }
+    }
+
+    for (int i = 2; i < 5; i++) {
+        if (!isdigit(codigoFornecido[i])) {
+            throw invalid_argument("Os tres ultimos caracteres devem ser numeros.");
+        }
     }
 }
 
-void Estado::setEstado(string estadoFornecido){
-    validar(estadoFornecido);
-    this->valor = estadoFornecido;
-}
-
-// PAPEL
-const string Papel::DESENVOLVEDOR = "DESENVOLVEDOR";
-const string Papel::MESTRE_SCRUM = "MESTRE SCRUM";
-const string Papel::PROPRIETARIO_DE_PRODUTO = "PROPRIETARIO DE PRODUTO";
-
-void Papel::validar(string papelFornecido){
-    if((papelFornecido != DESENVOLVEDOR) && (papelFornecido != MESTRE_SCRUM) && (papelFornecido != PROPRIETARIO_DE_PRODUTO)){
-        throw invalid_argument("Argumento invalido para PAPEL");
-    }
-}
-
-void Papel::setPapel(string papelFornecido){
-    validar(papelFornecido);
-    this->valor = papelFornecido;
+void Codigo::setCodigo(string codigoFornecido) {
+    validar(codigoFornecido);
+    this->valor = codigoFornecido;
 }
 
 // DATA
@@ -126,6 +118,79 @@ void Email::setEmail(string emailFornecido) {
     this->valor = emailFornecido;
 }
 
+// ESTADO
+const string Estado::A_FAZER = "A FAZER";
+const string Estado::FAZENDO = "FAZENDO";
+const string Estado::FEITO = "FEITO";
+
+void Estado::validar(string estadoFornecido){
+    if((estadoFornecido != A_FAZER) && (estadoFornecido != FAZENDO) && (estadoFornecido != FEITO)){
+        throw invalid_argument("Argumento invalido para ESTADO");
+    }
+}
+
+void Estado::setEstado(string estadoFornecido){
+    validar(estadoFornecido);
+    this->valor = estadoFornecido;
+}
+
+//Class Nome
+void Nome::validar(string nomeFornecido){
+    if (nomeFornecido.length() == 0 || nomeFornecido.length() > 10) {
+        throw invalid_argument("O nome deve ter entre 1 e 10 caracteres.");
+    }
+
+    if (nomeFornecido[0] == ' ') {
+        throw invalid_argument("O primeiro digito nao pode ser espaco.");
+    }
+
+    if (nomeFornecido[nomeFornecido.length() - 1] == ' ') {
+        throw invalid_argument("O ultimo caractere nao pode ser espaco");
+    }
+
+    for (size_t i = 0; i < nomeFornecido.length(); i++) {
+        if (!isalpha(nomeFornecido[i]) && nomeFornecido[i] != ' ') {
+            throw invalid_argument("Caracter pode ser letra maiuscula (A-Z), letra minuscula (a-z) ou espaco em branco");
+        }
+
+        if (nomeFornecido[i] == ' ') {
+            if (i < nomeFornecido.length() - 1){
+                if (!isalpha(nomeFornecido[i + 1])) {
+                    throw invalid_argument("Espaco em branco deve ser seguido por letra.");
+                }
+            }
+        }
+    }
+}
+
+// PAPEL
+const string Papel::DESENVOLVEDOR = "DESENVOLVEDOR";
+const string Papel::MESTRE_SCRUM = "MESTRE SCRUM";
+const string Papel::PROPRIETARIO_DE_PRODUTO = "PROPRIETARIO DE PRODUTO";
+
+void Papel::validar(string papelFornecido){
+    if((papelFornecido != DESENVOLVEDOR) && (papelFornecido != MESTRE_SCRUM) && (papelFornecido != PROPRIETARIO_DE_PRODUTO)){
+        throw invalid_argument("Argumento invalido para PAPEL");
+    }
+}
+
+void Papel::setPapel(string papelFornecido){
+    validar(papelFornecido);
+    this->valor = papelFornecido;
+}
+
+//Class Prioridade
+void Prioridade::validar(string prioridadeFornecida){
+    if (prioridadeFornecida != "ALTA" && prioridadeFornecida != "MEDIA" && prioridadeFornecida != "BAIXA"){
+        throw invalid_argument("Prioridade invalida. Use ALTA, MEDIA ou BAIXA.");
+    }
+}
+
+void Prioridade::setPrioridade(string prioridadeFornecida){
+    validar(prioridadeFornecida);
+    this->valor = valor;
+}
+
 // SENHA
 void Senha::validar(string senhaFornecida) {
     // Tamanho
@@ -171,4 +236,57 @@ void Senha::validar(string senhaFornecida) {
 void Senha::setSenha(string senhaFornecida) {
     validar(senhaFornecida);
     this->valor = senhaFornecida;
+}
+
+//CLASS TEMPO
+void Tempo::validar(int tempoFornecido) {
+    if (tempoFornecido < 1 || tempoFornecido > 365) {
+        throw invalid_argument("O valor deve ser entre 1 a 365.");
+    }
+}
+
+void Tempo::setTempo(int valor) {
+    validar(valor);
+    this->valor = valor;
+}
+
+
+//CLASS TEXTO
+void Texto::validar(string textoFornecido) {
+    if (textoFornecido.length() == 0 || textoFornecido.length() > 40) {
+        throw invalid_argument("O texto deve ter entre 1 a 40 caracteres.");
+    }
+
+    if (textoFornecido[0] == ',' || textoFornecido[0] =='.' || textoFornecido[0] == ' ') {
+        throw invalid_argument("Primeiro caracter nao pode ser virgula, ponto ou espaco em branco.");
+    }
+
+    if (textoFornecido[textoFornecido.length() - 1] == ',' || textoFornecido[textoFornecido.length() - 1] == '.' || textoFornecido[textoFornecido.length() - 1] == ' ') {
+        throw invalid_argument("Ultimo caracter nao pode ser virgula, ponto ou espaco em branco.");
+    }   
+
+    for (size_t i = 0; i < textoFornecido.length(); i++) {
+        if (!isalnum(textoFornecido[i]) && textoFornecido[i] != ',' && textoFornecido[i] != '.' && textoFornecido[i] != ' ') {
+            throw invalid_argument("Caracter pode ser letra (a-z ou A-Z), digito(0-9), virgula, ponto ou espaco em branco.");
+        }
+
+        if (i < textoFornecido.length() - 1){
+            if (textoFornecido[i] == ',' || textoFornecido[i] == '.') {
+                if(textoFornecido[i + 1] == ',' || textoFornecido[i + 1] == '.') {
+                    throw invalid_argument("Vírgula não pode ser seguida por vírgula ou ponto e ponto não pode ser seguido por vírgula ou ponto.");
+                }
+            }
+
+            if (textoFornecido[i] == ' ') {
+                if (!isalnum(textoFornecido[i + 1])) {
+                    throw invalid_argument("Espaco em branco deve ser seguido por letra ou digito.");
+                }
+            }
+        }   
+    }
+}
+
+void Texto::setTexto(string textoFornecido) {
+    validar(textoFornecido);
+    this->valor = valor;
 }
