@@ -18,11 +18,11 @@ Iago:
 
 Pedro:
 
-* Prioridade
-* Tempo
-* Texto
-* Codigo
-* Nome
+* Prioridade (OK)
+* Tempo (OK)
+* Texto (OK)
+* Codigo (OK)
+* Nome (OK)
 
 **Entidades**
 
