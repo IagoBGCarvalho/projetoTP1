@@ -7,9 +7,9 @@ using namespace std;
 class Codigo{
     private:
         string valor;
-        void validar(string valor);
+        void validar(string);
     public:
-        void setCodigo(string valor);
+        void setCodigo(string);
         string getCodigo();
 };
 

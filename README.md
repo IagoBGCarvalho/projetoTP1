@@ -28,7 +28,7 @@ Pedro:
 
 Iago:
 
-* Projeto
+* Projeto 
 * Historia do usuário
 
 Pedro:

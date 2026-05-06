@@ -4,7 +4,7 @@
 #include <regex>
 #include "dominios.hpp"
 
-//Class Codigo
+// CODIGO
 void Codigo::validar(string codigoFornecido){
     if (codigoFornecido.length() != 5) {
         throw invalid_argument("Código deve ter 5 caracteres.");
@@ -134,7 +134,7 @@ void Estado::setEstado(string estadoFornecido){
     this->valor = estadoFornecido;
 }
 
-//Class Nome
+// NOME
 void Nome::validar(string nomeFornecido){
     if (nomeFornecido.length() == 0 || nomeFornecido.length() > 10) {
         throw invalid_argument("O nome deve ter entre 1 e 10 caracteres.");
@@ -161,6 +161,11 @@ void Nome::validar(string nomeFornecido){
             }
         }
     }
+}
+
+void Nome::setNome(string nomeFornecido){
+    validar(nomeFornecido);
+    this->valor = nomeFornecido;
 }
 
 // PAPEL
@@ -263,7 +268,7 @@ void Texto::validar(string textoFornecido) {
 
     if (textoFornecido[textoFornecido.length() - 1] == ',' || textoFornecido[textoFornecido.length() - 1] == '.' || textoFornecido[textoFornecido.length() - 1] == ' ') {
         throw invalid_argument("Ultimo caracter nao pode ser virgula, ponto ou espaco em branco.");
-    }   
+    }
 
     for (size_t i = 0; i < textoFornecido.length(); i++) {
         if (!isalnum(textoFornecido[i]) && textoFornecido[i] != ',' && textoFornecido[i] != '.' && textoFornecido[i] != ' ') {
@@ -282,7 +287,7 @@ void Texto::validar(string textoFornecido) {
                     throw invalid_argument("Espaco em branco deve ser seguido por letra ou digito.");
                 }
             }
-        }   
+        }
     }
 }
 
