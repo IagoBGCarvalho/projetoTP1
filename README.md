@@ -28,8 +28,8 @@ Pedro:
 
 Iago:
 
-* Projeto 
-* Historia do usuário
+* Projeto (OK)
+* Historia do usuário (OK)
 
 Pedro:
 

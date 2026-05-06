@@ -1,6 +1,7 @@
-#include "dominios/dominios.hpp"
 #ifndef ENTIDADES_HPP_INCLUDED
 #define ENTIDADES_HPP_INCLUDED
+
+#include "../dominios/dominios.hpp"
 
 using namespace std;
 
@@ -12,35 +13,35 @@ class Projeto{
         Data termino;
     public:
         void setCodigo(Codigo);
-        Codigo getCodigo();
+        Codigo getCodigo() const;
 
         void setNome(Nome);
-        Nome getNome();
+        Nome getNome() const;
 
         void setInicio(Data);
-        Data getInicio();
+        Data getInicio() const;
 
         void setTermino(Data);
-        Data getTermino();
+        Data getTermino() const;
 };
 
-inline string Projeto::getCodigo(){
-    return codigo.getCodigo();
+inline Codigo Projeto::getCodigo() const{
+    return codigo;
 }
 
-inline string Projeto::getNome(){
-    return nome.getNome();
+inline Nome Projeto::getNome() const{
+    return nome;
 }
 
-inline string Projeto::getInicio(){
-    return inicio.getData();
+inline Data Projeto::getInicio() const{
+    return inicio;
 }
 
-inline string Projeto::getTermino(){
-    return termino.getData();
+inline Data Projeto::getTermino() const{
+    return termino;
 }
 
-class HistoriaDeUsuario(){
+class HistoriaDeUsuario{
     private:
         Codigo codigo; // PK
         Texto titulo;
@@ -52,60 +53,60 @@ class HistoriaDeUsuario(){
         Estado estado;
     public:
         void setCodigo(Codigo);
-        Codigo getCodigo();
+        Codigo getCodigo() const;
 
         void setTitulo(Texto);
-        Texto getTitulo();
+        Texto getTitulo() const;
 
         void setPapel(Texto);
-        Texto getPapel();
+        Texto getPapel() const;
 
         void setAcao(Texto);
-        Texto getAcao();
+        Texto getAcao() const;
 
         void setValor(Texto);
-        Texto getValor();
+        Texto getValor() const;
 
-        void setTempo(Tempo);
-        Tempo getTempo();
+        void setEstimativa(Tempo);
+        Tempo getEstimativa() const;
 
         void setPrioridade(Prioridade);
-        Prioridade getPrioridade();
+        Prioridade getPrioridade() const;
 
         void setEstado(Estado);
-        Estado getEstado();
+        Estado getEstado() const;
 };
 
-inline string HistoriaDeUsuario::getCodigo(){
-    return codigo.getCodigo();
+inline Codigo HistoriaDeUsuario::getCodigo() const{
+    return codigo;
 }
 
-inline string HistoriaDeUsuario::getTitulo(){
-    return titulo.getTexto();
+inline Texto HistoriaDeUsuario::getTitulo() const{
+    return titulo;
 }
 
-inline string HistoriaDeUsuario::getPapel(){
-    return papel.getTexto();
+inline Texto HistoriaDeUsuario::getPapel() const{
+    return papel;
 }
 
-inline string HistoriaDeUsuario::getAcao(){
-    return acao.getTexto();
+inline Texto HistoriaDeUsuario::getAcao() const{
+    return acao;
 }
 
-inline string HistoriaDeUsuario::getValor(){
-    return valor.getTexto();
+inline Texto HistoriaDeUsuario::getValor() const{
+    return valor;
 }
 
-inline string HistoriaDeUsuario::getTempo(){
-    return tempo.getTempo();
+inline Tempo HistoriaDeUsuario::getEstimativa() const{
+    return estimativa;
 }
 
-inline string HistoriaDeUsuario::getPrioridade(){
-    return prioridade.getPrioridade();
+inline Prioridade HistoriaDeUsuario::getPrioridade() const{
+    return prioridade;
 }
 
-inline string HistoriaDeUsuario::getEstado(){
-    return estado.getEstado();
+inline Estado HistoriaDeUsuario::getEstado() const{
+    return estado;
 }
 
 #endif // ENTIDADES_HPP_INCLUDED

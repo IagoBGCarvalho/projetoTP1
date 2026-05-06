@@ -2,11 +2,15 @@
 #include <string>
 #include <stdexcept>
 #include "dominios/dominios.hpp"
+#include "entidades/entidades.hpp"
 
 using namespace std;
 
 int main()
 {
+    // TESTES DE DOMÍNIOS
+    cout << "TESTES DE DOMÍNIOS\n";
+
     // Teste de Estado
     Estado *estado = new Estado();
     string estadoDigitado;
@@ -18,7 +22,7 @@ int main()
         estado->setEstado(estadoDigitado);
         cout << "Deu bom! O valor do estado foi armazenado: " << estado->getEstado() << "!!" << endl;
     }
-    catch(invalid_argument &ex){
+    catch(const invalid_argument &ex){
         cout << ex.what();
     }
 
@@ -35,7 +39,7 @@ int main()
         papel->setPapel(papelDigitado);
         cout << "Deu bom! O valor do papel foi armazenado: " << papel->getPapel() << "!!" << endl;
     }
-    catch(invalid_argument &ex){
+    catch(const invalid_argument &ex){
         cout << ex.what();
     }
 
@@ -52,7 +56,7 @@ int main()
         data->setData(dataDigitada);
         cout << "Deu bom! O valor da data foi armazenado: " << data->getData() << "!!" << endl;
     }
-    catch(invalid_argument &ex){
+    catch(const invalid_argument &ex){
         cout << ex.what() << endl;
     }
 
@@ -69,7 +73,7 @@ int main()
         email->setEmail(emailDigitado);
         cout << "Deu bom! O valor do email foi armazenado: " << email->getEmail() << "!!" << endl;
     }
-    catch(invalid_argument &ex){
+    catch(const invalid_argument &ex){
         cout << ex.what() << endl;
     }
 
@@ -86,85 +90,174 @@ int main()
         senha->setSenha(senhaDigitada);
         cout << "Deu bom! O valor da senha foi armazenado: " << senha->getSenha() << "!!" << endl;
     }
-    catch(invalid_argument &ex){
+    catch(const invalid_argument &ex){
         cout << ex.what() << endl;
     }
 
     delete senha;
 
-    Prioridade prioridade;
-    Codigo codigo;
-    Nome nome;
-    Tempo tempo;
-    Texto texto;
-
+    // Teste de prioridade
+    Prioridade *prioridade = new Prioridade();
     string minhaPrioridade;
-    string meuCodigo;
-    string meuNome;
-    int meuTempo;
-    string meuTexto;
 
-    //CLASS PRIORIDADE - TESTE UNITARIO
-    cout << "Digite sua prioridade: ";
-    cin >> minhaPrioridade;
+    cout << "\nDigite sua prioridade: ";
+    getline(cin, minhaPrioridade);
 
     try {
-        prioridade.setPrioridade(minhaPrioridade);
-        cout << "Sucesso: " << prioridade.getPrioridade() << endl;
+        prioridade->setPrioridade(minhaPrioridade);
+        cout << "Sucesso: " << prioridade->getPrioridade() << endl;
     }
-    catch (const  invalid_argument& e) {
-        cerr << "Erro de validacao: " << e.what() << endl;
+    catch (const invalid_argument &ex) {
+        cerr << "Erro de validacao: " << ex.what() << endl;
     }
 
-    cout << "Digite seu codigo: ";
-    cin >> meuCodigo;
+    delete prioridade;
 
-    cout << "Digite seu nome: ";
-    getline(cin >> ws, meuNome);
+    //Teste de codigo
+    Codigo *codigo = new Codigo();
+    string meuCodigo;
 
-    cout << "Digite seu tempo: ";
+    cout << "\nDigite seu codigo: ";
+    getline(cin, meuCodigo);
+
+    try {
+        codigo->setCodigo(meuCodigo);
+        cout << "Sucesso: " << codigo->getCodigo() << endl;
+    }
+    catch (const invalid_argument &ex) {
+        cerr << "Erro de validacao: " << ex.what() << endl;
+    }
+
+    delete codigo;
+
+    // Teste de nome
+    Nome *nome = new Nome();
+    string meuNome;
+
+    cout << "\nDigite seu nome: ";
+    getline(cin, meuNome);
+
+    try {
+        nome->setNome(meuNome);
+        cout << "Sucesso: " << nome->getNome() << endl;
+    }
+    catch (const invalid_argument &ex) {
+        cerr << "Erro de validacao: " << ex.what() << endl;
+    }
+
+    delete nome;
+
+    // Teste de tempo
+    Tempo *tempo = new Tempo();
+    int meuTempo;
+
+    cout << "\nDigite seu tempo: ";
     cin >> meuTempo;
 
-    cout << "Digite seu texto: ";
+    try {
+        tempo->setTempo(meuTempo);
+        cout << "Sucesso: " << tempo->getTempo() << endl;
+    }
+    catch (const invalid_argument &ex) {
+        cerr << "Erro de validacao: " << ex.what() << endl;
+    }
+
+    delete tempo;
+
+    // Teste de tempo
+    Texto *texto = new Texto();
+    string meuTexto;
+
+    cout << "\nDigite seu texto: ";
     getline(cin >> ws, meuTexto);
 
-
-
-    //CLASS CODIGO - TESTE UNITARIO
     try {
-        codigo.setCodigo(meuCodigo);
-        cout << "Sucesso: " << codigo.getCodigo() << endl;
+        texto->setTexto(meuTexto);
+        cout << "Sucesso: " << texto->getTexto() << endl;
     }
-    catch (const  invalid_argument& e) {
-        cerr << "Erro de validacao: " << e.what() << endl;
-    }
-
-    //CLASS NOME - TESTE UNITARIO
-    try {
-        nome.setNome(meuNome);
-        cout << "Sucesso: " << nome.getNome() << endl;
-    }
-    catch (const  invalid_argument& e) {
-        cerr << "Erro de validacao: " << e.what() << endl;
+    catch (const invalid_argument &ex) {
+        cerr << "Erro de validacao: " << ex.what() << endl;
     }
 
-    //CLASS TEMPO - TESTE UNITARIO
+    delete texto;
+
+    // TESTES DE ENTIDADES
+    cout << "TESTES DE ENTIDADES\n";
+
+    Projeto *projeto = new Projeto();
+
+    // Criando os domínios necessários para o projeto
+    Codigo codigoProjeto;
+    Nome nomeProjeto;
+    Data inicioProjeto;
+    Data terminoProjeto;
+
     try {
-        tempo.setTempo(meuTempo);
-        cout << "Sucesso: " << tempo.getTempo() << endl;
-    }
-    catch (const  invalid_argument& e) {
-        cerr << "Erro de validacao: " << e.what() << endl;
+        // Simulando dados válidos
+        codigoProjeto.setCodigo("PR013");
+        nomeProjeto.setNome("Sentinela");
+        inicioProjeto.setData("10/05/2026");
+        terminoProjeto.setData("20/12/2026");
+
+        // Associando os domínios à entidade Projeto
+        projeto->setCodigo(codigoProjeto);
+        projeto->setNome(nomeProjeto);
+        projeto->setInicio(inicioProjeto);
+        projeto->setTermino(terminoProjeto);
+
+        cout << "\n[PROJETO] Criado com sucesso!" << endl;
+        cout << "-> Codigo: " << projeto->getCodigo().getCodigo() << endl; // get: Entidade -> Dominio -> Tipo Primitivo
+        cout << "-> Nome: " << projeto->getNome().getNome() << endl;
+        cout << "-> Inicio: " << projeto->getInicio().getData() << endl;
+        cout << "-> Termino: " << projeto->getTermino().getData() << endl;
+
+    } catch (const invalid_argument &ex) {
+        cout << "\nErro na validacao de dominio para o Projeto: " << ex.what() << endl;
     }
 
-    //CLASS TEXTO - TESTE UNITARIO
+    delete projeto;
+
+    HistoriaDeUsuario *historia = new HistoriaDeUsuario();
+
+    Codigo codHistoria;
+    Texto tituloHistoria;
+    Texto papelHistoria;
+    Texto acaoHistoria;
+    Texto valorHistoria;
+    Tempo estimativaHistoria;
+    Prioridade prioridadeHistoria;
+    Estado estadoHistoria;
+
     try {
-        texto.setTexto(meuTexto);
-        cout << "Sucesso: " << texto.getTexto() << endl;
+        codHistoria.setCodigo("HU001");
+        tituloHistoria.setTexto("Login no Sistema");
+        papelHistoria.setTexto("Administrador");
+        acaoHistoria.setTexto("Autenticar com email e senha");
+        valorHistoria.setTexto("Acessar dados restritos");
+        estimativaHistoria.setTempo(5);
+        prioridadeHistoria.setPrioridade("ALTA");
+        estadoHistoria.setEstado("A FAZER");
+
+        historia->setCodigo(codHistoria);
+        historia->setTitulo(tituloHistoria);
+        historia->setPapel(papelHistoria);
+        historia->setAcao(acaoHistoria);
+        historia->setValor(valorHistoria);
+        historia->setEstimativa(estimativaHistoria);
+        historia->setPrioridade(prioridadeHistoria);
+        historia->setEstado(estadoHistoria);
+
+        cout << "\n[HISTORIA DE USUARIO] Criada com sucesso!" << endl;
+        cout << "-> Titulo: " << historia->getTitulo().getTexto() << endl;
+        cout << "-> Papel: " << historia->getPapel().getTexto() << endl;
+        cout << "-> Estado Atual: " << historia->getEstado().getEstado() << endl;
+        cout << "-> Prioridade: " << historia->getPrioridade().getPrioridade() << endl;
+
+    } catch (const invalid_argument &ex) {
+        cout << "\nErro na validacao de dominio para a Historia: " << ex.what() << endl;
     }
-    catch (const  invalid_argument& e) {
-        cerr << "Erro de validacao: " << e.what() << endl;
-    }
+
+    delete historia;
 
     return 0;
 }

@@ -184,7 +184,7 @@ void Papel::setPapel(string papelFornecido){
     this->valor = papelFornecido;
 }
 
-//Class Prioridade
+// Prioridade
 void Prioridade::validar(string prioridadeFornecida){
     if (prioridadeFornecida != "ALTA" && prioridadeFornecida != "MEDIA" && prioridadeFornecida != "BAIXA"){
         throw invalid_argument("Prioridade invalida. Use ALTA, MEDIA ou BAIXA.");
@@ -193,7 +193,7 @@ void Prioridade::validar(string prioridadeFornecida){
 
 void Prioridade::setPrioridade(string prioridadeFornecida){
     validar(prioridadeFornecida);
-    this->valor = valor;
+    this->valor = prioridadeFornecida;
 }
 
 // SENHA
@@ -243,7 +243,7 @@ void Senha::setSenha(string senhaFornecida) {
     this->valor = senhaFornecida;
 }
 
-//CLASS TEMPO
+// TEMPO
 void Tempo::validar(int tempoFornecido) {
     if (tempoFornecido < 1 || tempoFornecido > 365) {
         throw invalid_argument("O valor deve ser entre 1 a 365.");
@@ -256,7 +256,7 @@ void Tempo::setTempo(int valor) {
 }
 
 
-//CLASS TEXTO
+// TEXTO
 void Texto::validar(string textoFornecido) {
     if (textoFornecido.length() == 0 || textoFornecido.length() > 40) {
         throw invalid_argument("O texto deve ter entre 1 a 40 caracteres.");
@@ -293,5 +293,5 @@ void Texto::validar(string textoFornecido) {
 
 void Texto::setTexto(string textoFornecido) {
     validar(textoFornecido);
-    this->valor = valor;
+    this->valor = textoFornecido;
 }
