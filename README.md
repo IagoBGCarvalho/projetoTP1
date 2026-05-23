@@ -33,5 +33,5 @@ Iago:
 
 Pedro:
 
-* Pessoa
-* Plano de sprint
+* Pessoa (OK)
+* Plano de sprint (OK)
