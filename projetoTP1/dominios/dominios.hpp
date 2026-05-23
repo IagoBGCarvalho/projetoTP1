@@ -168,14 +168,14 @@ class Nome{
          * @param valor String a ser validada.
          * @throw std::invalid_argument Se o nome não obedecer às regras.
          */
-        void validar(string valor);
+        void validar(string);
     public:
         /**
          * @brief Define o nome se o valor fornecido for válido.
          * @param valor String representando o nome.
          * @throw std::invalid_argument Se o nome for inválido.
          */
-        void setNome(string valor);
+        void setNome(string);
         /**
          * @brief Retorna o nome armazenado.
          * @return String contendo o nome.
@@ -239,14 +239,14 @@ class Prioridade{
          * @param valor String a ser validada.
          * @throw std::invalid_argument Se a prioridade for inválida.
          */
-        void validar(string valor);
+        void validar(string);
     public:
         /**
          * @brief Define a prioridade se o valor fornecido for válido.
          * @param valor String representando a prioridade.
          * @throw std::invalid_argument Se a prioridade for inválida.
          */
-        void setPrioridade(string valor);
+        void setPrioridade(string);
         /**
          * @brief Retorna a prioridade armazenada.
          * @return String contendo a prioridade.
@@ -308,14 +308,14 @@ class Tempo{
          * @param valor Inteiro a ser validado.
          * @throw std::invalid_argument Se o tempo for menor que 1 ou maior que 365.
          */
-        void validar(int valor);
+        void validar(int);
     public:
         /**
          * @brief Define o tempo se o valor fornecido for válido.
          * @param valor Inteiro representando o tempo.
          * @throw std::invalid_argument Se o tempo for inválido.
          */
-        void setTempo(int valor);
+        void setTempo(int);
         /**
          * @brief Retorna o tempo armazenado.
          * @return Inteiro contendo o tempo.
@@ -343,14 +343,14 @@ class Texto{
          * @param valor String a ser validada.
          * @throw std::invalid_argument Se o texto desrespeitar as regras de formatação.
          */
-        void validar(string valor);
+        void validar(string);
     public:
         /**
          * @brief Define o texto se o valor fornecido for válido.
          * @param valor String representando o texto.
          * @throw std::invalid_argument Se o texto for inválido.
          */
-        void setTexto(string valor);
+        void setTexto(string);
         /**
          * @brief Retorna o texto armazenado.
          * @return String contendo o texto.
