@@ -184,6 +184,7 @@ int main()
     // TESTES DE ENTIDADES
     cout << "TESTES DE ENTIDADES\n";
 
+    //TESTE ENTIDADE PROJETO
     Projeto *projeto = new Projeto();
 
     // Criando os domínios necessários para o projeto
@@ -217,6 +218,7 @@ int main()
 
     delete projeto;
 
+    //TESTE ENTIDADE HISTORIA DE USUARIO
     HistoriaDeUsuario *historia = new HistoriaDeUsuario();
 
     Codigo codHistoria;
@@ -258,6 +260,64 @@ int main()
     }
 
     delete historia;
+
+    //TESTE ENTIDADE PESSOA
+    Pessoa *pessoa = new Pessoa();
+
+    Email emailPessoa;
+    Nome nomePessoa;
+    Senha senhaPessoa;
+    Papel papelPessoa;
+
+    try {
+        emailPessoa.setEmail("email.teste@unb.br");
+        nomePessoa.setNome("Fulano");
+        senhaPessoa.setSenha("A1b2C3"); 
+        papelPessoa.setPapel("DESENVOLVEDOR");
+
+        pessoa->setEmail(emailPessoa);
+        pessoa->setNome(nomePessoa);
+        pessoa->setSenha(senhaPessoa);
+        pessoa->setPapel(papelPessoa);
+
+        cout << "\n[PESSOA] Criada com sucesso!" << endl;
+        cout << "-> Email: " << pessoa->getEmail().getEmail() << endl; 
+        cout << "-> Nome: " << pessoa->getNome().getNome() << endl;
+        cout << "-> Senha: " << pessoa->getSenha().getSenha() << endl;
+        cout << "-> Papel: " << pessoa->getPapel().getPapel() << endl;
+
+    } catch (const invalid_argument &ex) {
+        cout << "\nErro na validacao de dominio para a Pessoa: " << ex.what() << endl;
+    }
+
+    delete pessoa;
+
+    //TESTE ENTIDADE PLANO DE SPRINT
+    PlanoDeSprint *plano = new PlanoDeSprint();
+
+    Codigo codigoPlano;
+    Texto objetivoPlano;
+    Tempo capacidadePlano;
+
+    try {
+        codigoPlano.setCodigo("PL123"); 
+        objetivoPlano.setTexto("Finalizar as classes de dominio");
+        capacidadePlano.setTempo(14); 
+
+        plano->setCodigo(codigoPlano);
+        plano->setObjetivo(objetivoPlano);
+        plano->setCapacidade(capacidadePlano);
+
+        cout << "\n[PLANO DE SPRINT] Criado com sucesso!" << endl;
+        cout << "-> Codigo: " << plano->getCodigo().getCodigo() << endl;
+        cout << "-> Objetivo: " << plano->getObjetivo().getTexto() << endl;
+        cout << "-> Capacidade: " << plano->getCapacidade().getTempo() << endl;
+
+    } catch (const invalid_argument &ex) {
+        cout << "\nErro na validacao de dominio para o Plano de Sprint: " << ex.what() << endl;
+    }
+
+    delete plano;
 
     return 0;
 }
