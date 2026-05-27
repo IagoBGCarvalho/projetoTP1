@@ -38,6 +38,15 @@
 		<Unit filename="entidades/entidades.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project output_language="Brazilian" />
+				<doxyfile_build extract_all="1" extract_private="1" extract_static="1" />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot class_diagrams="1" />
+				<general />
+			</DoxyBlocks>
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>

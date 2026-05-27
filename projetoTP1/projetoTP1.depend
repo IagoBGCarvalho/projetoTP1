@@ -7,6 +7,13 @@
 	<stdexcept>
 	"dominios/dominios.hpp"
 
-1778027433 /home/iagobgc/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp
+1779842840 /home/iagobgc/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp
 	<string>
+
+1779248103 source:/home/iagobgc/Estudos/projetoTP1/projetoTP1/dominios/dominios.cpp
+	<string>
+	<stdexcept>
+	<cctype>
+	<regex>
+	"dominios.hpp"
 

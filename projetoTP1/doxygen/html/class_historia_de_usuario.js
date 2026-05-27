@@ -1,0 +1,27 @@
+var class_historia_de_usuario =
+[
+    [ "getAcao", "class_historia_de_usuario.html#af230f6c4f5c152054a35f6cd9a7be4e2", null ],
+    [ "getCodigo", "class_historia_de_usuario.html#a6ad31554e3fe68d6fb5b5e95996abc7d", null ],
+    [ "getEstado", "class_historia_de_usuario.html#a727847b88582b3d9279b0c441959c8d7", null ],
+    [ "getEstimativa", "class_historia_de_usuario.html#a5d0c719d66cfb7e5162e65490a508645", null ],
+    [ "getPapel", "class_historia_de_usuario.html#ad9343d6144e0ebce21af61e1356d63da", null ],
+    [ "getPrioridade", "class_historia_de_usuario.html#a72f835badb163e3202c71f8e3aa1e09b", null ],
+    [ "getTitulo", "class_historia_de_usuario.html#ac94e47e85a0641bdffa8fac83a9aed3d", null ],
+    [ "getValor", "class_historia_de_usuario.html#a1081ce46124f6ec015eb871a5ebd0cb9", null ],
+    [ "setAcao", "class_historia_de_usuario.html#a6b21a83f0547aa5fe8664e940ee4d7a3", null ],
+    [ "setCodigo", "class_historia_de_usuario.html#ab4855fcf65a25e1e0bbea8570a9730f8", null ],
+    [ "setEstado", "class_historia_de_usuario.html#a6adcc7db7e83e51fee420c5983eec8ab", null ],
+    [ "setEstimativa", "class_historia_de_usuario.html#a71c8d8902756e4f25be7cc1d129d48da", null ],
+    [ "setPapel", "class_historia_de_usuario.html#a33aabead0d48e62a0c8c33d6bb701723", null ],
+    [ "setPrioridade", "class_historia_de_usuario.html#aa9cc9589a1b7c13c8d4c2126266f27d5", null ],
+    [ "setTitulo", "class_historia_de_usuario.html#ac45b9056c1eb7dfd93776463d8911274", null ],
+    [ "setValor", "class_historia_de_usuario.html#a3779e52288c4011864b5dd6412dccc98", null ],
+    [ "acao", "class_historia_de_usuario.html#a32fbe86ae842a067224e693d430cd2e1", null ],
+    [ "codigo", "class_historia_de_usuario.html#a0e837efa0d03fdd005f5da64ea3358d7", null ],
+    [ "estado", "class_historia_de_usuario.html#a1964bdcf76f35ad87a50539e352b514f", null ],
+    [ "estimativa", "class_historia_de_usuario.html#a7e3e7eca5fa42baa66ffa7e8aa1d9429", null ],
+    [ "papel", "class_historia_de_usuario.html#a86d439f2b00ee2d7f0f4c181d1edfff5", null ],
+    [ "prioridade", "class_historia_de_usuario.html#af34c9296ca872787c58e13896e2eb3ff", null ],
+    [ "titulo", "class_historia_de_usuario.html#ad60be72b9df9d8f9da4d1563e482ff2e", null ],
+    [ "valor", "class_historia_de_usuario.html#ae136d3f0e05bbbf080bd2cd00f826e2f", null ]
+];

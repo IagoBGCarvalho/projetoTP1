@@ -6,6 +6,8 @@ Projeto realizado no âmbito da matéria de Técnicas de Programação 1 da Univ
 
 ## Separação das atividades
 
+### Desenvolvimento de classes domínio e entidade
+
 **Domínios**
 
 Iago:
@@ -33,5 +35,27 @@ Iago:
 
 Pedro:
 
+* Pessoa (OK)
+* Plano de sprint (OK)
+
+### Documentação de classese métodos com Doxygen
+
+**Domínios**
+
+* Estado (OK)
+* Papel (OK)
+* Email (OK)
+* Senha (OK)
+* Data (OK)
+* Prioridade (OK)
+* Tempo (OK)
+* Texto (OK)
+* Codigo (OK)
+* Nome (OK)
+
+**Entidades**
+
+* Projeto (OK)
+* Historia do usuário (OK)
 * Pessoa (OK)
 * Plano de sprint (OK)
