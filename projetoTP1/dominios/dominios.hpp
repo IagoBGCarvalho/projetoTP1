@@ -266,7 +266,7 @@ inline string Prioridade::getPrioridade(){
  * pelo menos uma letra maiúscula, uma minúscula e um dígito. Não permite
  * que letras sejam seguidas por letras ou dígitos por dígitos.
  */
-class Senha {
+class Senha{
     private:
         string valor;
         /**
