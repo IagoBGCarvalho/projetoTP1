@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>projetoTP1: Código-Fonte de md_projeto.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">projetoTP1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md__projeto_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">md_projeto.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="md__projeto_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MD_PROJETO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MD_PROJETO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../interfaces/interfaces_dados.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;sqlite3.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_m_d_projeto.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_m_d_projeto.html">MDProjeto</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_d_p_r.html">IDPR</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_m_d_projeto.html#a5b2cf5282f8d1ffd8c8d962f64349d0e">   14</a></span>        sqlite3* <a class="code hl_variable" href="class_m_d_projeto.html#a5b2cf5282f8d1ffd8c8d962f64349d0e">db</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_m_d_projeto.html#afdaa5330612406ad588af769242792f0">   15</a></span>        <span class="keyword">const</span> std::string <a class="code hl_variable" href="class_m_d_projeto.html#afdaa5330612406ad588af769242792f0">dbName</a> = <span class="stringliteral">&quot;banco.db&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_m_d_projeto.html#a94ef33190ff1de2d80209bd6cdefd221">inicializarBanco</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="class_m_d_projeto.html#a40bdac4910404bf8f74f973a74edf9fc">MDProjeto</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="class_m_d_projeto.html#a46d0676ce2e68d55fef3db0aee311cb6">~MDProjeto</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#abd78de7a76466711f19df35a2fc78a91">cadastrarProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#aec7bf10dbcee11d7e9147601666e8c4d">lerProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo, <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#ae52c1fb8e95e7850ace5378d49f2f6e3">atualizarProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a39508a568c4c6a37641879560bf89a0c">excluirProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a93183556134a455a25993bd7103872ed">cadastrarHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>&amp; historia) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a040e212e1f14dfe5745b7b6fef4a2987">lerHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo, <a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>&amp; historia) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#af7f5bca28cf8ae3f4ce0e34bdd9046e9">atualizarHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>&amp; historia) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a45140596f32e3d6b7b3768f32f8aab9c">excluirHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#aef0eabb43d89dfbb9d477f66f105a290">cadastrarSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>&amp; sprint) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a256a24eee4277628a9fceb4073ac17de">lerSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo, <a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>&amp; sprint) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a361afd15a23a097e2ea1d15d66c0c94e">atualizarSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>&amp; sprint) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_m_d_projeto.html#a2acb5eb1e9f53bc4e36035ffe6098ef2">excluirSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif </span><span class="comment">// MD_PROJETO_HPP_INCLUDED</span></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Representa o domínio de Código.</div><div class="ttdef"><b>Definição</b> dominios.hpp:14</div></div>
+<div class="ttc" id="aclass_historia_de_usuario_html"><div class="ttname"><a href="class_historia_de_usuario.html">HistoriaDeUsuario</a></div><div class="ttdoc">Entidade que representa uma História de Usuário.</div><div class="ttdef"><b>Definição</b> entidades.hpp:94</div></div>
+<div class="ttc" id="aclass_i_d_p_r_html"><div class="ttname"><a href="class_i_d_p_r.html">IDPR</a></div><div class="ttdoc">Interface de Dados de Projeto.</div><div class="ttdef"><b>Definição</b> interfaces_dados.hpp:29</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html"><div class="ttname"><a href="class_m_d_projeto.html">MDProjeto</a></div><div class="ttdoc">Módulo de dados para operações de Projeto, História e Sprint utilizando SQLite.</div><div class="ttdef"><b>Definição</b> md_projeto.hpp:12</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a040e212e1f14dfe5745b7b6fef4a2987"><div class="ttname"><a href="class_m_d_projeto.html#a040e212e1f14dfe5745b7b6fef4a2987">MDProjeto::lerHistoria</a></div><div class="ttdeci">bool lerHistoria(const Codigo &amp;codigo, HistoriaDeUsuario &amp;historia) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:142</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a256a24eee4277628a9fceb4073ac17de"><div class="ttname"><a href="class_m_d_projeto.html#a256a24eee4277628a9fceb4073ac17de">MDProjeto::lerSprint</a></div><div class="ttdeci">bool lerSprint(const Codigo &amp;codigo, PlanoDeSprint &amp;sprint) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:228</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a2acb5eb1e9f53bc4e36035ffe6098ef2"><div class="ttname"><a href="class_m_d_projeto.html#a2acb5eb1e9f53bc4e36035ffe6098ef2">MDProjeto::excluirSprint</a></div><div class="ttdeci">bool excluirSprint(const Codigo &amp;codigo) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:271</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a361afd15a23a097e2ea1d15d66c0c94e"><div class="ttname"><a href="class_m_d_projeto.html#a361afd15a23a097e2ea1d15d66c0c94e">MDProjeto::atualizarSprint</a></div><div class="ttdeci">bool atualizarSprint(const PlanoDeSprint &amp;sprint) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:256</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a39508a568c4c6a37641879560bf89a0c"><div class="ttname"><a href="class_m_d_projeto.html#a39508a568c4c6a37641879560bf89a0c">MDProjeto::excluirProjeto</a></div><div class="ttdeci">bool excluirProjeto(const Codigo &amp;codigo) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:105</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a40bdac4910404bf8f74f973a74edf9fc"><div class="ttname"><a href="class_m_d_projeto.html#a40bdac4910404bf8f74f973a74edf9fc">MDProjeto::MDProjeto</a></div><div class="ttdeci">MDProjeto()</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:4</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a45140596f32e3d6b7b3768f32f8aab9c"><div class="ttname"><a href="class_m_d_projeto.html#a45140596f32e3d6b7b3768f32f8aab9c">MDProjeto::excluirHistoria</a></div><div class="ttdeci">bool excluirHistoria(const Codigo &amp;codigo) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:197</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a46d0676ce2e68d55fef3db0aee311cb6"><div class="ttname"><a href="class_m_d_projeto.html#a46d0676ce2e68d55fef3db0aee311cb6">MDProjeto::~MDProjeto</a></div><div class="ttdeci">~MDProjeto()</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:12</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a5b2cf5282f8d1ffd8c8d962f64349d0e"><div class="ttname"><a href="class_m_d_projeto.html#a5b2cf5282f8d1ffd8c8d962f64349d0e">MDProjeto::db</a></div><div class="ttdeci">sqlite3 * db</div><div class="ttdef"><b>Definição</b> md_projeto.hpp:14</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a93183556134a455a25993bd7103872ed"><div class="ttname"><a href="class_m_d_projeto.html#a93183556134a455a25993bd7103872ed">MDProjeto::cadastrarHistoria</a></div><div class="ttdeci">bool cadastrarHistoria(const HistoriaDeUsuario &amp;historia) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:120</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_a94ef33190ff1de2d80209bd6cdefd221"><div class="ttname"><a href="class_m_d_projeto.html#a94ef33190ff1de2d80209bd6cdefd221">MDProjeto::inicializarBanco</a></div><div class="ttdeci">void inicializarBanco()</div><div class="ttdoc">Executa o DDL para criar a tabela se não existir.</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:16</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_abd78de7a76466711f19df35a2fc78a91"><div class="ttname"><a href="class_m_d_projeto.html#abd78de7a76466711f19df35a2fc78a91">MDProjeto::cadastrarProjeto</a></div><div class="ttdeci">bool cadastrarProjeto(const Projeto &amp;projeto) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:48</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_ae52c1fb8e95e7850ace5378d49f2f6e3"><div class="ttname"><a href="class_m_d_projeto.html#ae52c1fb8e95e7850ace5378d49f2f6e3">MDProjeto::atualizarProjeto</a></div><div class="ttdeci">bool atualizarProjeto(const Projeto &amp;projeto) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:89</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_aec7bf10dbcee11d7e9147601666e8c4d"><div class="ttname"><a href="class_m_d_projeto.html#aec7bf10dbcee11d7e9147601666e8c4d">MDProjeto::lerProjeto</a></div><div class="ttdeci">bool lerProjeto(const Codigo &amp;codigo, Projeto &amp;projeto) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:64</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_aef0eabb43d89dfbb9d477f66f105a290"><div class="ttname"><a href="class_m_d_projeto.html#aef0eabb43d89dfbb9d477f66f105a290">MDProjeto::cadastrarSprint</a></div><div class="ttdeci">bool cadastrarSprint(const PlanoDeSprint &amp;sprint) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:212</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_af7f5bca28cf8ae3f4ce0e34bdd9046e9"><div class="ttname"><a href="class_m_d_projeto.html#af7f5bca28cf8ae3f4ce0e34bdd9046e9">MDProjeto::atualizarHistoria</a></div><div class="ttdeci">bool atualizarHistoria(const HistoriaDeUsuario &amp;historia) override</div><div class="ttdef"><b>Definição</b> md_projeto.cpp:177</div></div>
+<div class="ttc" id="aclass_m_d_projeto_html_afdaa5330612406ad588af769242792f0"><div class="ttname"><a href="class_m_d_projeto.html#afdaa5330612406ad588af769242792f0">MDProjeto::dbName</a></div><div class="ttdeci">const std::string dbName</div><div class="ttdef"><b>Definição</b> md_projeto.hpp:15</div></div>
+<div class="ttc" id="aclass_plano_de_sprint_html"><div class="ttname"><a href="class_plano_de_sprint.html">PlanoDeSprint</a></div><div class="ttdoc">Entidade que representa um Plano de Sprint no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:312</div></div>
+<div class="ttc" id="aclass_projeto_html"><div class="ttname"><a href="class_projeto.html">Projeto</a></div><div class="ttdoc">Entidade que representa um Projeto no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_472fafaf0f039b9e6b043966c1ef7dbf.html">data</a></li><li class="navelem"><a class="el" href="md__projeto_8hpp.html">md_projeto.hpp</a></li>
+    <li class="footer">Gerado em Quarta, 24 de Junho de 2026 02:36:56 para projetoTP1 por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

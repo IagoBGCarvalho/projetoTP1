@@ -91,16 +91,30 @@ WARN_IF_UNDOCUMENTED   = NO
 WARN_IF_DOC_ERROR      = YES
 WARN_NO_PARAMDOC       = YES
 WARN_FORMAT            = "$file:$line: $text"
-WARN_LOGFILE            = "/home/iagobgc/Estudos/projetoTP1/projetoTP1/doxygen/doxygen.log"
+WARN_LOGFILE            = "/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/doxygen/doxygen.log"
 #---------------------------------------------------------------------------
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = \
+	"../data/md_projeto.cpp" \
+	"../main_antiga.cpp" \
+	"../service/msc.cpp" \
 	"../dominios/dominios.hpp" \
-	"../entidades/entidades.hpp" \
+	"../interfaces/interfaces_servico.hpp" \
+	"../service/msp.cpp" \
+	"../service/msp.hpp" \
 	"../main.cpp" \
 	"../dominios/dominios.cpp" \
-	"../entidades/entidades.cpp" 
+	"../data/md_pessoa.cpp" \
+	"../service/msc.hpp" \
+	"../entidades/entidades.cpp" \
+	"../service/msa.cpp" \
+	"../service/msa.hpp" \
+	"../data/md_projeto.hpp" \
+	"../interfaces/interfaces_apresentacao.hpp" \
+	"../entidades/entidades.hpp" \
+	"../interfaces/interfaces_dados.hpp" \
+	"../data/md_pessoa.hpp" 
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          =
 RECURSIVE              = NO

@@ -43,3 +43,6 @@
 # Diretórios de compilação
 bin
 obj
+
+# Outros
+*.db

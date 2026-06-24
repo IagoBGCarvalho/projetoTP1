@@ -1,3 +1,6 @@
+#ifndef INTERFACES_SERVICO_HPP_INCLUDED
+#define INTERFACES_SERVICO_HPP_INCLUDED
+
 #pragma once
 
 //Entidades
@@ -7,15 +10,15 @@ class HistoriaDeUsuario;
 class PlanoDeSprint;
 
 //Dominios usados como parâmetros
-class Email;  
+class Email;
 class Senha;
-class Codigo; 
+class Codigo;
 
 /**
  * @class ISA
  * @brief Interface de Serviço de Autenticação.
  *
- * Declara o contrato para a camada de serviço responsável por validar 
+ * Declara o contrato para a camada de serviço responsável por validar
  * as credenciais de acesso do utilizador no sistema.
  */
 class ISA {
@@ -39,7 +42,7 @@ class ISA {
  * @class ISC
  * @brief Interface de Serviço de Cadastro.
  *
- * Declara o contrato para a gestão de contas (registo, leitura, 
+ * Declara o contrato para a gestão de contas (registo, leitura,
  * atualização e remoção de dados de utilizadores).
  */
 class ISC {
@@ -202,3 +205,5 @@ class ISP {
          */
         virtual ~ISP() = default;
 };
+
+#endif // INTERFACES_SERVICO_HPP_INCLUDED

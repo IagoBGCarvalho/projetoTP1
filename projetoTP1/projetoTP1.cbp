@@ -32,11 +32,28 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Linker>
+			<Add option="-lsqlite3" />
+		</Linker>
+		<Unit filename="data/md_pessoa.cpp" />
+		<Unit filename="data/md_pessoa.hpp" />
+		<Unit filename="data/md_projeto.cpp" />
+		<Unit filename="data/md_projeto.hpp" />
 		<Unit filename="dominios/dominios.cpp" />
 		<Unit filename="dominios/dominios.hpp" />
 		<Unit filename="entidades/entidades.cpp" />
 		<Unit filename="entidades/entidades.hpp" />
+		<Unit filename="interfaces/interfaces_apresentacao.hpp" />
+		<Unit filename="interfaces/interfaces_dados.hpp" />
+		<Unit filename="interfaces/interfaces_servico.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main_antiga.cpp" />
+		<Unit filename="service/msa.cpp" />
+		<Unit filename="service/msa.hpp" />
+		<Unit filename="service/msc.cpp" />
+		<Unit filename="service/msc.hpp" />
+		<Unit filename="service/msp.cpp" />
+		<Unit filename="service/msp.hpp" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

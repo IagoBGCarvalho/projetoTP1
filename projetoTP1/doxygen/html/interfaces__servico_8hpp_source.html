@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>projetoTP1: Código-Fonte de interfaces_servico.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">projetoTP1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('interfaces__servico_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">interfaces_servico.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="interfaces__servico_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef INTERFACES_SERVICO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define INTERFACES_SERVICO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//Entidades</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="class_pessoa.html">Pessoa</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="class_projeto.html">Projeto</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//Dominios usados como parâmetros</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_email.html">Email</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_senha.html">Senha</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_codigo.html">Codigo</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_i_s_a.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_s_a.html">ISA</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_i_s_a.html#a7c0859ca0c8859c436244b275475f5ab">   33</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_a.html#a7c0859ca0c8859c436244b275475f5ab">autenticar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; email, <span class="keyword">const</span> <a class="code hl_class" href="class_senha.html">Senha</a>&amp; senha) = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_i_s_a.html#ad8654709aa1bfe7711180e3b6fd091a3">   38</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_i_s_a.html#ad8654709aa1bfe7711180e3b6fd091a3">~ISA</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_i_s_c.html">   48</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_s_c.html">ISC</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_i_s_c.html#ae5538ddd71fbb02743b3f1d63ff5d52f">   56</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_c.html#ae5538ddd71fbb02743b3f1d63ff5d52f">cadastrar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pessoa.html">Pessoa</a>&amp; pessoa) = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_i_s_c.html#a43e1bdff33c3ac4d057594ea589bfd3f">   65</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_c.html#a43e1bdff33c3ac4d057594ea589bfd3f">ler</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; email, <a class="code hl_class" href="class_pessoa.html">Pessoa</a>&amp; pessoa) = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_i_s_c.html#a662ea4da3c18a2aa176f387381695154">   73</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_c.html#a662ea4da3c18a2aa176f387381695154">atualizar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pessoa.html">Pessoa</a>&amp; pessoa) = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_i_s_c.html#a6147a6d95931628769db8b4b1fd49dc6">   81</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_c.html#a6147a6d95931628769db8b4b1fd49dc6">excluir</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; email) = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_i_s_c.html#a480e1a39283faffff1875b8ea9abbe8d">   86</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_i_s_c.html#a480e1a39283faffff1875b8ea9abbe8d">~ISC</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_i_s_p.html">   96</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_s_p.html">ISP</a> {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="comment">// CRUD de Projeto</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_i_s_p.html#ab2a33aa21be9d4818e052f792aea555c">  106</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#ab2a33aa21be9d4818e052f792aea555c">cadastrarProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto) = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_i_s_p.html#aed908be642b055959c85b821cff971f3">  115</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#aed908be642b055959c85b821cff971f3">lerProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo, <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto) = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_i_s_p.html#a6e94417f39b333143db83ad7d7b107f7">  123</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#a6e94417f39b333143db83ad7d7b107f7">atualizarProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto) = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_i_s_p.html#aa72e60d78dde411fc82f91044ffa0308">  131</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#aa72e60d78dde411fc82f91044ffa0308">excluirProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo) = 0;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="comment">// CRUD de Historia</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_i_s_p.html#aae8fc2454581c460fcf61ab331513393">  141</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#aae8fc2454581c460fcf61ab331513393">cadastrarHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>&amp; historia) = 0;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa">  150</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa">lerHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo, <a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>&amp; historia) = 0;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_i_s_p.html#af5e1126e098b7fa2bf3ea4ea806f39dd">  158</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#af5e1126e098b7fa2bf3ea4ea806f39dd">atualizarHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_historia_de_usuario.html">HistoriaDeUsuario</a>&amp; historia) = 0;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571">  166</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571">excluirHistoria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo) = 0;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="comment">// CRUD de PlanoDeSprint</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_i_s_p.html#af3d62a71c789ffd98658bab9e003da8f">  176</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#af3d62a71c789ffd98658bab9e003da8f">cadastrarSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>&amp; sprint) = 0;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc">  185</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc">lerSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo, <a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>&amp; sprint) = 0;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_i_s_p.html#a1ca50c8a035f5598a8664b1141115c64">  193</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#a1ca50c8a035f5598a8664b1141115c64">atualizarSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_plano_de_sprint.html">PlanoDeSprint</a>&amp; sprint) = 0;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_i_s_p.html#a62e61002c083dbd07d5a88de0175efba">  201</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_s_p.html#a62e61002c083dbd07d5a88de0175efba">excluirSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo) = 0;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_i_s_p.html#a3bda90ea34af70f8b9a74144a60dcee7">  206</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_i_s_p.html#a3bda90ea34af70f8b9a74144a60dcee7">~ISP</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
+</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#endif </span><span class="comment">// INTERFACES_SERVICO_HPP_INCLUDED</span></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Representa o domínio de Código.</div><div class="ttdef"><b>Definição</b> dominios.hpp:14</div></div>
+<div class="ttc" id="aclass_email_html"><div class="ttname"><a href="class_email.html">Email</a></div><div class="ttdoc">Representa o domínio de Email.</div><div class="ttdef"><b>Definição</b> dominios.hpp:91</div></div>
+<div class="ttc" id="aclass_historia_de_usuario_html"><div class="ttname"><a href="class_historia_de_usuario.html">HistoriaDeUsuario</a></div><div class="ttdoc">Entidade que representa uma História de Usuário.</div><div class="ttdef"><b>Definição</b> entidades.hpp:94</div></div>
+<div class="ttc" id="aclass_i_s_a_html"><div class="ttname"><a href="class_i_s_a.html">ISA</a></div><div class="ttdoc">Interface de Serviço de Autenticação.</div><div class="ttdef"><b>Definição</b> interfaces_servico.hpp:24</div></div>
+<div class="ttc" id="aclass_i_s_a_html_a7c0859ca0c8859c436244b275475f5ab"><div class="ttname"><a href="class_i_s_a.html#a7c0859ca0c8859c436244b275475f5ab">ISA::autenticar</a></div><div class="ttdeci">virtual bool autenticar(const Email &amp;email, const Senha &amp;senha)=0</div><div class="ttdoc">Autentica um utilizador no sistema.</div></div>
+<div class="ttc" id="aclass_i_s_a_html_ad8654709aa1bfe7711180e3b6fd091a3"><div class="ttname"><a href="class_i_s_a.html#ad8654709aa1bfe7711180e3b6fd091a3">ISA::~ISA</a></div><div class="ttdeci">virtual ~ISA()=default</div><div class="ttdoc">Destrutor virtual padrão.</div></div>
+<div class="ttc" id="aclass_i_s_c_html"><div class="ttname"><a href="class_i_s_c.html">ISC</a></div><div class="ttdoc">Interface de Serviço de Cadastro.</div><div class="ttdef"><b>Definição</b> interfaces_servico.hpp:48</div></div>
+<div class="ttc" id="aclass_i_s_c_html_a43e1bdff33c3ac4d057594ea589bfd3f"><div class="ttname"><a href="class_i_s_c.html#a43e1bdff33c3ac4d057594ea589bfd3f">ISC::ler</a></div><div class="ttdeci">virtual bool ler(const Email &amp;email, Pessoa &amp;pessoa)=0</div><div class="ttdoc">Lê os dados de uma pessoa existente.</div></div>
+<div class="ttc" id="aclass_i_s_c_html_a480e1a39283faffff1875b8ea9abbe8d"><div class="ttname"><a href="class_i_s_c.html#a480e1a39283faffff1875b8ea9abbe8d">ISC::~ISC</a></div><div class="ttdeci">virtual ~ISC()=default</div><div class="ttdoc">Destrutor virtual padrão.</div></div>
+<div class="ttc" id="aclass_i_s_c_html_a6147a6d95931628769db8b4b1fd49dc6"><div class="ttname"><a href="class_i_s_c.html#a6147a6d95931628769db8b4b1fd49dc6">ISC::excluir</a></div><div class="ttdeci">virtual bool excluir(const Email &amp;email)=0</div><div class="ttdoc">Exclui a conta de uma pessoa.</div></div>
+<div class="ttc" id="aclass_i_s_c_html_a662ea4da3c18a2aa176f387381695154"><div class="ttname"><a href="class_i_s_c.html#a662ea4da3c18a2aa176f387381695154">ISC::atualizar</a></div><div class="ttdeci">virtual bool atualizar(const Pessoa &amp;pessoa)=0</div><div class="ttdoc">Atualiza os dados de uma pessoa.</div></div>
+<div class="ttc" id="aclass_i_s_c_html_ae5538ddd71fbb02743b3f1d63ff5d52f"><div class="ttname"><a href="class_i_s_c.html#ae5538ddd71fbb02743b3f1d63ff5d52f">ISC::cadastrar</a></div><div class="ttdeci">virtual bool cadastrar(const Pessoa &amp;pessoa)=0</div><div class="ttdoc">Cadastra uma nova pessoa no sistema.</div></div>
+<div class="ttc" id="aclass_i_s_p_html"><div class="ttname"><a href="class_i_s_p.html">ISP</a></div><div class="ttdoc">Interface de Serviço de Projeto.</div><div class="ttdef"><b>Definição</b> interfaces_servico.hpp:96</div></div>
+<div class="ttc" id="aclass_i_s_p_html_a1ca50c8a035f5598a8664b1141115c64"><div class="ttname"><a href="class_i_s_p.html#a1ca50c8a035f5598a8664b1141115c64">ISP::atualizarSprint</a></div><div class="ttdeci">virtual bool atualizarSprint(const PlanoDeSprint &amp;sprint)=0</div><div class="ttdoc">Atualiza os dados de um Sprint.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_a3bda90ea34af70f8b9a74144a60dcee7"><div class="ttname"><a href="class_i_s_p.html#a3bda90ea34af70f8b9a74144a60dcee7">ISP::~ISP</a></div><div class="ttdeci">virtual ~ISP()=default</div><div class="ttdoc">Destrutor virtual padrão.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_a58ca7d8348e6124ef764d84b663327aa"><div class="ttname"><a href="class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa">ISP::lerHistoria</a></div><div class="ttdeci">virtual bool lerHistoria(const Codigo &amp;codigo, HistoriaDeUsuario &amp;historia)=0</div><div class="ttdoc">Lê os dados de uma História de Utilizador.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_a62e61002c083dbd07d5a88de0175efba"><div class="ttname"><a href="class_i_s_p.html#a62e61002c083dbd07d5a88de0175efba">ISP::excluirSprint</a></div><div class="ttdeci">virtual bool excluirSprint(const Codigo &amp;codigo)=0</div><div class="ttdoc">Exclui um Sprint.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_a66ed30809b3ed909bb936bc38a99b571"><div class="ttname"><a href="class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571">ISP::excluirHistoria</a></div><div class="ttdeci">virtual bool excluirHistoria(const Codigo &amp;codigo)=0</div><div class="ttdoc">Exclui uma História de Utilizador.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_a6e94417f39b333143db83ad7d7b107f7"><div class="ttname"><a href="class_i_s_p.html#a6e94417f39b333143db83ad7d7b107f7">ISP::atualizarProjeto</a></div><div class="ttdeci">virtual bool atualizarProjeto(const Projeto &amp;projeto)=0</div><div class="ttdoc">Atualiza os dados de um projeto.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_aa72e60d78dde411fc82f91044ffa0308"><div class="ttname"><a href="class_i_s_p.html#aa72e60d78dde411fc82f91044ffa0308">ISP::excluirProjeto</a></div><div class="ttdeci">virtual bool excluirProjeto(const Codigo &amp;codigo)=0</div><div class="ttdoc">Exclui um projeto do sistema.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_aae8fc2454581c460fcf61ab331513393"><div class="ttname"><a href="class_i_s_p.html#aae8fc2454581c460fcf61ab331513393">ISP::cadastrarHistoria</a></div><div class="ttdeci">virtual bool cadastrarHistoria(const HistoriaDeUsuario &amp;historia)=0</div><div class="ttdoc">Cria uma nova História de Utilizador.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_ab2a33aa21be9d4818e052f792aea555c"><div class="ttname"><a href="class_i_s_p.html#ab2a33aa21be9d4818e052f792aea555c">ISP::cadastrarProjeto</a></div><div class="ttdeci">virtual bool cadastrarProjeto(const Projeto &amp;projeto)=0</div><div class="ttdoc">Cria um novo projeto no sistema.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_ad0fa16e1e1d85354aa3be9d171977fbc"><div class="ttname"><a href="class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc">ISP::lerSprint</a></div><div class="ttdeci">virtual bool lerSprint(const Codigo &amp;codigo, PlanoDeSprint &amp;sprint)=0</div><div class="ttdoc">Lê os dados de um Sprint.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_aed908be642b055959c85b821cff971f3"><div class="ttname"><a href="class_i_s_p.html#aed908be642b055959c85b821cff971f3">ISP::lerProjeto</a></div><div class="ttdeci">virtual bool lerProjeto(const Codigo &amp;codigo, Projeto &amp;projeto)=0</div><div class="ttdoc">Lê os dados de um projeto específico.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_af3d62a71c789ffd98658bab9e003da8f"><div class="ttname"><a href="class_i_s_p.html#af3d62a71c789ffd98658bab9e003da8f">ISP::cadastrarSprint</a></div><div class="ttdeci">virtual bool cadastrarSprint(const PlanoDeSprint &amp;sprint)=0</div><div class="ttdoc">Cria um novo Sprint.</div></div>
+<div class="ttc" id="aclass_i_s_p_html_af5e1126e098b7fa2bf3ea4ea806f39dd"><div class="ttname"><a href="class_i_s_p.html#af5e1126e098b7fa2bf3ea4ea806f39dd">ISP::atualizarHistoria</a></div><div class="ttdeci">virtual bool atualizarHistoria(const HistoriaDeUsuario &amp;historia)=0</div><div class="ttdoc">Atualiza uma História de Utilizador.</div></div>
+<div class="ttc" id="aclass_pessoa_html"><div class="ttname"><a href="class_pessoa.html">Pessoa</a></div><div class="ttdoc">Entidade que representa uma Pessoa no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:235</div></div>
+<div class="ttc" id="aclass_plano_de_sprint_html"><div class="ttname"><a href="class_plano_de_sprint.html">PlanoDeSprint</a></div><div class="ttdoc">Entidade que representa um Plano de Sprint no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:312</div></div>
+<div class="ttc" id="aclass_projeto_html"><div class="ttname"><a href="class_projeto.html">Projeto</a></div><div class="ttdoc">Entidade que representa um Projeto no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:16</div></div>
+<div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Representa o domínio de Senha.</div><div class="ttdef"><b>Definição</b> dominios.hpp:269</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ff6b5900125bb0123025c1cb24bdc726.html">interfaces</a></li><li class="navelem"><a class="el" href="interfaces__servico_8hpp.html">interfaces_servico.hpp</a></li>
+    <li class="footer">Gerado em Quarta, 24 de Junho de 2026 02:36:56 para projetoTP1 por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

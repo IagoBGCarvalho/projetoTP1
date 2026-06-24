@@ -31,10 +31,10 @@ class Codigo{
          * @brief Retorna o código armazenado.
          * @return String contendo o código.
          */
-        string getCodigo();
+        string getCodigo() const;
 };
 
-inline string Codigo::getCodigo(){
+inline string Codigo::getCodigo() const{
     return valor;
 }
 
@@ -72,10 +72,10 @@ class Data{
          * @brief Retorna a data armazenada.
          * @return String contendo a data.
          */
-        string getData();
+        string getData() const;
 };
 
-inline string Data::getData(){
+inline string Data::getData() const{
     return valor;
 }
 
@@ -108,10 +108,10 @@ class Email {
          * @brief Retorna o e-mail armazenado.
          * @return String contendo o e-mail.
          */
-        string getEmail();
+        string getEmail() const;
 };
 
-inline string Email::getEmail() {
+inline string Email::getEmail() const{
     return valor;
 }
 
@@ -145,10 +145,10 @@ class Estado{
          * @brief Retorna o estado armazenado.
          * @return String contendo o estado.
          */
-        string getEstado();
+        string getEstado() const;
 };
 
-inline string Estado::getEstado(){
+inline string Estado::getEstado() const{
     return valor;
 }
 
@@ -180,10 +180,10 @@ class Nome{
          * @brief Retorna o nome armazenado.
          * @return String contendo o nome.
          */
-        string getNome();
+        string getNome() const;
 };
 
-inline string Nome::getNome(){
+inline string Nome::getNome() const{
     return valor;
 }
 
@@ -217,10 +217,10 @@ class Papel{
          * @brief Retorna o papel armazenado.
          * @return String contendo o papel.
          */
-        string getPapel();
+        string getPapel() const;
 };
 
-inline string Papel::getPapel(){
+inline string Papel::getPapel() const{
     return valor;
 }
 
@@ -251,10 +251,10 @@ class Prioridade{
          * @brief Retorna a prioridade armazenada.
          * @return String contendo a prioridade.
          */
-        string getPrioridade();
+        string getPrioridade() const;
 };
 
-inline string Prioridade::getPrioridade(){
+inline string Prioridade::getPrioridade() const{
     return valor;
 }
 
@@ -286,10 +286,10 @@ class Senha{
          * @brief Retorna a senha armazenada.
          * @return String contendo a senha.
          */
-        string getSenha();
+        string getSenha() const;
 };
 
-inline string Senha::getSenha() {
+inline string Senha::getSenha() const{
     return valor;
 }
 
@@ -320,10 +320,10 @@ class Tempo{
          * @brief Retorna o tempo armazenado.
          * @return Inteiro contendo o tempo.
          */
-        int getTempo();
+        int getTempo() const;
 };
 
-inline int Tempo::getTempo(){
+inline int Tempo::getTempo() const{
     return valor;
 }
 
@@ -355,10 +355,10 @@ class Texto{
          * @brief Retorna o texto armazenado.
          * @return String contendo o texto.
          */
-        string getTexto();
+        string getTexto() const;
 };
 
-inline string Texto::getTexto(){
+inline string Texto::getTexto() const{
     return valor;
 }
 

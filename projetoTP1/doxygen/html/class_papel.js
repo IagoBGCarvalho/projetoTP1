@@ -1,6 +1,6 @@
 var class_papel =
 [
-    [ "getPapel", "class_papel.html#abb085bf29c655f1d6482e7457a2e0eaf", null ],
+    [ "getPapel", "class_papel.html#abb37844cbd149bcd5673f5382d6893b4", null ],
     [ "setPapel", "class_papel.html#aa12913a4060ec9a484b39795e050f885", null ],
     [ "validar", "class_papel.html#a06ba71dc59ba41d16a7d94a2272fcc6d", null ],
     [ "DESENVOLVEDOR", "class_papel.html#ac415607a07fdecf2c78b7783c6372fa6", null ],

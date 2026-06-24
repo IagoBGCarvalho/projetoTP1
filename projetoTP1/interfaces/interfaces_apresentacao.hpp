@@ -1,7 +1,10 @@
+#ifndef INTERFACES_APRESENTACAO_H_INCLUDED
+#define INTERFACES_APRESENTACAO_H_INCLUDED
+
 #pragma once
 #include "interfaces_servico.hpp"
 
-class Email; 
+class Email;
 
 /**
  * @class IAA
@@ -17,7 +20,7 @@ class IAA {
          * @return true Se o utilizador for autenticado com sucesso.
          * @return false Se o utilizador cancelar ou falhar a autenticação.
          */
-        virtual bool executar() = 0; 
+        virtual bool executar() = 0;
 
         /**
          * @brief Estabelece a ligação (injeção de dependência) com a camada de serviço.
@@ -43,7 +46,7 @@ class IAC {
         /**
          * @brief Inicia o fluxo de interação do menu de gestão de utilizadores.
          */
-        virtual void executar() = 0; 
+        virtual void executar() = 0;
 
         /**
          * @brief Estabelece a ligação (injeção de dependência) com a camada de serviço.
@@ -68,11 +71,11 @@ class IAP {
     public:
         /**
          * @brief Inicia o fluxo de interação do menu de projetos.
-         * @param emailUsuarioLogado Referência para o email do utilizador atual, 
+         * @param emailUsuarioLogado Referência para o email do utilizador atual,
          * permitindo filtrar e gerir apenas os projetos associados a este.
          */
         virtual void executar(const Email& emailUsuarioLogado) = 0;
-        
+
         /**
          * @brief Estabelece a ligação (injeção de dependência) com a camada de serviço.
          * @param servico Ponteiro para a instância do Serviço de Projeto (ISP).
@@ -84,3 +87,5 @@ class IAP {
          */
         virtual ~IAP() = default;
 };
+
+#endif // INTERFACES_APRESENTACAO_H_INCLUDED

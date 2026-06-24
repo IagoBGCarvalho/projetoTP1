@@ -85,7 +85,7 @@ void Data::setData(string dataFornecida) {
 
 // EMAIL
 void Email::validar(string emailFornecido) {
-    int posArroba = emailFornecido.find('@');
+    size_t posArroba = emailFornecido.find('@');
     if (posArroba == string::npos || emailFornecido.find('@', posArroba + 1) != string::npos) {
         throw invalid_argument("Email invalido: deve conter exatamente um @.");
     }
