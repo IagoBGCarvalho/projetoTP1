@@ -1,7 +1,16 @@
 #ifndef INTERFACES_DADOS_HPP_INCLUDED
 #define INTERFACES_DADOS_HPP_INCLUDED
 
-#include "../entidades/entidades.hpp"
+#include <vector>
+
+class Pessoa;
+class Projeto;
+class HistoriaDeUsuario;
+class PlanoDeSprint;
+class Email;
+class Senha;
+class Codigo;
+class Estado;
 
 /**
  * @class IDPE
@@ -45,6 +54,78 @@ class IDPR {
         virtual bool lerSprint(const Codigo& codigo, PlanoDeSprint& sprint) = 0;
         virtual bool atualizarSprint(const PlanoDeSprint& sprint) = 0;
         virtual bool excluirSprint(const Codigo& codigo) = 0;
+
+        /**
+         * @brief Associa uma História de Usuário a uma Pessoa.
+         * @param codigoHistoria Código da história.
+         * @param emailPessoa Email do usuário.
+         * @return true Se inserido com sucesso.
+         */
+        virtual bool associarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) = 0;
+
+        /**
+         * @brief Remove a associação entre História e Pessoa.
+         * @param codigoHistoria Código da história.
+         * @param emailPessoa Email do usuário.
+         * @return true Se removido com sucesso.
+         */
+        virtual bool desassociarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) = 0;
+
+        /**
+         * @brief Lista códigos de projetos associados a uma Pessoa.
+         * @param emailPessoa Email da pessoa.
+         * @param codigos Vetor para armazenar o resultado.
+         * @return true Se a consulta foi executada.
+         */
+        virtual bool listarProjetosPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) = 0;
+
+        /**
+         * @brief Lista códigos de histórias associadas a um Projeto.
+         * @param codigoProjeto Código do projeto.
+         * @param codigos Vetor para armazenar o resultado.
+         * @return true Se a consulta foi executada.
+         */
+        virtual bool listarHistoriasPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) = 0;
+
+        /**
+         * @brief Lista códigos de sprints associados a um Projeto.
+         * @param codigoProjeto Código do projeto.
+         * @param codigos Vetor para armazenar o resultado.
+         * @return true Se a consulta foi executada.
+         */
+        virtual bool listarSprintsPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) = 0;
+
+        /**
+         * @brief Lista códigos de histórias associadas a um Sprint.
+         * @param codigoSprint Código do sprint.
+         * @param codigos Vetor para armazenar o resultado.
+         * @return true Se a consulta foi executada.
+         */
+        virtual bool listarHistoriasPorSprint(const Codigo& codigoSprint, std::vector<Codigo>& codigos) = 0;
+
+        /**
+         * @brief Lista códigos de histórias associadas a uma Pessoa.
+         * @param emailPessoa Email da pessoa.
+         * @param codigos Vetor para armazenar o resultado.
+         * @return true Se a consulta foi executada.
+         */
+        virtual bool listarHistoriasPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) = 0;
+
+        /**
+         * @brief Move uma história para um sprint específico.
+         * @param codigoHistoria Código da história.
+         * @param codigoSprint Código do sprint de destino.
+         * @return true Se a atualização ocorreu com sucesso.
+         */
+        virtual bool moverHistoriaParaSprint(const Codigo& codigoHistoria, const Codigo& codigoSprint) = 0;
+
+        /**
+         * @brief Altera o estado de uma História de Usuário.
+         * @param codigoHistoria Código da história a ser alterada.
+         * @param novoEstado Novo estado a ser aplicado.
+         * @return true Se atualizado com sucesso.
+         */
+        virtual bool alterarEstadoHistoria(const Codigo& codigoHistoria, const Estado& novoEstado) = 0;
 
         virtual ~IDPR() = default;
 };

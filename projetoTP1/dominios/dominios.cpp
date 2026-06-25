@@ -12,7 +12,7 @@ void Codigo::validar(string codigoFornecido){
 
     for (int i = 0; i < 2; i++) {
         if (!isupper(codigoFornecido[i])) {
-            throw invalid_argument("Os dois primeiros caracteres devem ser letras maiuscular");
+            throw invalid_argument("Os dois primeiros caracteres devem ser letras maiusculas.");
         }
     }
 

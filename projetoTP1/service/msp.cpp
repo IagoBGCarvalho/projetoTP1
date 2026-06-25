@@ -57,3 +57,48 @@ bool MSP::excluirSprint(const Codigo& codigo) {
     if (dadosProjeto == nullptr) return false;
     return dadosProjeto->excluirSprint(codigo);
 }
+
+bool MSP::associarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->associarHistoriaPessoa(codigoHistoria, emailPessoa);
+}
+
+bool MSP::desassociarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->desassociarHistoriaPessoa(codigoHistoria, emailPessoa);
+}
+
+bool MSP::listarProjetosPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->listarProjetosPorPessoa(emailPessoa, codigos);
+}
+
+bool MSP::listarHistoriasPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->listarHistoriasPorProjeto(codigoProjeto, codigos);
+}
+
+bool MSP::listarSprintsPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->listarSprintsPorProjeto(codigoProjeto, codigos);
+}
+
+bool MSP::listarHistoriasPorSprint(const Codigo& codigoSprint, std::vector<Codigo>& codigos) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->listarHistoriasPorSprint(codigoSprint, codigos);
+}
+
+bool MSP::listarHistoriasPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->listarHistoriasPorPessoa(emailPessoa, codigos);
+}
+
+bool MSP::moverHistoriaParaSprint(const Codigo& codigoHistoria, const Codigo& codigoSprint) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->moverHistoriaParaSprint(codigoHistoria, codigoSprint);
+}
+
+bool MSP::alterarEstadoHistoria(const Codigo& codigoHistoria, const Estado& novoEstado) {
+    if (dadosProjeto == nullptr) return false;
+    return dadosProjeto->alterarEstadoHistoria(codigoHistoria, novoEstado);
+}

@@ -1,4 +1,6 @@
 #include "md_projeto.hpp"
+#include "../entidades/entidades.hpp"
+#include "../dominios/dominios.hpp"
 #include <iostream>
 
 MDProjeto::MDProjeto() {
@@ -19,7 +21,16 @@ void MDProjeto::inicializarBanco() {
         "codigo TEXT PRIMARY KEY, "
         "nome TEXT NOT NULL, "
         "inicio TEXT NOT NULL, "
-        "termino TEXT NOT NULL);";
+        "termino TEXT NOT NULL, "
+        "email_scrum_master TEXT, "
+        "email_product_owner TEXT);";
+
+    std::string sqlSprints =
+        "CREATE TABLE IF NOT EXISTS PLANO_DE_SPRINT ("
+        "codigo TEXT PRIMARY KEY, "
+        "objetivo TEXT NOT NULL, "
+        "capacidade INTEGER NOT NULL, "
+        "codigo_projeto TEXT);";
 
     std::string sqlHistorias =
         "CREATE TABLE IF NOT EXISTS HISTORIA_DE_USUARIO ("
@@ -30,13 +41,10 @@ void MDProjeto::inicializarBanco() {
         "valor TEXT, "
         "estimativa INTEGER, "
         "prioridade TEXT, "
-        "estado TEXT);";
-
-    std::string sqlSprints =
-        "CREATE TABLE IF NOT EXISTS PLANO_DE_SPRINT ("
-        "codigo TEXT PRIMARY KEY, "
-        "objetivo TEXT NOT NULL, "
-        "capacidade INTEGER NOT NULL);";
+        "estado TEXT, "
+        "codigo_projeto TEXT, "
+        "codigo_sprint TEXT, "
+        "email_desenvolvedor TEXT);";
 
     sqlite3_exec(db, sqlProjetos.c_str(), nullptr, nullptr, nullptr);
     sqlite3_exec(db, sqlHistorias.c_str(), nullptr, nullptr, nullptr);
@@ -275,6 +283,146 @@ bool MDProjeto::excluirSprint(const Codigo& codigo) {
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
     sqlite3_bind_text(stmt, 1, codigo.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+
+    bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
+    sqlite3_finalize(stmt);
+    return sucesso;
+}
+
+// MÉTODOS DE ASSOCIAÇÃO E LISTAGEM
+
+bool MDProjeto::associarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) {
+    std::string sql = "UPDATE HISTORIA_DE_USUARIO SET email_desenvolvedor = ? WHERE codigo = ?;";
+    sqlite3_stmt* stmt;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, emailPessoa.getEmail().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, codigoHistoria.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+
+    bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
+    sqlite3_finalize(stmt);
+    return sucesso;
+}
+
+bool MDProjeto::desassociarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) {
+    std::string sql = "UPDATE HISTORIA_DE_USUARIO SET email_desenvolvedor = NULL WHERE codigo = ? AND email_desenvolvedor = ?;";
+    sqlite3_stmt* stmt;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, codigoHistoria.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, emailPessoa.getEmail().c_str(), -1, SQLITE_TRANSIENT);
+
+    bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
+    sqlite3_finalize(stmt);
+    return sucesso;
+}
+
+bool MDProjeto::listarProjetosPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) {
+    std::string sql = "SELECT codigo FROM PROJETO WHERE email_scrum_master = ? OR email_product_owner = ?;";
+    sqlite3_stmt* stmt;
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, emailPessoa.getEmail().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, emailPessoa.getEmail().c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        Codigo c;
+        c.setCodigo(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        codigos.push_back(c);
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+
+bool MDProjeto::listarHistoriasPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) {
+    std::string sql = "SELECT codigo FROM HISTORIA_DE_USUARIO WHERE codigo_projeto = ?;";
+    sqlite3_stmt* stmt;
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, codigoProjeto.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        Codigo c;
+        c.setCodigo(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        codigos.push_back(c);
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+
+bool MDProjeto::listarSprintsPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) {
+    std::string sql = "SELECT codigo FROM PLANO_DE_SPRINT WHERE codigo_projeto = ?;";
+    sqlite3_stmt* stmt;
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, codigoProjeto.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        Codigo c;
+        c.setCodigo(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        codigos.push_back(c);
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+
+bool MDProjeto::listarHistoriasPorSprint(const Codigo& codigoSprint, std::vector<Codigo>& codigos) {
+    std::string sql = "SELECT codigo FROM HISTORIA_DE_USUARIO WHERE codigo_sprint = ?;";
+    sqlite3_stmt* stmt;
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, codigoSprint.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        Codigo c;
+        c.setCodigo(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        codigos.push_back(c);
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+
+bool MDProjeto::listarHistoriasPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) {
+    std::string sql = "SELECT codigo FROM HISTORIA_DE_USUARIO WHERE email_desenvolvedor = ?;";
+    sqlite3_stmt* stmt;
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, emailPessoa.getEmail().c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        Codigo c;
+        c.setCodigo(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        codigos.push_back(c);
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+
+bool MDProjeto::moverHistoriaParaSprint(const Codigo& codigoHistoria, const Codigo& codigoSprint) {
+    // Apenas atualiza a chave estrangeira do sprint na tabela de histórias
+    std::string sql = "UPDATE HISTORIA_DE_USUARIO SET codigo_sprint = ? WHERE codigo = ?;";
+    sqlite3_stmt* stmt;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, codigoSprint.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, codigoHistoria.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
+
+    bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
+    sqlite3_finalize(stmt);
+    return sucesso;
+}
+
+bool MDProjeto::alterarEstadoHistoria(const Codigo& codigoHistoria, const Estado& novoEstado) {
+    std::string sql = "UPDATE HISTORIA_DE_USUARIO SET estado = ? WHERE codigo = ?;";
+    sqlite3_stmt* stmt;
+
+    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
+
+    sqlite3_bind_text(stmt, 1, novoEstado.getEstado().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, codigoHistoria.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
 
     bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
     sqlite3_finalize(stmt);

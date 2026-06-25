@@ -1,4 +1,6 @@
 #include "md_pessoa.hpp"
+#include "../entidades/entidades.hpp"
+#include "../dominios/dominios.hpp"
 #include <iostream>
 
 MDPessoa::MDPessoa() {

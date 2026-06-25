@@ -50,7 +50,6 @@
 		<Unit filename="interfaces/interfaces_dados.hpp" />
 		<Unit filename="interfaces/interfaces_servico.hpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="main_antiga.cpp" />
 		<Unit filename="service/msa.cpp" />
 		<Unit filename="service/msa.hpp" />
 		<Unit filename="service/msc.cpp" />

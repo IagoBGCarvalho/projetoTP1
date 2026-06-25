@@ -2,7 +2,6 @@
 #define INTERFACES_SERVICO_HPP_INCLUDED
 
 #pragma once
-
 #include <vector>
 
 /// @file interfaces_servico.hpp

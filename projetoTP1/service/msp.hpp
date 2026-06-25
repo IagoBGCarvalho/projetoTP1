@@ -37,6 +37,16 @@ class MSP : public ISP {
         bool lerSprint(const Codigo& codigo, PlanoDeSprint& sprint) override;
         bool atualizarSprint(const PlanoDeSprint& sprint) override;
         bool excluirSprint(const Codigo& codigo) override;
+
+        bool associarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) override;
+        bool desassociarHistoriaPessoa(const Codigo& codigoHistoria, const Email& emailPessoa) override;
+        bool listarProjetosPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) override;
+        bool listarHistoriasPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) override;
+        bool listarSprintsPorProjeto(const Codigo& codigoProjeto, std::vector<Codigo>& codigos) override;
+        bool listarHistoriasPorSprint(const Codigo& codigoSprint, std::vector<Codigo>& codigos) override;
+        bool listarHistoriasPorPessoa(const Email& emailPessoa, std::vector<Codigo>& codigos) override;
+        bool moverHistoriaParaSprint(const Codigo& codigoHistoria, const Codigo& codigoSprint) override;
+        bool alterarEstadoHistoria(const Codigo& codigoHistoria, const Estado& novoEstado) override;
 };
 
 #endif // MSP_HPP_INCLUDED

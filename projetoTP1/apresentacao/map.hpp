@@ -13,6 +13,9 @@
 class MAP : public IAP {
 private:
     ISP* servicoProjeto;
+    void menuProjetos(const Email& emailUsuarioLogado);
+    void menuSprints(const Email& emailUsuarioLogado);
+    void menuHistorias(const Email& emailUsuarioLogado);
 
 public:
     /**
