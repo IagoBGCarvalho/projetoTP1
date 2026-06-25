@@ -25,9 +25,11 @@
 	<string>
 	<stdexcept>
 
-1782340116 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\mac.hpp
+1782391320 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\mac.hpp
 	"../interfaces/interfaces_apresentacao.hpp"
 	"../interfaces/interfaces_servico.hpp"
+	"../dominios/dominios.hpp"
+	"../entidades/entidades.hpp"
 
 1782352690 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_apresentacao.hpp
 	"interfaces_servico.hpp"
@@ -41,16 +43,18 @@
 1779518307 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\entidades\entidades.hpp
 	"../dominios/dominios.hpp"
 
-1782340162 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.cpp
+1782391908 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.cpp
 	"map.hpp"
-	"../entidades/entidades.hpp"
 	<iostream>
 	<string>
 	<stdexcept>
+	<cstdlib>
 
-1782340176 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.hpp
+1782391564 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.hpp
 	"../interfaces/interfaces_apresentacao.hpp"
 	"../interfaces/interfaces_servico.hpp"
+	"../dominios/dominios.hpp"
+	"../entidades/entidades.hpp"
 
 1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\dominios\dominios.cpp
 	<string>
@@ -193,7 +197,7 @@
 	"../sqlite3.h"
 	<string>
 
-1782352059 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\main.cpp
+1782392166 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\main.cpp
 	<iostream>
 	<string>
 	<stdexcept>

@@ -35,10 +35,10 @@ int main() {
     apresentacaoProjeto->setServicoProjeto(servicoProjeto);
 
     string opcao;
-    bool autenticado = false;
+    bool sistemaRodando = true;
     Email emailLogado;
 
-    while (!autenticado) {
+    while (sistemaRodando) {
         #ifdef _WIN32
             system("cls");
         #else
@@ -50,7 +50,7 @@ int main() {
         cout << "===========================================" << endl;
         cout << "\n1 - Login" << endl;
         cout << "2 - Cadastrar-se" << endl;
-        cout << "3 - Sair" << endl;
+        cout << "3 - Sair do Sistema" << endl;
         cout << "Escolha uma opcao: ";
 
         cin >> opcao;
@@ -58,21 +58,18 @@ int main() {
 
         if (opcao == "1") {
             if (apresentacaoAutenticacao->executar()) {
-                autenticado = true;
                 emailLogado = apresentacaoAutenticacao->getEmailLogado();
-
-                cout << "\nPressione ENTER para ir para o painel de Projetos." << endl;
-                cin.get();
+                apresentacaoProjeto->executar(emailLogado);
             }
         }
         else if (opcao == "2") {
             apresentacaoCadastro->executar();
-            cout << "\nPressione ENTER para voltar ao menu e fazer Login." << endl;
+            cout << "\nPressione ENTER para voltar ao menu inicial." << endl;
             cin.get();
         }
         else if (opcao == "3") {
             cout << "\nEncerrando sistema..." << endl;
-            goto cleanup;
+            sistemaRodando = false;
         }
         else {
             cout << "\nOpcao invalida! Pressione ENTER para tentar novamente." << endl;
@@ -80,17 +77,6 @@ int main() {
         }
     }
 
-    if (autenticado) {
-        #ifdef _WIN32
-            system("cls");
-        #else
-            system("clear");
-        #endif
-
-        apresentacaoProjeto->executar(emailLogado);
-    }
-
-cleanup:
     delete apresentacaoAutenticacao;
     delete apresentacaoCadastro;
     delete apresentacaoProjeto;

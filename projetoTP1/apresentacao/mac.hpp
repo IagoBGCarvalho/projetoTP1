@@ -2,6 +2,8 @@
 #define MAC_HPP_INCLUDED
 #include "../interfaces/interfaces_apresentacao.hpp"
 #include "../interfaces/interfaces_servico.hpp"
+#include "../dominios/dominios.hpp"
+#include "../entidades/entidades.hpp"
 
 /**
  * @class MAC
