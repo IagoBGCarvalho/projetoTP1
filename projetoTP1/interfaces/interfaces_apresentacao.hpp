@@ -82,6 +82,7 @@ class IAP {
          * @param servico Ponteiro para a instância do Serviço de Projeto (ISP).
          */
         virtual void setServicoProjeto(ISP* servico) = 0;
+        virtual void setServicoCadastro(ISC* servico) = 0;
 
         /**
          * @brief Destrutor virtual padrão.

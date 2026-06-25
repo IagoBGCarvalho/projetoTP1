@@ -13,6 +13,7 @@
 class MAP : public IAP {
 private:
     ISP* servicoProjeto;
+    ISC* servicoCadastro;
     void menuProjetos(const Email& emailUsuarioLogado);
     void menuSprints(const Email& emailUsuarioLogado);
     void menuHistorias(const Email& emailUsuarioLogado);
@@ -34,6 +35,10 @@ public:
      */
     void setServicoProjeto(ISP* servico) override {
         this->servicoProjeto = servico;
+    }
+
+    void setServicoCadastro(ISC* servico) override {
+        this->servicoCadastro = servico;
     }
 };
 

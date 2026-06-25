@@ -33,6 +33,7 @@ int main() {
     apresentacaoAutenticacao->setServicoAutenticacao(servicoAutenticacao);
     apresentacaoCadastro->setServicoCadastro(servicoCadastro);
     apresentacaoProjeto->setServicoProjeto(servicoProjeto);
+    apresentacaoProjeto->setServicoCadastro(servicoCadastro);
 
     string opcao;
     bool sistemaRodando = true;

@@ -19,6 +19,8 @@ class Projeto{
         Nome nome;
         Data inicio;
         Data termino;
+        Email scrumMaster;
+        Email productOwner;
     public:
         /**
          * @brief Define o código identificador do projeto.
@@ -63,6 +65,10 @@ class Projeto{
          * @return Instância do domínio Data armazenada.
          */
         Data getTermino() const;
+        void setScrumMaster(const Email& sm) { this->scrumMaster = sm; }
+        Email getScrumMaster() const { return scrumMaster; }
+        void setProductOwner(const Email& po) { this->productOwner = po; }
+        Email getProductOwner() const { return productOwner; }
 };
 
 inline Codigo Projeto::getCodigo() const{
@@ -86,9 +92,9 @@ inline Data Projeto::getTermino() const{
  * @brief Entidade que representa uma História de Usuário.
  *
  * Uma História de Usuário documenta um requisito ou funcionalidade do
- * sistema. É unicamente identificada por um Código e detalha o título, 
- * o papel de quem executa a ação, a ação em si, o valor agregado, 
- * a estimativa de tempo, o nível de prioridade e o estado atual de 
+ * sistema. É unicamente identificada por um Código e detalha o título,
+ * o papel de quem executa a ação, a ação em si, o valor agregado,
+ * a estimativa de tempo, o nível de prioridade e o estado atual de
  * desenvolvimento.
  */
 class HistoriaDeUsuario{
@@ -101,6 +107,9 @@ class HistoriaDeUsuario{
         Tempo estimativa;
         Prioridade prioridade;
         Estado estado;
+        Codigo codigoProjeto; // FK
+        Codigo codigoSprint; // FK
+        Email emailDesenvolvedor; // FK
     public:
         /**
          * @brief Define o código identificador da história de usuário.
@@ -189,6 +198,41 @@ class HistoriaDeUsuario{
          * @return Instância do domínio Estado armazenada.
          */
         Estado getEstado() const;
+        /**
+         * @brief Define o código do projeto ao qual a história pertence.
+         * @param cp Instância válida do domínio Codigo.
+         */
+        void setCodigoProjeto(const Codigo& cp) { this->codigoProjeto = cp; }
+
+        /**
+         * @brief Retorna o código do projeto associado.
+         * @return Instância do domínio Codigo armazenada.
+         */
+        Codigo getCodigoProjeto() const { return codigoProjeto; }
+
+        /**
+         * @brief Define o código do sprint onde a história está alocada.
+         * @param cs Instância válida do domínio Codigo.
+         */
+        void setCodigoSprint(const Codigo& cs) { this->codigoSprint = cs; }
+
+        /**
+         * @brief Retorna o código do sprint associado.
+         * @return Instância do domínio Codigo armazenada.
+         */
+        Codigo getCodigoSprint() const { return codigoSprint; }
+
+        /**
+         * @brief Define o email do desenvolvedor responsável pela história.
+         * @param ed Instância válida do domínio Email.
+         */
+        void setEmailDesenvolvedor(const Email& ed) { this->emailDesenvolvedor = ed; }
+
+        /**
+         * @brief Retorna o email do desenvolvedor associado.
+         * @return Instância do domínio Email armazenada.
+         */
+        Email getEmailDesenvolvedor() const { return emailDesenvolvedor; }
 };
 
 inline Codigo HistoriaDeUsuario::getCodigo() const{
@@ -304,9 +348,9 @@ inline Papel Pessoa::getPapel() const{
  * @class PlanoDeSprint
  * @brief Entidade que representa um Plano de Sprint no sistema.
  *
- * Documenta o planejamento de uma iteração de desenvolvimento (Sprint), 
+ * Documenta o planejamento de uma iteração de desenvolvimento (Sprint),
  * sendo unicamente identificado por um Código (Chave Primária). Define
- * de forma descritiva o objetivo que a equipe busca alcançar e a 
+ * de forma descritiva o objetivo que a equipe busca alcançar e a
  * capacidade total de esforço alocada para aquele ciclo.
  */
 class PlanoDeSprint {
@@ -314,6 +358,7 @@ class PlanoDeSprint {
         Codigo codigo; // PK
         Texto objetivo;
         Tempo capacidade;
+        Codigo codigoProjeto;
     public:
         /**
          * @brief Define o código identificador do plano de sprint.
@@ -347,6 +392,8 @@ class PlanoDeSprint {
          * @return Instância do domínio Tempo armazenada.
          */
         Tempo getCapacidade() const;
+        void setCodigoProjeto(const Codigo& cp) { this->codigoProjeto = cp; }
+        Codigo getCodigoProjeto() const { return codigoProjeto; }
 };
 
 inline Codigo PlanoDeSprint::getCodigo() const{

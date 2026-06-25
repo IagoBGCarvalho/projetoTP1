@@ -52,17 +52,17 @@ void MDProjeto::inicializarBanco() {
 }
 
 // CRUD: Projeto
-
 bool MDProjeto::cadastrarProjeto(const Projeto& projeto) {
-    std::string sql = "INSERT INTO PROJETO (codigo, nome, inicio, termino) VALUES (?, ?, ?, ?);";
+    std::string sql = "INSERT INTO PROJETO (codigo, nome, inicio, termino, email_scrum_master, email_product_owner) VALUES (?, ?, ?, ?, ?, ?);";
     sqlite3_stmt* stmt;
-
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
     sqlite3_bind_text(stmt, 1, projeto.getCodigo().getCodigo().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 2, projeto.getNome().getNome().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 3, projeto.getInicio().getData().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 4, projeto.getTermino().getData().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 5, projeto.getScrumMaster().getEmail().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 6, projeto.getProductOwner().getEmail().c_str(), -1, SQLITE_TRANSIENT);
 
     bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
     sqlite3_finalize(stmt);
@@ -70,28 +70,26 @@ bool MDProjeto::cadastrarProjeto(const Projeto& projeto) {
 }
 
 bool MDProjeto::lerProjeto(const Codigo& codigo, Projeto& projeto) {
-    std::string sql = "SELECT nome, inicio, termino FROM PROJETO WHERE codigo = ?;";
+    std::string sql = "SELECT nome, inicio, termino, email_scrum_master, email_product_owner FROM PROJETO WHERE codigo = ?;";
     sqlite3_stmt* stmt;
-
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
     sqlite3_bind_text(stmt, 1, codigo.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
 
-    bool encontrado = false;
     if (sqlite3_step(stmt) == SQLITE_ROW) {
         Nome nome; nome.setNome(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
         Data inicio; inicio.setData(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
         Data termino; termino.setData(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
+        Email sm; sm.setEmail(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
+        Email po; po.setEmail(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4)));
 
-        projeto.setCodigo(codigo);
-        projeto.setNome(nome);
-        projeto.setInicio(inicio);
-        projeto.setTermino(termino);
-        encontrado = true;
+        projeto.setCodigo(codigo); projeto.setNome(nome);
+        projeto.setInicio(inicio); projeto.setTermino(termino);
+        projeto.setScrumMaster(sm); projeto.setProductOwner(po);
+        sqlite3_finalize(stmt);
+        return true;
     }
-
-    sqlite3_finalize(stmt);
-    return encontrado;
+    sqlite3_finalize(stmt); return false;
 }
 
 bool MDProjeto::atualizarProjeto(const Projeto& projeto) {
@@ -124,11 +122,9 @@ bool MDProjeto::excluirProjeto(const Codigo& codigo) {
 }
 
 // CRUD: História de Usuário
-
 bool MDProjeto::cadastrarHistoria(const HistoriaDeUsuario& historia) {
-    std::string sql = "INSERT INTO HISTORIA_DE_USUARIO (codigo, titulo, papel, acao, valor, estimativa, prioridade, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    std::string sql = "INSERT INTO HISTORIA_DE_USUARIO (codigo, titulo, papel, acao, valor, estimativa, prioridade, estado, codigo_projeto) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
     sqlite3_stmt* stmt;
-
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
     sqlite3_bind_text(stmt, 1, historia.getCodigo().getCodigo().c_str(), -1, SQLITE_TRANSIENT);
@@ -136,50 +132,41 @@ bool MDProjeto::cadastrarHistoria(const HistoriaDeUsuario& historia) {
     sqlite3_bind_text(stmt, 3, historia.getPapel().getTexto().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 4, historia.getAcao().getTexto().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 5, historia.getValor().getTexto().c_str(), -1, SQLITE_TRANSIENT);
-
     sqlite3_bind_int(stmt, 6, historia.getEstimativa().getTempo());
-
     sqlite3_bind_text(stmt, 7, historia.getPrioridade().getPrioridade().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 8, historia.getEstado().getEstado().c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 9, historia.getCodigoProjeto().getCodigo().c_str(), -1, SQLITE_TRANSIENT);
 
     bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
-    sqlite3_finalize(stmt);
-    return sucesso;
+    sqlite3_finalize(stmt); return sucesso;
 }
 
 bool MDProjeto::lerHistoria(const Codigo& codigo, HistoriaDeUsuario& historia) {
-    std::string sql = "SELECT titulo, papel, acao, valor, estimativa, prioridade, estado FROM HISTORIA_DE_USUARIO WHERE codigo = ?;";
+    std::string sql = "SELECT titulo, papel, acao, valor, estimativa, prioridade, estado, codigo_projeto FROM HISTORIA_DE_USUARIO WHERE codigo = ?;";
     sqlite3_stmt* stmt;
-
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
     sqlite3_bind_text(stmt, 1, codigo.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
 
-    bool encontrado = false;
     if (sqlite3_step(stmt) == SQLITE_ROW) {
         Texto titulo; titulo.setTexto(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
         Texto papel; papel.setTexto(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
         Texto acao; acao.setTexto(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
         Texto valor; valor.setTexto(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
-
         Tempo estimativa; estimativa.setTempo(sqlite3_column_int(stmt, 4));
-
         Prioridade prioridade; prioridade.setPrioridade(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5)));
         Estado estado; estado.setEstado(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 6)));
 
-        historia.setCodigo(codigo);
-        historia.setTitulo(titulo);
-        historia.setPapel(papel);
-        historia.setAcao(acao);
-        historia.setValor(valor);
-        historia.setEstimativa(estimativa);
-        historia.setPrioridade(prioridade);
-        historia.setEstado(estado);
-        encontrado = true;
-    }
+        // Proteção contra leitura de NULL caso o projeto não exista no banco antigo
+        const char* projText = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 7));
+        if (projText) { Codigo cp; cp.setCodigo(projText); historia.setCodigoProjeto(cp); }
 
-    sqlite3_finalize(stmt);
-    return encontrado;
+        historia.setCodigo(codigo); historia.setTitulo(titulo); historia.setPapel(papel);
+        historia.setAcao(acao); historia.setValor(valor); historia.setEstimativa(estimativa);
+        historia.setPrioridade(prioridade); historia.setEstado(estado);
+        sqlite3_finalize(stmt); return true;
+    }
+    sqlite3_finalize(stmt); return false;
 }
 
 bool MDProjeto::atualizarHistoria(const HistoriaDeUsuario& historia) {
@@ -218,47 +205,36 @@ bool MDProjeto::excluirHistoria(const Codigo& codigo) {
 // CRUD: Plano de Sprint
 
 bool MDProjeto::cadastrarSprint(const PlanoDeSprint& sprint) {
-    std::string sql = "INSERT INTO PLANO_DE_SPRINT (codigo, objetivo, capacidade) VALUES (?, ?, ?);";
+    std::string sql = "INSERT INTO PLANO_DE_SPRINT (codigo, objetivo, capacidade, codigo_projeto) VALUES (?, ?, ?, ?);";
     sqlite3_stmt* stmt;
-
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
-    // Extração segura dos dados dos domínios para o banco
     sqlite3_bind_text(stmt, 1, sprint.getCodigo().getCodigo().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(stmt, 2, sprint.getObjetivo().getTexto().c_str(), -1, SQLITE_TRANSIENT);
     sqlite3_bind_int(stmt, 3, sprint.getCapacidade().getTempo());
+    sqlite3_bind_text(stmt, 4, sprint.getCodigoProjeto().getCodigo().c_str(), -1, SQLITE_TRANSIENT);
 
     bool sucesso = (sqlite3_step(stmt) == SQLITE_DONE);
-    sqlite3_finalize(stmt);
-    return sucesso;
+    sqlite3_finalize(stmt); return sucesso;
 }
 
 bool MDProjeto::lerSprint(const Codigo& codigo, PlanoDeSprint& sprint) {
-    std::string sql = "SELECT objetivo, capacidade FROM PLANO_DE_SPRINT WHERE codigo = ?;";
+    std::string sql = "SELECT objetivo, capacidade, codigo_projeto FROM PLANO_DE_SPRINT WHERE codigo = ?;";
     sqlite3_stmt* stmt;
-
     if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK) return false;
 
     sqlite3_bind_text(stmt, 1, codigo.getCodigo().c_str(), -1, SQLITE_TRANSIENT);
 
-    bool encontrado = false;
     if (sqlite3_step(stmt) == SQLITE_ROW) {
-        // Reconstrói os domínios com os dados do banco
-        Texto objetivo;
-        objetivo.setTexto(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        Texto objetivo; objetivo.setTexto(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        Tempo capacidade; capacidade.setTempo(sqlite3_column_int(stmt, 1));
+        Codigo cp; cp.setCodigo(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
 
-        Tempo capacidade;
-        capacidade.setTempo(sqlite3_column_int(stmt, 1));
-
-        // Preenche a entidade
-        sprint.setCodigo(codigo);
-        sprint.setObjetivo(objetivo);
-        sprint.setCapacidade(capacidade);
-        encontrado = true;
+        sprint.setCodigo(codigo); sprint.setObjetivo(objetivo);
+        sprint.setCapacidade(capacidade); sprint.setCodigoProjeto(cp);
+        sqlite3_finalize(stmt); return true;
     }
-
-    sqlite3_finalize(stmt);
-    return encontrado;
+    sqlite3_finalize(stmt); return false;
 }
 
 bool MDProjeto::atualizarSprint(const PlanoDeSprint& sprint) {
