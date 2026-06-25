@@ -17,3 +17,194 @@
 	<regex>
 	"dominios.hpp"
 
+1782338410 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\mac.cpp
+	"mac.hpp"
+	"../dominios/dominios.hpp"
+	"../entidades/entidades.hpp"
+	<iostream>
+	<string>
+	<stdexcept>
+
+1782340116 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\mac.hpp
+	"../interfaces/interfaces_apresentacao.hpp"
+	"../interfaces/interfaces_servico.hpp"
+
+1782352690 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_apresentacao.hpp
+	"interfaces_servico.hpp"
+	"../dominios/dominios.hpp"
+
+1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_servico.hpp
+
+1782328335 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\dominios\dominios.hpp
+	<string>
+
+1779518307 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\entidades\entidades.hpp
+	"../dominios/dominios.hpp"
+
+1782340162 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.cpp
+	"map.hpp"
+	"../entidades/entidades.hpp"
+	<iostream>
+	<string>
+	<stdexcept>
+
+1782340176 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.hpp
+	"../interfaces/interfaces_apresentacao.hpp"
+	"../interfaces/interfaces_servico.hpp"
+
+1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\dominios\dominios.cpp
+	<string>
+	<stdexcept>
+	<cctype>
+	<regex>
+	"dominios.hpp"
+
+1779518308 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\entidades\entidades.cpp
+	<string>
+	<stdexcept>
+	"../dominios/dominios.hpp"
+	"entidades.hpp"
+
+1782328336 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\main_antiga.cpp
+
+1782328336 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msa.cpp
+	"msa.hpp"
+
+1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msa.hpp
+	"../interfaces/interfaces_servico.hpp"
+	"../interfaces/interfaces_dados.hpp"
+	"../entidades/entidades.hpp"
+
+1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_dados.hpp
+	"../entidades/entidades.hpp"
+
+1782328336 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msc.cpp
+	"msc.hpp"
+
+1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msc.hpp
+	"../interfaces/interfaces_servico.hpp"
+	"../interfaces/interfaces_dados.hpp"
+	"../entidades/entidades.hpp"
+
+1782328336 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msp.cpp
+	"msp.hpp"
+
+1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msp.hpp
+	"../interfaces/interfaces_servico.hpp"
+	"../interfaces/interfaces_dados.hpp"
+	"../entidades/entidades.hpp"
+
+1782352432 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\maa.cpp
+	"maa.hpp"
+	"../dominios/dominios.hpp"
+	<iostream>
+	<string>
+	<cstdlib>
+
+1782352838 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\maa.hpp
+	"../interfaces/interfaces_apresentacao.hpp"
+	"../interfaces/interfaces_servico.hpp"
+	"../dominios/dominios.hpp"
+
+1780514855 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\sqlite3.c
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	"sqlite_cfg.h"
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<ctype.h>
+	<TargetConditionals.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<sys/stat.h>
+	<unistd.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<sys/time.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	<Windows.h>
+	<profileapi.h>
+	"tclsqlite.h"
+	"sqlite3rtree.h"
+	<ctype.h>
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<sys/uio.h>
+	<math.h>
+
+1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_pessoa.cpp
+	"md_pessoa.hpp"
+	<iostream>
+
+1782337298 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_pessoa.hpp
+	"../interfaces/interfaces_dados.hpp"
+	"../sqlite3.h"
+	<string>
+
+1780514856 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\sqlite3.h
+	<stdarg.h>
+
+1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_projeto.cpp
+	"md_projeto.hpp"
+	<iostream>
+
+1782337297 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_projeto.hpp
+	"../interfaces/interfaces_dados.hpp"
+	"../sqlite3.h"
+	<string>
+
+1782352059 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\main.cpp
+	<iostream>
+	<string>
+	<stdexcept>
+	"dominios/dominios.hpp"
+	"entidades/entidades.hpp"
+	"data/md_pessoa.hpp"
+	"data/md_projeto.hpp"
+	"service/msa.hpp"
+	"service/msc.hpp"
+	"service/msp.hpp"
+	"apresentacao/maa.hpp"
+	"apresentacao/mac.hpp"
+	"apresentacao/map.hpp"
+

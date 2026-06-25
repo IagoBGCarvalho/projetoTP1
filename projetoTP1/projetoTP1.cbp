@@ -32,9 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Linker>
-			<Add option="-lsqlite3" />
-		</Linker>
+		<Unit filename="apresentacao/maa.cpp" />
+		<Unit filename="apresentacao/maa.hpp" />
+		<Unit filename="apresentacao/mac.cpp" />
+		<Unit filename="apresentacao/mac.hpp" />
+		<Unit filename="apresentacao/map.cpp" />
+		<Unit filename="apresentacao/map.hpp" />
 		<Unit filename="data/md_pessoa.cpp" />
 		<Unit filename="data/md_pessoa.hpp" />
 		<Unit filename="data/md_projeto.cpp" />
@@ -54,6 +57,10 @@
 		<Unit filename="service/msc.hpp" />
 		<Unit filename="service/msp.cpp" />
 		<Unit filename="service/msp.hpp" />
+		<Unit filename="sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sqlite3.h" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

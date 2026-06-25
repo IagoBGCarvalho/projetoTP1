@@ -3,6 +3,7 @@
 
 #pragma once
 #include "interfaces_servico.hpp"
+#include "../dominios/dominios.hpp"
 
 class Email;
 
@@ -46,7 +47,7 @@ class IAC {
         /**
          * @brief Inicia o fluxo de interação do menu de gestão de utilizadores.
          */
-        virtual void executar() = 0;
+        virtual bool executar() = 0;
 
         /**
          * @brief Estabelece a ligação (injeção de dependência) com a camada de serviço.
@@ -74,7 +75,7 @@ class IAP {
          * @param emailUsuarioLogado Referência para o email do utilizador atual,
          * permitindo filtrar e gerir apenas os projetos associados a este.
          */
-        virtual void executar(const Email& emailUsuarioLogado) = 0;
+        virtual bool executar(const Email& emailUsuarioLogado) = 0;
 
         /**
          * @brief Estabelece a ligação (injeção de dependência) com a camada de serviço.

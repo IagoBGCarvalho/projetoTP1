@@ -1,0 +1,35 @@
+#ifndef MAP_HPP_INCLUDED
+#define MAP_HPP_INCLUDED
+#include "../interfaces/interfaces_apresentacao.hpp"
+#include "../interfaces/interfaces_servico.hpp"
+
+/**
+ * @class MAP
+ * @brief Classe responsável pela Apresentação do Módulo de Projeto (MAP).
+ * Gerencia o menu de criação e visualização de projetos via terminal.
+ */
+class MAP : public IAP {
+private:
+    ISP* servicoProjeto;
+
+public:
+    /**
+     * @brief Construtor padrão do módulo MAP.
+     */
+    MAP() : servicoProjeto(nullptr) {}
+
+    /**
+     * @brief Executa o menu de projetos no terminal.
+     */
+    bool executar(const Email& emailUsuarioLogado) override;
+
+    /**
+     * @brief Injeta a dependência do serviço de projeto.
+     * @param servico Ponteiro para a implementação concreta do serviço.
+     */
+    void setServicoProjeto(ISP* servico) override {
+        this->servicoProjeto = servico;
+    }
+};
+
+#endif // MAP_HPP_INCLUDED
