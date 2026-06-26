@@ -142,6 +142,33 @@ Membros Públicos</h2></td></tr>
 <tr class="separator:a361afd15a23a097e2ea1d15d66c0c94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2acb5eb1e9f53bc4e36035ffe6098ef2" id="r_a2acb5eb1e9f53bc4e36035ffe6098ef2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#a2acb5eb1e9f53bc4e36035ffe6098ef2">excluirSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo) override</td></tr>
 <tr class="separator:a2acb5eb1e9f53bc4e36035ffe6098ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2af15c935840c0c3e7e7abdb88efbf" id="r_a5f2af15c935840c0c3e7e7abdb88efbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#a5f2af15c935840c0c3e7e7abdb88efbf">associarHistoriaPessoa</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa) override</td></tr>
+<tr class="memdesc:a5f2af15c935840c0c3e7e7abdb88efbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associa uma História de Usuário a uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>.  <br /></td></tr>
+<tr class="separator:a5f2af15c935840c0c3e7e7abdb88efbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1866b0a12db6253f87e39882a1452d3" id="r_af1866b0a12db6253f87e39882a1452d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#af1866b0a12db6253f87e39882a1452d3">desassociarHistoriaPessoa</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa) override</td></tr>
+<tr class="memdesc:af1866b0a12db6253f87e39882a1452d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a associação entre História e <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>.  <br /></td></tr>
+<tr class="separator:af1866b0a12db6253f87e39882a1452d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50931f4380ce55c56a869cfcb89c131" id="r_aa50931f4380ce55c56a869cfcb89c131"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#aa50931f4380ce55c56a869cfcb89c131">listarProjetosPorPessoa</a> (const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos) override</td></tr>
+<tr class="memdesc:aa50931f4380ce55c56a869cfcb89c131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista códigos de projetos associados a uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>.  <br /></td></tr>
+<tr class="separator:aa50931f4380ce55c56a869cfcb89c131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee865a347d92a7755554bede7cd03d4" id="r_aaee865a347d92a7755554bede7cd03d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#aaee865a347d92a7755554bede7cd03d4">listarHistoriasPorProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos) override</td></tr>
+<tr class="memdesc:aaee865a347d92a7755554bede7cd03d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista códigos de histórias associadas a um <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>.  <br /></td></tr>
+<tr class="separator:aaee865a347d92a7755554bede7cd03d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0649707fe3c4d992a915add8ac7da1b2" id="r_a0649707fe3c4d992a915add8ac7da1b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#a0649707fe3c4d992a915add8ac7da1b2">listarSprintsPorProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos) override</td></tr>
+<tr class="memdesc:a0649707fe3c4d992a915add8ac7da1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista códigos de sprints associados a um <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>.  <br /></td></tr>
+<tr class="separator:a0649707fe3c4d992a915add8ac7da1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e66e93fa0413f803e90ddd6287394c6" id="r_a9e66e93fa0413f803e90ddd6287394c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#a9e66e93fa0413f803e90ddd6287394c6">listarHistoriasPorSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoSprint, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos) override</td></tr>
+<tr class="memdesc:a9e66e93fa0413f803e90ddd6287394c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista códigos de histórias associadas a um Sprint.  <br /></td></tr>
+<tr class="separator:a9e66e93fa0413f803e90ddd6287394c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01be62b031897731814735afd9804ad" id="r_ac01be62b031897731814735afd9804ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#ac01be62b031897731814735afd9804ad">listarHistoriasPorPessoa</a> (const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos) override</td></tr>
+<tr class="memdesc:ac01be62b031897731814735afd9804ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista códigos de histórias associadas a uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>.  <br /></td></tr>
+<tr class="separator:ac01be62b031897731814735afd9804ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c3494627d7371c9aa82777a6414555" id="r_a72c3494627d7371c9aa82777a6414555"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#a72c3494627d7371c9aa82777a6414555">moverHistoriaParaSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoSprint) override</td></tr>
+<tr class="memdesc:a72c3494627d7371c9aa82777a6414555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move uma história para um sprint específico.  <br /></td></tr>
+<tr class="separator:a72c3494627d7371c9aa82777a6414555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05078dd33b9c2c98a5514c7272ac4d28" id="r_a05078dd33b9c2c98a5514c7272ac4d28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_d_projeto.html#a05078dd33b9c2c98a5514c7272ac4d28">alterarEstadoHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_estado.html">Estado</a> &amp;novoEstado) override</td></tr>
+<tr class="memdesc:a05078dd33b9c2c98a5514c7272ac4d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera o estado de uma História de Usuário.  <br /></td></tr>
+<tr class="separator:a05078dd33b9c2c98a5514c7272ac4d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_d_p_r"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_d_p_r')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="class_i_d_p_r.html">IDPR</a></td></tr>
 <tr class="memitem:a9c3537eb2e982ae8fb69e34ba8eb3ecb inherit pub_methods_class_i_d_p_r" id="r_a9c3537eb2e982ae8fb69e34ba8eb3ecb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_d_p_r.html#a9c3537eb2e982ae8fb69e34ba8eb3ecb">~IDPR</a> ()=default</td></tr>
 <tr class="separator:a9c3537eb2e982ae8fb69e34ba8eb3ecb inherit pub_methods_class_i_d_p_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +224,102 @@ Atributos Privados</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>
+<a id="a05078dd33b9c2c98a5514c7272ac4d28" name="a05078dd33b9c2c98a5514c7272ac4d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05078dd33b9c2c98a5514c7272ac4d28">&#9670;&#160;</a></span>alterarEstadoHistoria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::alterarEstadoHistoria </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_estado.html">Estado</a> &amp;&#160;</td>
+          <td class="paramname"><em>novoEstado</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Altera o estado de uma História de Usuário. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td>Código da história a ser alterada. </td></tr>
+    <tr><td class="paramname">novoEstado</td><td>Novo estado a ser aplicado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se atualizado com sucesso. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a3642b7c12a36214b02ad7c24d4fd3d27">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="a5f2af15c935840c0c3e7e7abdb88efbf" name="a5f2af15c935840c0c3e7e7abdb88efbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2af15c935840c0c3e7e7abdb88efbf">&#9670;&#160;</a></span>associarHistoriaPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::associarHistoriaPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Associa uma História de Usuário a uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td>Código da história. </td></tr>
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> do usuário. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se inserido com sucesso. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a7e6ee4f6f81255e8f0f36f054950ee0e">IDPR</a>.</p>
+
+</div>
+</div>
 <a id="af7f5bca28cf8ae3f4ce0e34bdd9046e9" name="af7f5bca28cf8ae3f4ce0e34bdd9046e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7f5bca28cf8ae3f4ce0e34bdd9046e9">&#9670;&#160;</a></span>atualizarHistoria()</h2>
 
@@ -362,6 +485,54 @@ Atributos Privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementa <a class="el" href="class_i_d_p_r.html#af8a96d857803c8ce5823440fb767facd">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="af1866b0a12db6253f87e39882a1452d3" name="af1866b0a12db6253f87e39882a1452d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1866b0a12db6253f87e39882a1452d3">&#9670;&#160;</a></span>desassociarHistoriaPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::desassociarHistoriaPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a associação entre História e <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td>Código da história. </td></tr>
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> do usuário. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se removido com sucesso. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a1d11110398c8f46605ac64c7216e8602">IDPR</a>.</p>
 
 </div>
 </div>
@@ -590,6 +761,294 @@ Atributos Privados</h2></td></tr>
 
 </div>
 </div>
+<a id="ac01be62b031897731814735afd9804ad" name="ac01be62b031897731814735afd9804ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01be62b031897731814735afd9804ad">&#9670;&#160;</a></span>listarHistoriasPorPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::listarHistoriasPorPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista códigos de histórias associadas a uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> da pessoa. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor para armazenar o resultado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a consulta foi executada. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a662d8cbbb395867abf4afe174563ed15">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="aaee865a347d92a7755554bede7cd03d4" name="aaee865a347d92a7755554bede7cd03d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee865a347d92a7755554bede7cd03d4">&#9670;&#160;</a></span>listarHistoriasPorProjeto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::listarHistoriasPorProjeto </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoProjeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista códigos de histórias associadas a um <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoProjeto</td><td>Código do projeto. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor para armazenar o resultado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a consulta foi executada. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a1f812a963d54cd4afe84d5c154baaccc">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="a9e66e93fa0413f803e90ddd6287394c6" name="a9e66e93fa0413f803e90ddd6287394c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e66e93fa0413f803e90ddd6287394c6">&#9670;&#160;</a></span>listarHistoriasPorSprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::listarHistoriasPorSprint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoSprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista códigos de histórias associadas a um Sprint. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoSprint</td><td>Código do sprint. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor para armazenar o resultado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a consulta foi executada. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a167bde8363ac5bd01e1bc628af060fc7">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="aa50931f4380ce55c56a869cfcb89c131" name="aa50931f4380ce55c56a869cfcb89c131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50931f4380ce55c56a869cfcb89c131">&#9670;&#160;</a></span>listarProjetosPorPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::listarProjetosPorPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista códigos de projetos associados a uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> da pessoa. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor para armazenar o resultado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a consulta foi executada. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a59fd4d52bb6dab195bda067940d51eac">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="a0649707fe3c4d992a915add8ac7da1b2" name="a0649707fe3c4d992a915add8ac7da1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0649707fe3c4d992a915add8ac7da1b2">&#9670;&#160;</a></span>listarSprintsPorProjeto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::listarSprintsPorProjeto </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoProjeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista códigos de sprints associados a um <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoProjeto</td><td>Código do projeto. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor para armazenar o resultado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a consulta foi executada. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#a47b7a589eb796fb8825d654b3e7f03ea">IDPR</a>.</p>
+
+</div>
+</div>
+<a id="a72c3494627d7371c9aa82777a6414555" name="a72c3494627d7371c9aa82777a6414555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c3494627d7371c9aa82777a6414555">&#9670;&#160;</a></span>moverHistoriaParaSprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MDProjeto::moverHistoriaParaSprint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoSprint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move uma história para um sprint específico. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td>Código da história. </td></tr>
+    <tr><td class="paramname">codigoSprint</td><td>Código do sprint de destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a atualização ocorreu com sucesso. </dd></dl>
+
+<p>Implementa <a class="el" href="class_i_d_p_r.html#ad901161427510d19d5115c6df838919d">IDPR</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Atributos</h2>
 <a id="a5b2cf5282f8d1ffd8c8d962f64349d0e" name="a5b2cf5282f8d1ffd8c8d962f64349d0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b2cf5282f8d1ffd8c8d962f64349d0e">&#9670;&#160;</a></span>db</h2>
@@ -645,7 +1104,7 @@ Atributos Privados</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_m_d_projeto.html">MDProjeto</a></li>
-    <li class="footer">Gerado em Quarta, 24 de Junho de 2026 02:36:56 para projetoTP1 por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

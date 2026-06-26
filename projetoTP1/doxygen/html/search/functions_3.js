@@ -1,21 +1,8 @@
 var searchData=
 [
-  ['getacao_0',['getAcao',['../class_historia_de_usuario.html#af230f6c4f5c152054a35f6cd9a7be4e2',1,'HistoriaDeUsuario']]],
-  ['getcapacidade_1',['getCapacidade',['../class_plano_de_sprint.html#a9a338492f7d18dada39014fd5c355cf4',1,'PlanoDeSprint']]],
-  ['getcodigo_2',['getcodigo',['../class_codigo.html#ac263b3f7ff4f995fa72ad9101f1a8533',1,'Codigo::getCodigo()'],['../class_projeto.html#a5d9c3bb6177e5c62176347461bd620a3',1,'Projeto::getCodigo()'],['../class_historia_de_usuario.html#a6ad31554e3fe68d6fb5b5e95996abc7d',1,'HistoriaDeUsuario::getCodigo()'],['../class_plano_de_sprint.html#ac2381fe1f2101f4982119a007573f67d',1,'PlanoDeSprint::getCodigo()']]],
-  ['getdata_3',['getData',['../class_data.html#a13f25eafdc138d743e99eb4086d765a2',1,'Data']]],
-  ['getemail_4',['getemail',['../class_email.html#a6c314589c2042bf2234a9b5781d50def',1,'Email::getEmail()'],['../class_pessoa.html#a137a2a665a10ffa4880d1f7d726b07c7',1,'Pessoa::getEmail()']]],
-  ['getestado_5',['getestado',['../class_estado.html#aedbb6c1d75f1dbe5d5869d147d14fc20',1,'Estado::getEstado()'],['../class_historia_de_usuario.html#a727847b88582b3d9279b0c441959c8d7',1,'HistoriaDeUsuario::getEstado() const']]],
-  ['getestimativa_6',['getEstimativa',['../class_historia_de_usuario.html#a5d0c719d66cfb7e5162e65490a508645',1,'HistoriaDeUsuario']]],
-  ['getinicio_7',['getInicio',['../class_projeto.html#ae68dfbb815e8a85340590eacc683e574',1,'Projeto']]],
-  ['getnome_8',['getnome',['../class_projeto.html#a1eb1c0d356d0f662ac6fda75ff766004',1,'Projeto::getNome()'],['../class_pessoa.html#ad0c0448768ca2f5b5dfca86f156cdfe9',1,'Pessoa::getNome()'],['../class_nome.html#a1c08f5b9827a1e97a2631196ff99fdef',1,'Nome::getNome()']]],
-  ['getobjetivo_9',['getObjetivo',['../class_plano_de_sprint.html#a790aceecf2c79a63b974e97f1c04774f',1,'PlanoDeSprint']]],
-  ['getpapel_10',['getpapel',['../class_papel.html#abb37844cbd149bcd5673f5382d6893b4',1,'Papel::getPapel()'],['../class_historia_de_usuario.html#ad9343d6144e0ebce21af61e1356d63da',1,'HistoriaDeUsuario::getPapel()'],['../class_pessoa.html#a8c7e1938888e9e84b5c30ca977b98b9d',1,'Pessoa::getPapel()']]],
-  ['getprioridade_11',['getprioridade',['../class_prioridade.html#ade0ac92c3d4cbda5906602546f6c3500',1,'Prioridade::getPrioridade()'],['../class_historia_de_usuario.html#a72f835badb163e3202c71f8e3aa1e09b',1,'HistoriaDeUsuario::getPrioridade()']]],
-  ['getsenha_12',['getsenha',['../class_senha.html#a1cc904431d0a8287d0b22dee3e9d34ae',1,'Senha::getSenha()'],['../class_pessoa.html#a02498f338ca00cdd18e794f17d660281',1,'Pessoa::getSenha()']]],
-  ['gettempo_13',['getTempo',['../class_tempo.html#abcbb0bc8b4211717951c727aeed007df',1,'Tempo']]],
-  ['gettermino_14',['getTermino',['../class_projeto.html#aaa3ccd83ad23021458cac35b74683168',1,'Projeto']]],
-  ['gettexto_15',['getTexto',['../class_texto.html#a69463b543f36eaf86076ef48c896987f',1,'Texto']]],
-  ['gettitulo_16',['getTitulo',['../class_historia_de_usuario.html#ac94e47e85a0641bdffa8fac83a9aed3d',1,'HistoriaDeUsuario']]],
-  ['getvalor_17',['getValor',['../class_historia_de_usuario.html#a1081ce46124f6ec015eb871a5ebd0cb9',1,'HistoriaDeUsuario']]]
+  ['excluir_0',['excluir',['../class_i_d_p_e.html#a4a6557368d61eda0dd5d279f641d8b6c',1,'IDPE::excluir()'],['../class_m_s_c.html#a5631f13abdeccc8951ea9bc42b9fedfb',1,'MSC::excluir()'],['../class_i_s_c.html#a6147a6d95931628769db8b4b1fd49dc6',1,'ISC::excluir()'],['../class_m_d_pessoa.html#aa7070bf73caa0af38c0f9a275f04692f',1,'MDPessoa::excluir()']]],
+  ['excluirhistoria_1',['excluirhistoria',['../class_i_d_p_r.html#a65faa12f5874280d533eb210c2f68b91',1,'IDPR::excluirHistoria()'],['../class_m_d_projeto.html#a45140596f32e3d6b7b3768f32f8aab9c',1,'MDProjeto::excluirHistoria()'],['../class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571',1,'ISP::excluirHistoria()'],['../class_m_s_p.html#a2b59d105b98a45ef95968e687d3d6852',1,'MSP::excluirHistoria(const Codigo &amp;codigo) override']]],
+  ['excluirprojeto_2',['excluirprojeto',['../class_m_s_p.html#a70489e85d6d04dcd1575f6c56e0f95c2',1,'MSP::excluirProjeto()'],['../class_i_s_p.html#aa72e60d78dde411fc82f91044ffa0308',1,'ISP::excluirProjeto()'],['../class_m_d_projeto.html#a39508a568c4c6a37641879560bf89a0c',1,'MDProjeto::excluirProjeto()'],['../class_i_d_p_r.html#ac5dc299be4645ec1249f7c14e78b04c1',1,'IDPR::excluirProjeto(const Codigo &amp;codigo)=0']]],
+  ['excluirsprint_3',['excluirsprint',['../class_i_d_p_r.html#ab4172871c3b890b908b7d77777414a8c',1,'IDPR::excluirSprint()'],['../class_m_d_projeto.html#a2acb5eb1e9f53bc4e36035ffe6098ef2',1,'MDProjeto::excluirSprint()'],['../class_i_s_p.html#a62e61002c083dbd07d5a88de0175efba',1,'ISP::excluirSprint()'],['../class_m_s_p.html#a9bb9bcda051d64c7dd21d6671a6adc86',1,'MSP::excluirSprint()']]],
+  ['executar_4',['executar',['../class_m_a_p.html#af974cccb748872c543ff4c8f2503da74',1,'MAP::executar()'],['../class_m_a_a.html#aae485ecc9c13304dee2da97532417b5d',1,'MAA::executar()'],['../class_i_a_a.html#a50ca2076ac7c2d1dc9577db9c5959161',1,'IAA::executar()'],['../class_i_a_c.html#a311ffe8c94a615313b8825fa8787ac9d',1,'IAC::executar()'],['../class_i_a_p.html#a6bb6a9fc10d001252de8abb10f0a84e8',1,'IAP::executar()'],['../class_m_a_c.html#ac1386d3dc0b9c6b10b7454ab595f6e65',1,'MAC::executar()']]]
 ];

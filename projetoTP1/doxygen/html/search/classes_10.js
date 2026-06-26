@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['p4union_0',['p4union',['../union_vdbe_op_1_1p4union.html',1,'VdbeOp']]],
+  ['pager_1',['Pager',['../struct_pager.html',1,'']]],
+  ['pagersavepoint_2',['PagerSavepoint',['../struct_pager_savepoint.html',1,'']]],
+  ['papel_3',['Papel',['../class_papel.html',1,'']]],
+  ['parse_4',['Parse',['../struct_parse.html',1,'']]],
+  ['parsecleanup_5',['ParseCleanup',['../struct_parse_cleanup.html',1,'']]],
+  ['pcache_6',['PCache',['../struct_p_cache.html',1,'']]],
+  ['pcache1_7',['PCache1',['../struct_p_cache1.html',1,'']]],
+  ['pcacheglobal_8',['PCacheGlobal',['../struct_p_cache_global.html',1,'']]],
+  ['pessoa_9',['Pessoa',['../class_pessoa.html',1,'']]],
+  ['pgfreeslot_10',['PgFreeslot',['../struct_pg_freeslot.html',1,'']]],
+  ['pghdr_11',['PgHdr',['../struct_pg_hdr.html',1,'']]],
+  ['pghdr1_12',['PgHdr1',['../struct_pg_hdr1.html',1,'']]],
+  ['pgroup_13',['PGroup',['../struct_p_group.html',1,'']]],
+  ['planodesprint_14',['PlanoDeSprint',['../class_plano_de_sprint.html',1,'']]],
+  ['pmareader_15',['PmaReader',['../struct_pma_reader.html',1,'']]],
+  ['pmawriter_16',['PmaWriter',['../struct_pma_writer.html',1,'']]],
+  ['pragmaname_17',['PragmaName',['../struct_pragma_name.html',1,'']]],
+  ['pragmavtab_18',['PragmaVtab',['../struct_pragma_vtab.html',1,'']]],
+  ['pragmavtabcursor_19',['PragmaVtabCursor',['../struct_pragma_vtab_cursor.html',1,'']]],
+  ['preupdate_20',['PreUpdate',['../struct_pre_update.html',1,'']]],
+  ['printfarguments_21',['PrintfArguments',['../struct_printf_arguments.html',1,'']]],
+  ['prioridade_22',['Prioridade',['../class_prioridade.html',1,'']]],
+  ['projeto_23',['Projeto',['../class_projeto.html',1,'']]]
+];

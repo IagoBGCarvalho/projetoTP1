@@ -30,8 +30,8 @@ var NAVTREE =
       [ "Índice dos Componentes", "classes.html", null ],
       [ "Hierarquia de Classes", "hierarchy.html", "hierarchy" ],
       [ "Membros de classe", "functions.html", [
-        [ "Todos", "functions.html", null ],
-        [ "Funções", "functions_func.html", null ],
+        [ "Todos", "functions.html", "functions_dup" ],
+        [ "Funções", "functions_func.html", "functions_func" ],
         [ "Variáveis", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -48,7 +48,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"interfaces__dados_8hpp.html"
+"class_pessoa.html#aaa2c0e6dddfbf2e1a3c6218706ecb325"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';

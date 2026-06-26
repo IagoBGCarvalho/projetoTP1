@@ -1,7 +1,27 @@
 var searchData=
 [
-  ['ler_0',['ler',['../class_i_s_c.html#a43e1bdff33c3ac4d057594ea589bfd3f',1,'ISC::ler()'],['../class_m_s_c.html#a9f2bc250eae39cc2b7fbac379bcdb4ce',1,'MSC::ler()'],['../class_i_d_p_e.html#ae31053163c38badb2fde18cf2bd72fd7',1,'IDPE::ler()'],['../class_m_d_pessoa.html#a918a11f152f4872ebe2832d10e7fbb68',1,'MDPessoa::ler()']]],
-  ['lerhistoria_1',['lerhistoria',['../class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa',1,'ISP::lerHistoria()'],['../class_m_s_p.html#ad628907cd9af20c4cbfe921d2ad6d067',1,'MSP::lerHistoria()'],['../class_m_d_projeto.html#a040e212e1f14dfe5745b7b6fef4a2987',1,'MDProjeto::lerHistoria()'],['../class_i_d_p_r.html#ab8d84da6634cddca6866f787b1fe9819',1,'IDPR::lerHistoria()']]],
-  ['lerprojeto_2',['lerprojeto',['../class_i_s_p.html#aed908be642b055959c85b821cff971f3',1,'ISP::lerProjeto()'],['../class_m_s_p.html#a238da09fffde9d3c08ef6a899f951229',1,'MSP::lerProjeto()'],['../class_m_d_projeto.html#aec7bf10dbcee11d7e9147601666e8c4d',1,'MDProjeto::lerProjeto()'],['../class_i_d_p_r.html#a6fa34296776f6c51178161bdf96c08ef',1,'IDPR::lerProjeto()']]],
-  ['lersprint_3',['lersprint',['../class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc',1,'ISP::lerSprint()'],['../class_m_s_p.html#aab7e6a3bbaf32a06d991f5051f25a594',1,'MSP::lerSprint()'],['../class_m_d_projeto.html#a256a24eee4277628a9fceb4073ac17de',1,'MDProjeto::lerSprint()'],['../class_i_d_p_r.html#a8a72feb9ed0e70ba92066749e691bf8a',1,'IDPR::lerSprint()']]]
+  ['getacao_0',['getAcao',['../class_historia_de_usuario.html#af230f6c4f5c152054a35f6cd9a7be4e2',1,'HistoriaDeUsuario']]],
+  ['getcapacidade_1',['getCapacidade',['../class_plano_de_sprint.html#a9a338492f7d18dada39014fd5c355cf4',1,'PlanoDeSprint']]],
+  ['getcodigo_2',['getcodigo',['../class_codigo.html#ac263b3f7ff4f995fa72ad9101f1a8533',1,'Codigo::getCodigo()'],['../class_projeto.html#a5d9c3bb6177e5c62176347461bd620a3',1,'Projeto::getCodigo()'],['../class_historia_de_usuario.html#a6ad31554e3fe68d6fb5b5e95996abc7d',1,'HistoriaDeUsuario::getCodigo()'],['../class_plano_de_sprint.html#ac2381fe1f2101f4982119a007573f67d',1,'PlanoDeSprint::getCodigo()']]],
+  ['getcodigoprojeto_3',['getcodigoprojeto',['../class_historia_de_usuario.html#ac5da7d08259f03d106c4c15238cc0596',1,'HistoriaDeUsuario::getCodigoProjeto()'],['../class_plano_de_sprint.html#adc38c2a64cb4c7c18da376305737064b',1,'PlanoDeSprint::getCodigoProjeto()']]],
+  ['getcodigosprint_4',['getCodigoSprint',['../class_historia_de_usuario.html#a4a8c3da0e26fd8e4d6091da78dc0d609',1,'HistoriaDeUsuario']]],
+  ['getdata_5',['getData',['../class_data.html#a13f25eafdc138d743e99eb4086d765a2',1,'Data']]],
+  ['getemail_6',['getemail',['../class_email.html#a6c314589c2042bf2234a9b5781d50def',1,'Email::getEmail()'],['../class_pessoa.html#a137a2a665a10ffa4880d1f7d726b07c7',1,'Pessoa::getEmail()']]],
+  ['getemaildesenvolvedor_7',['getEmailDesenvolvedor',['../class_historia_de_usuario.html#ae405909dac98ef37c6bc9099a0210d9b',1,'HistoriaDeUsuario']]],
+  ['getemaillogado_8',['getEmailLogado',['../class_m_a_a.html#a30e34bd073c819b690a1aa1b9f66e4d8',1,'MAA']]],
+  ['getestado_9',['getestado',['../class_estado.html#aedbb6c1d75f1dbe5d5869d147d14fc20',1,'Estado::getEstado()'],['../class_historia_de_usuario.html#a727847b88582b3d9279b0c441959c8d7',1,'HistoriaDeUsuario::getEstado() const']]],
+  ['getestimativa_10',['getEstimativa',['../class_historia_de_usuario.html#a5d0c719d66cfb7e5162e65490a508645',1,'HistoriaDeUsuario']]],
+  ['getinicio_11',['getInicio',['../class_projeto.html#ae68dfbb815e8a85340590eacc683e574',1,'Projeto']]],
+  ['getnome_12',['getnome',['../class_nome.html#a1c08f5b9827a1e97a2631196ff99fdef',1,'Nome::getNome()'],['../class_pessoa.html#ad0c0448768ca2f5b5dfca86f156cdfe9',1,'Pessoa::getNome()'],['../class_projeto.html#a1eb1c0d356d0f662ac6fda75ff766004',1,'Projeto::getNome()']]],
+  ['getobjetivo_13',['getObjetivo',['../class_plano_de_sprint.html#a790aceecf2c79a63b974e97f1c04774f',1,'PlanoDeSprint']]],
+  ['getpapel_14',['getpapel',['../class_papel.html#abb37844cbd149bcd5673f5382d6893b4',1,'Papel::getPapel()'],['../class_historia_de_usuario.html#ad9343d6144e0ebce21af61e1356d63da',1,'HistoriaDeUsuario::getPapel()'],['../class_pessoa.html#a8c7e1938888e9e84b5c30ca977b98b9d',1,'Pessoa::getPapel()']]],
+  ['getprioridade_15',['getprioridade',['../class_prioridade.html#ade0ac92c3d4cbda5906602546f6c3500',1,'Prioridade::getPrioridade()'],['../class_historia_de_usuario.html#a72f835badb163e3202c71f8e3aa1e09b',1,'HistoriaDeUsuario::getPrioridade()']]],
+  ['getproductowner_16',['getProductOwner',['../class_projeto.html#aabdda5becd6a4069f2b5f49b8037d127',1,'Projeto']]],
+  ['getscrummaster_17',['getScrumMaster',['../class_projeto.html#aea9b4571387a15363d321e8dc8bf0669',1,'Projeto']]],
+  ['getsenha_18',['getsenha',['../class_senha.html#a1cc904431d0a8287d0b22dee3e9d34ae',1,'Senha::getSenha()'],['../class_pessoa.html#a02498f338ca00cdd18e794f17d660281',1,'Pessoa::getSenha()']]],
+  ['gettempo_19',['getTempo',['../class_tempo.html#abcbb0bc8b4211717951c727aeed007df',1,'Tempo']]],
+  ['gettermino_20',['getTermino',['../class_projeto.html#aaa3ccd83ad23021458cac35b74683168',1,'Projeto']]],
+  ['gettexto_21',['getTexto',['../class_texto.html#a69463b543f36eaf86076ef48c896987f',1,'Texto']]],
+  ['gettitulo_22',['getTitulo',['../class_historia_de_usuario.html#ac94e47e85a0641bdffa8fac83a9aed3d',1,'HistoriaDeUsuario']]],
+  ['getvalor_23',['getValor',['../class_historia_de_usuario.html#a1081ce46124f6ec015eb871a5ebd0cb9',1,'HistoriaDeUsuario']]]
 ];

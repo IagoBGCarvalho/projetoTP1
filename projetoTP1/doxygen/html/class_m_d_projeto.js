@@ -2,12 +2,15 @@ var class_m_d_projeto =
 [
     [ "MDProjeto", "class_m_d_projeto.html#a40bdac4910404bf8f74f973a74edf9fc", null ],
     [ "~MDProjeto", "class_m_d_projeto.html#a46d0676ce2e68d55fef3db0aee311cb6", null ],
+    [ "alterarEstadoHistoria", "class_m_d_projeto.html#a05078dd33b9c2c98a5514c7272ac4d28", null ],
+    [ "associarHistoriaPessoa", "class_m_d_projeto.html#a5f2af15c935840c0c3e7e7abdb88efbf", null ],
     [ "atualizarHistoria", "class_m_d_projeto.html#af7f5bca28cf8ae3f4ce0e34bdd9046e9", null ],
     [ "atualizarProjeto", "class_m_d_projeto.html#ae52c1fb8e95e7850ace5378d49f2f6e3", null ],
     [ "atualizarSprint", "class_m_d_projeto.html#a361afd15a23a097e2ea1d15d66c0c94e", null ],
     [ "cadastrarHistoria", "class_m_d_projeto.html#a93183556134a455a25993bd7103872ed", null ],
     [ "cadastrarProjeto", "class_m_d_projeto.html#abd78de7a76466711f19df35a2fc78a91", null ],
     [ "cadastrarSprint", "class_m_d_projeto.html#aef0eabb43d89dfbb9d477f66f105a290", null ],
+    [ "desassociarHistoriaPessoa", "class_m_d_projeto.html#af1866b0a12db6253f87e39882a1452d3", null ],
     [ "excluirHistoria", "class_m_d_projeto.html#a45140596f32e3d6b7b3768f32f8aab9c", null ],
     [ "excluirProjeto", "class_m_d_projeto.html#a39508a568c4c6a37641879560bf89a0c", null ],
     [ "excluirSprint", "class_m_d_projeto.html#a2acb5eb1e9f53bc4e36035ffe6098ef2", null ],
@@ -15,6 +18,12 @@ var class_m_d_projeto =
     [ "lerHistoria", "class_m_d_projeto.html#a040e212e1f14dfe5745b7b6fef4a2987", null ],
     [ "lerProjeto", "class_m_d_projeto.html#aec7bf10dbcee11d7e9147601666e8c4d", null ],
     [ "lerSprint", "class_m_d_projeto.html#a256a24eee4277628a9fceb4073ac17de", null ],
+    [ "listarHistoriasPorPessoa", "class_m_d_projeto.html#ac01be62b031897731814735afd9804ad", null ],
+    [ "listarHistoriasPorProjeto", "class_m_d_projeto.html#aaee865a347d92a7755554bede7cd03d4", null ],
+    [ "listarHistoriasPorSprint", "class_m_d_projeto.html#a9e66e93fa0413f803e90ddd6287394c6", null ],
+    [ "listarProjetosPorPessoa", "class_m_d_projeto.html#aa50931f4380ce55c56a869cfcb89c131", null ],
+    [ "listarSprintsPorProjeto", "class_m_d_projeto.html#a0649707fe3c4d992a915add8ac7da1b2", null ],
+    [ "moverHistoriaParaSprint", "class_m_d_projeto.html#a72c3494627d7371c9aa82777a6414555", null ],
     [ "db", "class_m_d_projeto.html#a5b2cf5282f8d1ffd8c8d962f64349d0e", null ],
     [ "dbName", "class_m_d_projeto.html#afdaa5330612406ad588af769242792f0", null ]
 ];

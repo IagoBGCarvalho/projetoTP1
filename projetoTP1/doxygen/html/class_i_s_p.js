@@ -1,16 +1,25 @@
 var class_i_s_p =
 [
     [ "~ISP", "class_i_s_p.html#a3bda90ea34af70f8b9a74144a60dcee7", null ],
+    [ "alterarEstadoHistoria", "class_i_s_p.html#a75634d6f79869ce71d498272f3d76a38", null ],
+    [ "associarHistoriaPessoa", "class_i_s_p.html#aca475c249034024344727f445493e57d", null ],
     [ "atualizarHistoria", "class_i_s_p.html#af5e1126e098b7fa2bf3ea4ea806f39dd", null ],
     [ "atualizarProjeto", "class_i_s_p.html#a6e94417f39b333143db83ad7d7b107f7", null ],
     [ "atualizarSprint", "class_i_s_p.html#a1ca50c8a035f5598a8664b1141115c64", null ],
     [ "cadastrarHistoria", "class_i_s_p.html#aae8fc2454581c460fcf61ab331513393", null ],
     [ "cadastrarProjeto", "class_i_s_p.html#ab2a33aa21be9d4818e052f792aea555c", null ],
     [ "cadastrarSprint", "class_i_s_p.html#af3d62a71c789ffd98658bab9e003da8f", null ],
+    [ "desassociarHistoriaPessoa", "class_i_s_p.html#a2856346546097a879658f9f7708e3b89", null ],
     [ "excluirHistoria", "class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571", null ],
     [ "excluirProjeto", "class_i_s_p.html#aa72e60d78dde411fc82f91044ffa0308", null ],
     [ "excluirSprint", "class_i_s_p.html#a62e61002c083dbd07d5a88de0175efba", null ],
     [ "lerHistoria", "class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa", null ],
     [ "lerProjeto", "class_i_s_p.html#aed908be642b055959c85b821cff971f3", null ],
-    [ "lerSprint", "class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc", null ]
+    [ "lerSprint", "class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc", null ],
+    [ "listarHistoriasPorPessoa", "class_i_s_p.html#a718f746fbe1d4df64f7f13453e1e1b38", null ],
+    [ "listarHistoriasPorProjeto", "class_i_s_p.html#a828b80adde79a644df06207a0a90e22c", null ],
+    [ "listarHistoriasPorSprint", "class_i_s_p.html#a0310a31ad1eb9687e32f34b85a617bf7", null ],
+    [ "listarProjetosPorPessoa", "class_i_s_p.html#a4944f09ee4e0000f3b65930df9d7583a", null ],
+    [ "listarSprintsPorProjeto", "class_i_s_p.html#aec46265b187fc98cf8302a28bcbeee76", null ],
+    [ "moverHistoriaParaSprint", "class_i_s_p.html#a4c458fc58960fc9daee6e9744e6ce210", null ]
 ];

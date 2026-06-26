@@ -23,29 +23,29 @@
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:133: warning: argument 'valor' of command @param is not found in the argument list of Estado::validar(string estadoFornecido)
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:133: warning: The following parameter of Estado::validar(string estadoFornecido) is not documented:
   parameter 'estadoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:140: warning: argument 'acao' of command @param is not found in the argument list of HistoriaDeUsuario::setAcao(const Texto &textoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:140: warning: The following parameter of HistoriaDeUsuario::setAcao(const Texto &textoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:149: warning: argument 'acao' of command @param is not found in the argument list of HistoriaDeUsuario::setAcao(const Texto &textoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:149: warning: The following parameter of HistoriaDeUsuario::setAcao(const Texto &textoFornecido) is not documented:
   parameter 'textoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:107: warning: argument 'codigo' of command @param is not found in the argument list of HistoriaDeUsuario::setCodigo(const Codigo &codigoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:107: warning: The following parameter of HistoriaDeUsuario::setCodigo(const Codigo &codigoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:116: warning: argument 'codigo' of command @param is not found in the argument list of HistoriaDeUsuario::setCodigo(const Codigo &codigoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:116: warning: The following parameter of HistoriaDeUsuario::setCodigo(const Codigo &codigoFornecido) is not documented:
   parameter 'codigoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:184: warning: argument 'estado' of command @param is not found in the argument list of HistoriaDeUsuario::setEstado(const Estado &estadoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:184: warning: The following parameter of HistoriaDeUsuario::setEstado(const Estado &estadoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:193: warning: argument 'estado' of command @param is not found in the argument list of HistoriaDeUsuario::setEstado(const Estado &estadoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:193: warning: The following parameter of HistoriaDeUsuario::setEstado(const Estado &estadoFornecido) is not documented:
   parameter 'estadoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:162: warning: argument 'estimativa' of command @param is not found in the argument list of HistoriaDeUsuario::setEstimativa(const Tempo &tempoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:162: warning: The following parameter of HistoriaDeUsuario::setEstimativa(const Tempo &tempoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:171: warning: argument 'estimativa' of command @param is not found in the argument list of HistoriaDeUsuario::setEstimativa(const Tempo &tempoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:171: warning: The following parameter of HistoriaDeUsuario::setEstimativa(const Tempo &tempoFornecido) is not documented:
   parameter 'tempoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:129: warning: argument 'papel' of command @param is not found in the argument list of HistoriaDeUsuario::setPapel(const Texto &textoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:129: warning: The following parameter of HistoriaDeUsuario::setPapel(const Texto &textoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:138: warning: argument 'papel' of command @param is not found in the argument list of HistoriaDeUsuario::setPapel(const Texto &textoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:138: warning: The following parameter of HistoriaDeUsuario::setPapel(const Texto &textoFornecido) is not documented:
   parameter 'textoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:173: warning: argument 'prioridade' of command @param is not found in the argument list of HistoriaDeUsuario::setPrioridade(const Prioridade &prioridadeFornecida)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:173: warning: The following parameter of HistoriaDeUsuario::setPrioridade(const Prioridade &prioridadeFornecida) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:182: warning: argument 'prioridade' of command @param is not found in the argument list of HistoriaDeUsuario::setPrioridade(const Prioridade &prioridadeFornecida)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:182: warning: The following parameter of HistoriaDeUsuario::setPrioridade(const Prioridade &prioridadeFornecida) is not documented:
   parameter 'prioridadeFornecida'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:118: warning: argument 'titulo' of command @param is not found in the argument list of HistoriaDeUsuario::setTitulo(const Texto &textoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:118: warning: The following parameter of HistoriaDeUsuario::setTitulo(const Texto &textoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:127: warning: argument 'titulo' of command @param is not found in the argument list of HistoriaDeUsuario::setTitulo(const Texto &textoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:127: warning: The following parameter of HistoriaDeUsuario::setTitulo(const Texto &textoFornecido) is not documented:
   parameter 'textoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:151: warning: argument 'valor' of command @param is not found in the argument list of HistoriaDeUsuario::setValor(const Texto &textoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:151: warning: The following parameter of HistoriaDeUsuario::setValor(const Texto &textoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:160: warning: argument 'valor' of command @param is not found in the argument list of HistoriaDeUsuario::setValor(const Texto &textoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:160: warning: The following parameter of HistoriaDeUsuario::setValor(const Texto &textoFornecido) is not documented:
   parameter 'textoFornecido'
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:175: warning: argument 'valor' of command @param is not found in the argument list of Nome::setNome(string nomeFornecido)
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:175: warning: The following parameter of Nome::setNome(string nomeFornecido) is not documented:
@@ -59,26 +59,26 @@
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:205: warning: argument 'valor' of command @param is not found in the argument list of Papel::validar(string papelFornecido)
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:205: warning: The following parameter of Papel::validar(string papelFornecido) is not documented:
   parameter 'papelFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:244: warning: argument 'email' of command @param is not found in the argument list of Pessoa::setEmail(const Email &emailFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:244: warning: The following parameter of Pessoa::setEmail(const Email &emailFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:288: warning: argument 'email' of command @param is not found in the argument list of Pessoa::setEmail(const Email &emailFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:288: warning: The following parameter of Pessoa::setEmail(const Email &emailFornecido) is not documented:
   parameter 'emailFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:255: warning: argument 'nome' of command @param is not found in the argument list of Pessoa::setNome(const Nome &nomeFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:255: warning: The following parameter of Pessoa::setNome(const Nome &nomeFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:299: warning: argument 'nome' of command @param is not found in the argument list of Pessoa::setNome(const Nome &nomeFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:299: warning: The following parameter of Pessoa::setNome(const Nome &nomeFornecido) is not documented:
   parameter 'nomeFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:277: warning: argument 'papel' of command @param is not found in the argument list of Pessoa::setPapel(const Papel &papelFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:277: warning: The following parameter of Pessoa::setPapel(const Papel &papelFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:321: warning: argument 'papel' of command @param is not found in the argument list of Pessoa::setPapel(const Papel &papelFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:321: warning: The following parameter of Pessoa::setPapel(const Papel &papelFornecido) is not documented:
   parameter 'papelFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:266: warning: argument 'senha' of command @param is not found in the argument list of Pessoa::setSenha(const Senha &senhaFornecida)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:266: warning: The following parameter of Pessoa::setSenha(const Senha &senhaFornecida) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:310: warning: argument 'senha' of command @param is not found in the argument list of Pessoa::setSenha(const Senha &senhaFornecida)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:310: warning: The following parameter of Pessoa::setSenha(const Senha &senhaFornecida) is not documented:
   parameter 'senhaFornecida'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:342: warning: argument 'capacidade' of command @param is not found in the argument list of PlanoDeSprint::setCapacidade(const Tempo &capacidadeFornecida)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:342: warning: The following parameter of PlanoDeSprint::setCapacidade(const Tempo &capacidadeFornecida) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:387: warning: argument 'capacidade' of command @param is not found in the argument list of PlanoDeSprint::setCapacidade(const Tempo &capacidadeFornecida)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:387: warning: The following parameter of PlanoDeSprint::setCapacidade(const Tempo &capacidadeFornecida) is not documented:
   parameter 'capacidadeFornecida'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:320: warning: argument 'codigo' of command @param is not found in the argument list of PlanoDeSprint::setCodigo(const Codigo &codigoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:320: warning: The following parameter of PlanoDeSprint::setCodigo(const Codigo &codigoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:365: warning: argument 'codigo' of command @param is not found in the argument list of PlanoDeSprint::setCodigo(const Codigo &codigoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:365: warning: The following parameter of PlanoDeSprint::setCodigo(const Codigo &codigoFornecido) is not documented:
   parameter 'codigoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:331: warning: argument 'objetivo' of command @param is not found in the argument list of PlanoDeSprint::setObjetivo(const Texto &objetivoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:331: warning: The following parameter of PlanoDeSprint::setObjetivo(const Texto &objetivoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:376: warning: argument 'objetivo' of command @param is not found in the argument list of PlanoDeSprint::setObjetivo(const Texto &objetivoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:376: warning: The following parameter of PlanoDeSprint::setObjetivo(const Texto &objetivoFornecido) is not documented:
   parameter 'objetivoFornecido'
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:246: warning: argument 'valor' of command @param is not found in the argument list of Prioridade::setPrioridade(string prioridadeFornecida)
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:246: warning: The following parameter of Prioridade::setPrioridade(string prioridadeFornecida) is not documented:
@@ -86,17 +86,17 @@
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:239: warning: argument 'valor' of command @param is not found in the argument list of Prioridade::validar(string prioridadeFornecida)
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:239: warning: The following parameter of Prioridade::validar(string prioridadeFornecida) is not documented:
   parameter 'prioridadeFornecida'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:25: warning: argument 'codigo' of command @param is not found in the argument list of Projeto::setCodigo(const Codigo &codigoFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:25: warning: The following parameter of Projeto::setCodigo(const Codigo &codigoFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:27: warning: argument 'codigo' of command @param is not found in the argument list of Projeto::setCodigo(const Codigo &codigoFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:27: warning: The following parameter of Projeto::setCodigo(const Codigo &codigoFornecido) is not documented:
   parameter 'codigoFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:47: warning: argument 'inicio' of command @param is not found in the argument list of Projeto::setInicio(const Data &dataFornecida)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:47: warning: The following parameter of Projeto::setInicio(const Data &dataFornecida) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:49: warning: argument 'inicio' of command @param is not found in the argument list of Projeto::setInicio(const Data &dataFornecida)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:49: warning: The following parameter of Projeto::setInicio(const Data &dataFornecida) is not documented:
   parameter 'dataFornecida'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:36: warning: argument 'nome' of command @param is not found in the argument list of Projeto::setNome(const Nome &nomeFornecido)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:36: warning: The following parameter of Projeto::setNome(const Nome &nomeFornecido) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:38: warning: argument 'nome' of command @param is not found in the argument list of Projeto::setNome(const Nome &nomeFornecido)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:38: warning: The following parameter of Projeto::setNome(const Nome &nomeFornecido) is not documented:
   parameter 'nomeFornecido'
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:58: warning: argument 'termino' of command @param is not found in the argument list of Projeto::setTermino(const Data &dataFornecida)
-/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:58: warning: The following parameter of Projeto::setTermino(const Data &dataFornecida) is not documented:
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:60: warning: argument 'termino' of command @param is not found in the argument list of Projeto::setTermino(const Data &dataFornecida)
+/home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/entidades/entidades.hpp:60: warning: The following parameter of Projeto::setTermino(const Data &dataFornecida) is not documented:
   parameter 'dataFornecida'
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:281: warning: argument 'valor' of command @param is not found in the argument list of Senha::setSenha(string senhaFornecida)
 /home/iaguinho/Área de trabalho/Estudos/projetoTP1/projetoTP1/dominios/dominios.hpp:281: warning: The following parameter of Senha::setSenha(string senhaFornecida) is not documented:

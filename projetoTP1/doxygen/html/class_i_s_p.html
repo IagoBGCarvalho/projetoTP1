@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('class_i_s_p.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>Interface de Serviço de <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>.  
+<p>Interface de Servico de <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>.  
  <a href="class_i_s_p.html#details">Mais...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces__servico_8hpp_source.html">interfaces_servico.hpp</a>&gt;</code></p>
@@ -113,48 +113,75 @@ Diagrama de hierarquia da classe ISP:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
 <tr class="memitem:ab2a33aa21be9d4818e052f792aea555c" id="r_ab2a33aa21be9d4818e052f792aea555c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#ab2a33aa21be9d4818e052f792aea555c">cadastrarProjeto</a> (const <a class="el" href="class_projeto.html">Projeto</a> &amp;projeto)=0</td></tr>
-<tr class="memdesc:ab2a33aa21be9d4818e052f792aea555c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo projeto no sistema.  <br /></td></tr>
+<tr class="memdesc:ab2a33aa21be9d4818e052f792aea555c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo projeto no sistema (RF 05).  <br /></td></tr>
 <tr class="separator:ab2a33aa21be9d4818e052f792aea555c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed908be642b055959c85b821cff971f3" id="r_aed908be642b055959c85b821cff971f3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#aed908be642b055959c85b821cff971f3">lerProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo, <a class="el" href="class_projeto.html">Projeto</a> &amp;projeto)=0</td></tr>
-<tr class="memdesc:aed908be642b055959c85b821cff971f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê os dados de um projeto específico.  <br /></td></tr>
+<tr class="memdesc:aed908be642b055959c85b821cff971f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le os dados de um projeto especifico (RF 06).  <br /></td></tr>
 <tr class="separator:aed908be642b055959c85b821cff971f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e94417f39b333143db83ad7d7b107f7" id="r_a6e94417f39b333143db83ad7d7b107f7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a6e94417f39b333143db83ad7d7b107f7">atualizarProjeto</a> (const <a class="el" href="class_projeto.html">Projeto</a> &amp;projeto)=0</td></tr>
-<tr class="memdesc:a6e94417f39b333143db83ad7d7b107f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um projeto.  <br /></td></tr>
+<tr class="memdesc:a6e94417f39b333143db83ad7d7b107f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um projeto (RF 07).  <br /></td></tr>
 <tr class="separator:a6e94417f39b333143db83ad7d7b107f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72e60d78dde411fc82f91044ffa0308" id="r_aa72e60d78dde411fc82f91044ffa0308"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#aa72e60d78dde411fc82f91044ffa0308">excluirProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo)=0</td></tr>
-<tr class="memdesc:aa72e60d78dde411fc82f91044ffa0308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclui um projeto do sistema.  <br /></td></tr>
+<tr class="memdesc:aa72e60d78dde411fc82f91044ffa0308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclui um projeto do sistema (RF 08).  <br /></td></tr>
 <tr class="separator:aa72e60d78dde411fc82f91044ffa0308"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae8fc2454581c460fcf61ab331513393" id="r_aae8fc2454581c460fcf61ab331513393"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#aae8fc2454581c460fcf61ab331513393">cadastrarHistoria</a> (const <a class="el" href="class_historia_de_usuario.html">HistoriaDeUsuario</a> &amp;historia)=0</td></tr>
-<tr class="memdesc:aae8fc2454581c460fcf61ab331513393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma nova História de Utilizador.  <br /></td></tr>
-<tr class="separator:aae8fc2454581c460fcf61ab331513393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58ca7d8348e6124ef764d84b663327aa" id="r_a58ca7d8348e6124ef764d84b663327aa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa">lerHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo, <a class="el" href="class_historia_de_usuario.html">HistoriaDeUsuario</a> &amp;historia)=0</td></tr>
-<tr class="memdesc:a58ca7d8348e6124ef764d84b663327aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê os dados de uma História de Utilizador.  <br /></td></tr>
-<tr class="separator:a58ca7d8348e6124ef764d84b663327aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5e1126e098b7fa2bf3ea4ea806f39dd" id="r_af5e1126e098b7fa2bf3ea4ea806f39dd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#af5e1126e098b7fa2bf3ea4ea806f39dd">atualizarHistoria</a> (const <a class="el" href="class_historia_de_usuario.html">HistoriaDeUsuario</a> &amp;historia)=0</td></tr>
-<tr class="memdesc:af5e1126e098b7fa2bf3ea4ea806f39dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza uma História de Utilizador.  <br /></td></tr>
-<tr class="separator:af5e1126e098b7fa2bf3ea4ea806f39dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ed30809b3ed909bb936bc38a99b571" id="r_a66ed30809b3ed909bb936bc38a99b571"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571">excluirHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo)=0</td></tr>
-<tr class="memdesc:a66ed30809b3ed909bb936bc38a99b571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclui uma História de Utilizador.  <br /></td></tr>
-<tr class="separator:a66ed30809b3ed909bb936bc38a99b571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3d62a71c789ffd98658bab9e003da8f" id="r_af3d62a71c789ffd98658bab9e003da8f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#af3d62a71c789ffd98658bab9e003da8f">cadastrarSprint</a> (const <a class="el" href="class_plano_de_sprint.html">PlanoDeSprint</a> &amp;sprint)=0</td></tr>
-<tr class="memdesc:af3d62a71c789ffd98658bab9e003da8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo Sprint.  <br /></td></tr>
+<tr class="memdesc:af3d62a71c789ffd98658bab9e003da8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo Plano de Sprint (RF 09).  <br /></td></tr>
 <tr class="separator:af3d62a71c789ffd98658bab9e003da8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0fa16e1e1d85354aa3be9d171977fbc" id="r_ad0fa16e1e1d85354aa3be9d171977fbc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#ad0fa16e1e1d85354aa3be9d171977fbc">lerSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo, <a class="el" href="class_plano_de_sprint.html">PlanoDeSprint</a> &amp;sprint)=0</td></tr>
-<tr class="memdesc:ad0fa16e1e1d85354aa3be9d171977fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê os dados de um Sprint.  <br /></td></tr>
+<tr class="memdesc:ad0fa16e1e1d85354aa3be9d171977fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le os dados de um Plano de Sprint especifico (RF 10).  <br /></td></tr>
 <tr class="separator:ad0fa16e1e1d85354aa3be9d171977fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ca50c8a035f5598a8664b1141115c64" id="r_a1ca50c8a035f5598a8664b1141115c64"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a1ca50c8a035f5598a8664b1141115c64">atualizarSprint</a> (const <a class="el" href="class_plano_de_sprint.html">PlanoDeSprint</a> &amp;sprint)=0</td></tr>
-<tr class="memdesc:a1ca50c8a035f5598a8664b1141115c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um Sprint.  <br /></td></tr>
+<tr class="memdesc:a1ca50c8a035f5598a8664b1141115c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um Plano de Sprint (RF 11).  <br /></td></tr>
 <tr class="separator:a1ca50c8a035f5598a8664b1141115c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e61002c083dbd07d5a88de0175efba" id="r_a62e61002c083dbd07d5a88de0175efba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a62e61002c083dbd07d5a88de0175efba">excluirSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo)=0</td></tr>
-<tr class="memdesc:a62e61002c083dbd07d5a88de0175efba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclui um Sprint.  <br /></td></tr>
+<tr class="memdesc:a62e61002c083dbd07d5a88de0175efba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclui um Plano de Sprint (RF 12).  <br /></td></tr>
 <tr class="separator:a62e61002c083dbd07d5a88de0175efba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8fc2454581c460fcf61ab331513393" id="r_aae8fc2454581c460fcf61ab331513393"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#aae8fc2454581c460fcf61ab331513393">cadastrarHistoria</a> (const <a class="el" href="class_historia_de_usuario.html">HistoriaDeUsuario</a> &amp;historia)=0</td></tr>
+<tr class="memdesc:aae8fc2454581c460fcf61ab331513393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma nova Historia de Usuario (RF 13).  <br /></td></tr>
+<tr class="separator:aae8fc2454581c460fcf61ab331513393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ca7d8348e6124ef764d84b663327aa" id="r_a58ca7d8348e6124ef764d84b663327aa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a58ca7d8348e6124ef764d84b663327aa">lerHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo, <a class="el" href="class_historia_de_usuario.html">HistoriaDeUsuario</a> &amp;historia)=0</td></tr>
+<tr class="memdesc:a58ca7d8348e6124ef764d84b663327aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le os dados de uma Historia de Usuario (RF 14).  <br /></td></tr>
+<tr class="separator:a58ca7d8348e6124ef764d84b663327aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e1126e098b7fa2bf3ea4ea806f39dd" id="r_af5e1126e098b7fa2bf3ea4ea806f39dd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#af5e1126e098b7fa2bf3ea4ea806f39dd">atualizarHistoria</a> (const <a class="el" href="class_historia_de_usuario.html">HistoriaDeUsuario</a> &amp;historia)=0</td></tr>
+<tr class="memdesc:af5e1126e098b7fa2bf3ea4ea806f39dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza uma Historia de Usuario (RF 15).  <br /></td></tr>
+<tr class="separator:af5e1126e098b7fa2bf3ea4ea806f39dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ed30809b3ed909bb936bc38a99b571" id="r_a66ed30809b3ed909bb936bc38a99b571"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a66ed30809b3ed909bb936bc38a99b571">excluirHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigo)=0</td></tr>
+<tr class="memdesc:a66ed30809b3ed909bb936bc38a99b571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclui uma Historia de Usuario (RF 16).  <br /></td></tr>
+<tr class="separator:a66ed30809b3ed909bb936bc38a99b571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca475c249034024344727f445493e57d" id="r_aca475c249034024344727f445493e57d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#aca475c249034024344727f445493e57d">associarHistoriaPessoa</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa)=0</td></tr>
+<tr class="memdesc:aca475c249034024344727f445493e57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estabelece associacao entre uma Historia de Usuario e uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a> (RF 17).  <br /></td></tr>
+<tr class="separator:aca475c249034024344727f445493e57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2856346546097a879658f9f7708e3b89" id="r_a2856346546097a879658f9f7708e3b89"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a2856346546097a879658f9f7708e3b89">desassociarHistoriaPessoa</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa)=0</td></tr>
+<tr class="memdesc:a2856346546097a879658f9f7708e3b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a associacao entre uma Historia de Usuario e uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a> (RF 18).  <br /></td></tr>
+<tr class="separator:a2856346546097a879658f9f7708e3b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4944f09ee4e0000f3b65930df9d7583a" id="r_a4944f09ee4e0000f3b65930df9d7583a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a4944f09ee4e0000f3b65930df9d7583a">listarProjetosPorPessoa</a> (const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos)=0</td></tr>
+<tr class="memdesc:a4944f09ee4e0000f3b65930df9d7583a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os codigos dos projetos associados a uma pessoa (RF 19).  <br /></td></tr>
+<tr class="separator:a4944f09ee4e0000f3b65930df9d7583a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a828b80adde79a644df06207a0a90e22c" id="r_a828b80adde79a644df06207a0a90e22c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a828b80adde79a644df06207a0a90e22c">listarHistoriasPorProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos)=0</td></tr>
+<tr class="memdesc:a828b80adde79a644df06207a0a90e22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os codigos das historias associadas a um projeto (RF 20).  <br /></td></tr>
+<tr class="separator:a828b80adde79a644df06207a0a90e22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec46265b187fc98cf8302a28bcbeee76" id="r_aec46265b187fc98cf8302a28bcbeee76"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#aec46265b187fc98cf8302a28bcbeee76">listarSprintsPorProjeto</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoProjeto, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos)=0</td></tr>
+<tr class="memdesc:aec46265b187fc98cf8302a28bcbeee76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os codigos dos sprints associados a um projeto (RF 21).  <br /></td></tr>
+<tr class="separator:aec46265b187fc98cf8302a28bcbeee76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0310a31ad1eb9687e32f34b85a617bf7" id="r_a0310a31ad1eb9687e32f34b85a617bf7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a0310a31ad1eb9687e32f34b85a617bf7">listarHistoriasPorSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoSprint, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos)=0</td></tr>
+<tr class="memdesc:a0310a31ad1eb9687e32f34b85a617bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os codigos das historias associadas a um Plano de Sprint (RF 22).  <br /></td></tr>
+<tr class="separator:a0310a31ad1eb9687e32f34b85a617bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718f746fbe1d4df64f7f13453e1e1b38" id="r_a718f746fbe1d4df64f7f13453e1e1b38"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a718f746fbe1d4df64f7f13453e1e1b38">listarHistoriasPorPessoa</a> (const <a class="el" href="class_email.html">Email</a> &amp;emailPessoa, std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;codigos)=0</td></tr>
+<tr class="memdesc:a718f746fbe1d4df64f7f13453e1e1b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista os codigos das historias associadas a uma pessoa (RF 23).  <br /></td></tr>
+<tr class="separator:a718f746fbe1d4df64f7f13453e1e1b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c458fc58960fc9daee6e9744e6ce210" id="r_a4c458fc58960fc9daee6e9744e6ce210"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a4c458fc58960fc9daee6e9744e6ce210">moverHistoriaParaSprint</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoSprint)=0</td></tr>
+<tr class="memdesc:a4c458fc58960fc9daee6e9744e6ce210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move uma Historia de Usuario do backlog do projeto para um Sprint (RF 24).  <br /></td></tr>
+<tr class="separator:a4c458fc58960fc9daee6e9744e6ce210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75634d6f79869ce71d498272f3d76a38" id="r_a75634d6f79869ce71d498272f3d76a38"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a75634d6f79869ce71d498272f3d76a38">alterarEstadoHistoria</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;codigoHistoria, const <a class="el" href="class_estado.html">Estado</a> &amp;novoEstado)=0</td></tr>
+<tr class="memdesc:a75634d6f79869ce71d498272f3d76a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altera o estado de uma Historia de Usuario (RF 25).  <br /></td></tr>
+<tr class="separator:a75634d6f79869ce71d498272f3d76a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bda90ea34af70f8b9a74144a60dcee7" id="r_a3bda90ea34af70f8b9a74144a60dcee7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_p.html#a3bda90ea34af70f8b9a74144a60dcee7">~ISP</a> ()=default</td></tr>
-<tr class="memdesc:a3bda90ea34af70f8b9a74144a60dcee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
+<tr class="memdesc:a3bda90ea34af70f8b9a74144a60dcee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrao.  <br /></td></tr>
 <tr class="separator:a3bda90ea34af70f8b9a74144a60dcee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>Interface de Serviço de <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>. </p>
-<p>Declara o contrato para a gestão de Projetos, Histórias de Utilizador e Sprints, permitindo operações de CRUD para cada uma destas entidades. </p>
+<div class="textblock"><p>Interface de Servico de <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>. </p>
+<p>Declara o contrato para a gestao de Projetos, Historias de Usuario e Planos de Sprint, cobrindo os requisitos funcionais 5 a 25. Inclui operacoes de CRUD, associacoes entre entidades, listagens filtradas, movimentacao de historias e alteracao de estado. </p>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="a3bda90ea34af70f8b9a74144a60dcee7" name="a3bda90ea34af70f8b9a74144a60dcee7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bda90ea34af70f8b9a74144a60dcee7">&#9670;&#160;</a></span>~ISP()</h2>
@@ -179,11 +206,113 @@ Membros Públicos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destrutor virtual padrão. </p>
+<p>Destrutor virtual padrao. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>
+<a id="a75634d6f79869ce71d498272f3d76a38" name="a75634d6f79869ce71d498272f3d76a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75634d6f79869ce71d498272f3d76a38">&#9670;&#160;</a></span>alterarEstadoHistoria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::alterarEstadoHistoria </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_estado.html">Estado</a> &amp;&#160;</td>
+          <td class="paramname"><em>novoEstado</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Altera o estado de uma Historia de Usuario (RF 25). </p>
+<p>Proprietario de Produto e Mestre Scrum podem realizar esta operacao. Os estados validos sao: A FAZER, FAZENDO e FEITO.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> da Historia de Usuario. </td></tr>
+    <tr><td class="paramname">novoEstado</td><td>Novo estado a ser atribuido a historia. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se o estado for alterado com sucesso. </dd>
+<dd>
+false Se a historia nao for encontrada ou o estado for invalido. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#aff8232846da62232f9c67855aa9839b1">MSP</a>.</p>
+
+</div>
+</div>
+<a id="aca475c249034024344727f445493e57d" name="aca475c249034024344727f445493e57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca475c249034024344727f445493e57d">&#9670;&#160;</a></span>associarHistoriaPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::associarHistoriaPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Estabelece associacao entre uma Historia de Usuario e uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a> (RF 17). </p>
+<p>Apenas o Mestre Scrum pode realizar esta operacao. Vincula a pessoa (desenvolvedor) responsavel pela historia.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> da Historia de Usuario. </td></tr>
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> da <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a> a ser associada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a associacao for criada com sucesso. </dd>
+<dd>
+false Se a historia ou a pessoa nao existirem, ou se a associacao ja existir. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#a77ed4bce8c26e327d74ff7dfc4f177e0">MSP</a>.</p>
+
+</div>
+</div>
 <a id="af5e1126e098b7fa2bf3ea4ea806f39dd" name="af5e1126e098b7fa2bf3ea4ea806f39dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5e1126e098b7fa2bf3ea4ea806f39dd">&#9670;&#160;</a></span>atualizarHistoria()</h2>
 
@@ -208,16 +337,17 @@ Membros Públicos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Atualiza uma História de Utilizador. </p>
+<p>Atualiza uma Historia de Usuario (RF 15). </p>
+<p>Permite alterar titulo, acao, valor, estimativa e prioridade. O codigo (chave primaria) nao pode ser modificado.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">historia</td><td>Referência constante para a História modificada. </td></tr>
+    <tr><td class="paramname">historia</td><td>Referencia constante para a <a class="el" href="class_historia_de_usuario.html" title="Entidade que representa uma História de Usuário.">HistoriaDeUsuario</a> com dados atualizados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se a atualização for bem-sucedida. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a atualizacao for bem-sucedida. </dd>
 <dd>
-false Se ocorrer um erro. </dd></dl>
+false Se a historia nao for encontrada. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#af7afadfac6cf2f915c6c1951d98efbec">MSP</a>.</p>
 
@@ -247,16 +377,17 @@ false Se ocorrer um erro. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Atualiza os dados de um projeto. </p>
+<p>Atualiza os dados de um projeto (RF 07). </p>
+<p>Permite alterar nome, datas e Mestre Scrum associado. O codigo (chave primaria) nao pode ser modificado.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">projeto</td><td>Referência constante para o <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a> modificado. </td></tr>
+    <tr><td class="paramname">projeto</td><td>Referencia constante para o <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a> com os dados atualizados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se atualizado com sucesso. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a atualizacao for bem-sucedida. </dd>
 <dd>
-false Caso não seja possível atualizar. </dd></dl>
+false Se o projeto nao for encontrado ou restricoes forem violadas. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a19e8e0555659af521dbdc5071cedee03">MSP</a>.</p>
 
@@ -286,16 +417,17 @@ false Caso não seja possível atualizar. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Atualiza os dados de um Sprint. </p>
+<p>Atualiza os dados de um Plano de Sprint (RF 11). </p>
+<p>Permite alterar objetivo e capacidade. O codigo (chave primaria) nao pode ser modificado. A capacidade atualizada nao pode violar a restricao total do projeto.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sprint</td><td>Referência constante para o Sprint modificado. </td></tr>
+    <tr><td class="paramname">sprint</td><td>Referencia constante para o <a class="el" href="class_plano_de_sprint.html" title="Entidade que representa um Plano de Sprint no sistema.">PlanoDeSprint</a> com os dados atualizados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se atualizado com sucesso. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a atualizacao for bem-sucedida. </dd>
 <dd>
-false Em caso de falha. </dd></dl>
+false Se o sprint nao for encontrado ou restricoes forem violadas. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a64ed25fb75b971a72f4d398c4e4c0bb0">MSP</a>.</p>
 
@@ -325,16 +457,17 @@ false Em caso de falha. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Cria uma nova História de Utilizador. </p>
+<p>Cria uma nova Historia de Usuario (RF 13). </p>
+<p>Apenas o Proprietario de Produto pode criar historias. A historia deve ser associada a um projeto e criada com estado "A FAZER". A descricao deve seguir o formato: papel (como...), acao (eu quero...) e valor (para...).</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">historia</td><td>Referência constante para a entidade Historia. </td></tr>
+    <tr><td class="paramname">historia</td><td>Referencia constante para a entidade <a class="el" href="class_historia_de_usuario.html" title="Entidade que representa uma História de Usuário.">HistoriaDeUsuario</a> a ser criada. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true Se criada com sucesso. </dd>
 <dd>
-false Em caso de falha. </dd></dl>
+false Se o codigo ja existir ou o projeto associado nao existir. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#ad65a1a925522601d7b8413d7ad1aa652">MSP</a>.</p>
 
@@ -364,16 +497,17 @@ false Em caso de falha. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Cria um novo projeto no sistema. </p>
+<p>Cria um novo projeto no sistema (RF 05). </p>
+<p>Apenas o Proprietario de Produto pode criar projetos. Ao criar, o projeto deve ser associado a um Mestre Scrum. A soma das capacidades dos sprints do projeto nao pode exceder o numero de dias entre as datas de inicio e termino.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">projeto</td><td>Referência constante para a entidade <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a>. </td></tr>
+    <tr><td class="paramname">projeto</td><td>Referencia constante para a entidade <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a> a ser criada. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true Se o projeto for criado com sucesso. </dd>
 <dd>
-false Caso ocorra um erro na criação. </dd></dl>
+false Se o codigo ja existir ou as restricoes de negocio forem violadas. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#abb7ba6839193a56360ed08eb20800d8a">MSP</a>.</p>
 
@@ -403,18 +537,70 @@ false Caso ocorra um erro na criação. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Cria um novo Sprint. </p>
+<p>Cria um novo Plano de Sprint (RF 09). </p>
+<p>Apenas o Mestre Scrum pode criar sprints. O sprint deve ser associado a um projeto existente. A soma das capacidades de todos os sprints do projeto nao pode exceder o intervalo de datas do projeto.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sprint</td><td>Referência constante para a entidade Sprint. </td></tr>
+    <tr><td class="paramname">sprint</td><td>Referencia constante para a entidade <a class="el" href="class_plano_de_sprint.html" title="Entidade que representa um Plano de Sprint no sistema.">PlanoDeSprint</a> a ser criada. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se criado com sucesso. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se o sprint for criado com sucesso. </dd>
 <dd>
-false Caso contrário. </dd></dl>
+false Se restricoes de capacidade ou de existencia forem violadas. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a012ab5e36085023d9a468cbb4b7306a0">MSP</a>.</p>
+
+</div>
+</div>
+<a id="a2856346546097a879658f9f7708e3b89" name="a2856346546097a879658f9f7708e3b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2856346546097a879658f9f7708e3b89">&#9670;&#160;</a></span>desassociarHistoriaPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::desassociarHistoriaPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a associacao entre uma Historia de Usuario e uma <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a> (RF 18). </p>
+<p>Apenas o Mestre Scrum pode realizar esta operacao.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> da Historia de Usuario. </td></tr>
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> da <a class="el" href="class_pessoa.html" title="Entidade que representa uma Pessoa no sistema.">Pessoa</a> cuja associacao sera removida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a associacao for removida com sucesso. </dd>
+<dd>
+false Se a historia, a pessoa ou a associacao nao existirem. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#a1fa65bce1db10834cc5dd5a4f43365fa">MSP</a>.</p>
 
 </div>
 </div>
@@ -442,16 +628,17 @@ false Caso contrário. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Exclui uma História de Utilizador. </p>
+<p>Exclui uma Historia de Usuario (RF 16). </p>
+<p>Remove a historia e todas as suas associacoes com pessoas.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">codigo</td><td>Código identificador da História a remover. </td></tr>
+    <tr><td class="paramname">codigo</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> identificador da Historia de Usuario a ser removida. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true Se removida com sucesso. </dd>
 <dd>
-false Se a História não for encontrada. </dd></dl>
+false Se a historia nao for encontrada. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a2b59d105b98a45ef95968e687d3d6852">MSP</a>.</p>
 
@@ -481,16 +668,17 @@ false Se a História não for encontrada. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Exclui um projeto do sistema. </p>
+<p>Exclui um projeto do sistema (RF 08). </p>
+<p>A operacao falha se a exclusao resultar em inconsistencias (ex.: projeto com historias ou sprints associados).</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">codigo</td><td>Código identificador do projeto a remover. </td></tr>
+    <tr><td class="paramname">codigo</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> identificador do projeto a ser removido. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se excluído com sucesso. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se excluido com sucesso. </dd>
 <dd>
-false Se o projeto não for encontrado. </dd></dl>
+false Se o projeto nao for encontrado ou a exclusao gerar inconsistencia. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a70489e85d6d04dcd1575f6c56e0f95c2">MSP</a>.</p>
 
@@ -520,16 +708,17 @@ false Se o projeto não for encontrado. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Exclui um Sprint. </p>
+<p>Exclui um Plano de Sprint (RF 12). </p>
+<p>A operacao falha se o sprint possuir historias associadas, para evitar inconsistencias.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">codigo</td><td>Código identificador do Sprint a remover. </td></tr>
+    <tr><td class="paramname">codigo</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> identificador do sprint a ser removido. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se a remoção for bem-sucedida. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se removido com sucesso. </dd>
 <dd>
-false Se o Sprint não for encontrado. </dd></dl>
+false Se o sprint nao for encontrado ou tiver historias associadas. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a9bb9bcda051d64c7dd21d6671a6adc86">MSP</a>.</p>
 
@@ -569,17 +758,17 @@ false Se o Sprint não for encontrado. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Lê os dados de uma História de Utilizador. </p>
+<p>Le os dados de uma Historia de Usuario (RF 14). </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">codigo</td><td>Código identificador da História. </td></tr>
-    <tr><td class="paramname">historia</td><td>Objeto onde os dados serão armazenados. </td></tr>
+    <tr><td class="paramname">codigo</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> identificador da Historia de Usuario. </td></tr>
+    <tr><td class="paramname">historia</td><td>Objeto <a class="el" href="class_historia_de_usuario.html" title="Entidade que representa uma História de Usuário.">HistoriaDeUsuario</a> onde os dados serao armazenados. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true Se encontrada. </dd>
 <dd>
-false Caso não exista. </dd></dl>
+false Se nenhuma historia com o codigo fornecido existir. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#ad628907cd9af20c4cbfe921d2ad6d067">MSP</a>.</p>
 
@@ -619,17 +808,18 @@ false Caso não exista. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Lê os dados de um projeto específico. </p>
+<p>Le os dados de um projeto especifico (RF 06). </p>
+<p>Recupera todos os atributos do projeto identificado pelo codigo.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">codigo</td><td>Código que identifica o projeto. </td></tr>
-    <tr><td class="paramname">projeto</td><td>Objeto onde os dados serão guardados. </td></tr>
+    <tr><td class="paramname">codigo</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> que identifica o projeto. </td></tr>
+    <tr><td class="paramname">projeto</td><td>Objeto <a class="el" href="class_projeto.html" title="Entidade que representa um Projeto no sistema.">Projeto</a> onde os dados recuperados serao armazenados. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true Se o projeto for encontrado. </dd>
 <dd>
-false Se o projeto não for encontrado. </dd></dl>
+false Se nenhum projeto com o codigo fornecido existir. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#a238da09fffde9d3c08ef6a899f951229">MSP</a>.</p>
 
@@ -669,19 +859,324 @@ false Se o projeto não for encontrado. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Lê os dados de um Sprint. </p>
+<p>Le os dados de um Plano de Sprint especifico (RF 10). </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">codigo</td><td>Código identificador do Sprint. </td></tr>
-    <tr><td class="paramname">sprint</td><td>Objeto onde os dados serão armazenados. </td></tr>
+    <tr><td class="paramname">codigo</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> identificador do Plano de Sprint. </td></tr>
+    <tr><td class="paramname">sprint</td><td>Objeto <a class="el" href="class_plano_de_sprint.html" title="Entidade que representa um Plano de Sprint no sistema.">PlanoDeSprint</a> onde os dados recuperados serao armazenados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>true Se encontrado. </dd>
+<dl class="section return"><dt>Retorna</dt><dd>true Se o sprint for encontrado. </dd>
 <dd>
-false Se não existir. </dd></dl>
+false Se nenhum sprint com o codigo fornecido existir. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_p.html#aab7e6a3bbaf32a06d991f5051f25a594">MSP</a>.</p>
+
+</div>
+</div>
+<a id="a718f746fbe1d4df64f7f13453e1e1b38" name="a718f746fbe1d4df64f7f13453e1e1b38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718f746fbe1d4df64f7f13453e1e1b38">&#9670;&#160;</a></span>listarHistoriasPorPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::listarHistoriasPorPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista os codigos das historias associadas a uma pessoa (RF 23). </p>
+<p>Retorna os codigos de todas as Historias de Usuario as quais a pessoa esta vinculada como responsavel.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> da pessoa. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor onde os codigos das historias serao inseridos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a operacao for bem-sucedida. </dd>
+<dd>
+false Se a pessoa nao existir. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#a71b5dd5ba4ae278cdaa7098c904d40d1">MSP</a>.</p>
+
+</div>
+</div>
+<a id="a828b80adde79a644df06207a0a90e22c" name="a828b80adde79a644df06207a0a90e22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828b80adde79a644df06207a0a90e22c">&#9670;&#160;</a></span>listarHistoriasPorProjeto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::listarHistoriasPorProjeto </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoProjeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista os codigos das historias associadas a um projeto (RF 20). </p>
+<p>Retorna os codigos de todas as Historias de Usuario vinculadas diretamente ao projeto (ainda nao movidas para um sprint).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoProjeto</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> do projeto. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor onde os codigos das historias serao inseridos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a operacao for bem-sucedida. </dd>
+<dd>
+false Se o projeto nao existir. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#ac1efad25560926be9a35d73e7c2b2a0c">MSP</a>.</p>
+
+</div>
+</div>
+<a id="a0310a31ad1eb9687e32f34b85a617bf7" name="a0310a31ad1eb9687e32f34b85a617bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0310a31ad1eb9687e32f34b85a617bf7">&#9670;&#160;</a></span>listarHistoriasPorSprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::listarHistoriasPorSprint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoSprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista os codigos das historias associadas a um Plano de Sprint (RF 22). </p>
+<p>A soma das estimativas das historias retornadas nao excede a capacidade do sprint.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoSprint</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> do Plano de Sprint. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor onde os codigos das historias serao inseridos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a operacao for bem-sucedida. </dd>
+<dd>
+false Se o sprint nao existir. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#ac319dfeea87def02ee162b872870183f">MSP</a>.</p>
+
+</div>
+</div>
+<a id="a4944f09ee4e0000f3b65930df9d7583a" name="a4944f09ee4e0000f3b65930df9d7583a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4944f09ee4e0000f3b65930df9d7583a">&#9670;&#160;</a></span>listarProjetosPorPessoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::listarProjetosPorPessoa </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_email.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailPessoa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista os codigos dos projetos associados a uma pessoa (RF 19). </p>
+<p>Retorna os codigos de todos os projetos nos quais a pessoa participa (como Proprietario de Produto ou Mestre Scrum).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emailPessoa</td><td><a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a> da pessoa cujos projetos serao listados. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor onde os codigos dos projetos serao inseridos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a operacao for bem-sucedida (mesmo que a lista esteja vazia). </dd>
+<dd>
+false Se a pessoa nao existir. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#a00dee734da93c3739762e160eb6ead19">MSP</a>.</p>
+
+</div>
+</div>
+<a id="aec46265b187fc98cf8302a28bcbeee76" name="aec46265b187fc98cf8302a28bcbeee76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec46265b187fc98cf8302a28bcbeee76">&#9670;&#160;</a></span>listarSprintsPorProjeto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::listarSprintsPorProjeto </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoProjeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_codigo.html">Codigo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>codigos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista os codigos dos sprints associados a um projeto (RF 21). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoProjeto</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> do projeto. </td></tr>
+    <tr><td class="paramname">codigos</td><td>Vetor onde os codigos dos sprints serao inseridos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a operacao for bem-sucedida. </dd>
+<dd>
+false Se o projeto nao existir. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#a160a683be6a3d6027f1b41466ccb7a06">MSP</a>.</p>
+
+</div>
+</div>
+<a id="a4c458fc58960fc9daee6e9744e6ce210" name="a4c458fc58960fc9daee6e9744e6ce210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c458fc58960fc9daee6e9744e6ce210">&#9670;&#160;</a></span>moverHistoriaParaSprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISP::moverHistoriaParaSprint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoHistoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;&#160;</td>
+          <td class="paramname"><em>codigoSprint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move uma Historia de Usuario do backlog do projeto para um Sprint (RF 24). </p>
+<p>Apenas o Mestre Scrum pode realizar esta operacao. A historia deve estar atualmente associada ao projeto (e nao a outro sprint). A estimativa da historia somada as estimativas ja existentes no sprint nao pode exceder a capacidade do sprint.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigoHistoria</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> da Historia de Usuario a ser movida. </td></tr>
+    <tr><td class="paramname">codigoSprint</td><td><a class="el" href="class_codigo.html" title="Representa o domínio de Código.">Codigo</a> do Plano de Sprint de destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se a movimentacao for bem-sucedida. </dd>
+<dd>
+false Se a historia ou o sprint nao existirem, ou se a capacidade do sprint for excedida. </dd></dl>
+
+<p>Implementado por <a class="el" href="class_m_s_p.html#a421bff22334acdcca066da00b9f41ee1">MSP</a>.</p>
 
 </div>
 </div>
@@ -694,7 +1189,7 @@ false Se não existir. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_i_s_p.html">ISP</a></li>
-    <li class="footer">Gerado em Quarta, 24 de Junho de 2026 02:36:56 para projetoTP1 por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

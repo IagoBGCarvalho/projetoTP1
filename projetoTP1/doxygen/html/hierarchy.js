@@ -5,9 +5,15 @@ var hierarchy =
     [ "Email", "class_email.html", null ],
     [ "Estado", "class_estado.html", null ],
     [ "HistoriaDeUsuario", "class_historia_de_usuario.html", null ],
-    [ "IAA", "class_i_a_a.html", null ],
-    [ "IAC", "class_i_a_c.html", null ],
-    [ "IAP", "class_i_a_p.html", null ],
+    [ "IAA", "class_i_a_a.html", [
+      [ "MAA", "class_m_a_a.html", null ]
+    ] ],
+    [ "IAC", "class_i_a_c.html", [
+      [ "MAC", "class_m_a_c.html", null ]
+    ] ],
+    [ "IAP", "class_i_a_p.html", [
+      [ "MAP", "class_m_a_p.html", null ]
+    ] ],
     [ "IDPE", "class_i_d_p_e.html", [
       [ "MDPessoa", "class_m_d_pessoa.html", null ]
     ] ],

@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('class_i_s_a.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>Interface de Serviço de Autenticação.  
+<p>Interface de Servico de Autenticacao.  
  <a href="class_i_s_a.html#details">Mais...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces__servico_8hpp_source.html">interfaces_servico.hpp</a>&gt;</code></p>
@@ -113,15 +113,15 @@ Diagrama de hierarquia da classe ISA:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
 <tr class="memitem:a7c0859ca0c8859c436244b275475f5ab" id="r_a7c0859ca0c8859c436244b275475f5ab"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_a.html#a7c0859ca0c8859c436244b275475f5ab">autenticar</a> (const <a class="el" href="class_email.html">Email</a> &amp;email, const <a class="el" href="class_senha.html">Senha</a> &amp;senha)=0</td></tr>
-<tr class="memdesc:a7c0859ca0c8859c436244b275475f5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Autentica um utilizador no sistema.  <br /></td></tr>
+<tr class="memdesc:a7c0859ca0c8859c436244b275475f5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Autentica um usuario no sistema.  <br /></td></tr>
 <tr class="separator:a7c0859ca0c8859c436244b275475f5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8654709aa1bfe7711180e3b6fd091a3" id="r_ad8654709aa1bfe7711180e3b6fd091a3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_a.html#ad8654709aa1bfe7711180e3b6fd091a3">~ISA</a> ()=default</td></tr>
-<tr class="memdesc:ad8654709aa1bfe7711180e3b6fd091a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
+<tr class="memdesc:ad8654709aa1bfe7711180e3b6fd091a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrao.  <br /></td></tr>
 <tr class="separator:ad8654709aa1bfe7711180e3b6fd091a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>Interface de Serviço de Autenticação. </p>
-<p>Declara o contrato para a camada de serviço responsável por validar as credenciais de acesso do utilizador no sistema. </p>
+<div class="textblock"><p>Interface de Servico de Autenticacao. </p>
+<p>Declara o contrato para a camada de servico responsavel por validar as credenciais de acesso do usuario no sistema. </p>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="ad8654709aa1bfe7711180e3b6fd091a3" name="ad8654709aa1bfe7711180e3b6fd091a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8654709aa1bfe7711180e3b6fd091a3">&#9670;&#160;</a></span>~ISA()</h2>
@@ -146,7 +146,7 @@ Membros Públicos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destrutor virtual padrão. </p>
+<p>Destrutor virtual padrao. </p>
 
 </div>
 </div>
@@ -185,20 +185,18 @@ Membros Públicos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Autentica um utilizador no sistema. </p>
-<ul>
-<li><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Autentica um usuario no sistema. </p>
+<p>Verifica se o par email/senha corresponde a uma conta cadastrada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">email</td><td>Referência constante para o objeto do domínio <a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a>. </td></tr>
-    <tr><td class="paramname">senha</td><td>Referência constante para o objeto do domínio <a class="el" href="class_senha.html" title="Representa o domínio de Senha.">Senha</a>. </td></tr>
+    <tr><td class="paramname">email</td><td>Referencia constante para o objeto do dominio <a class="el" href="class_email.html" title="Representa o domínio de Email.">Email</a>. </td></tr>
+    <tr><td class="paramname">senha</td><td>Referencia constante para o objeto do dominio <a class="el" href="class_senha.html" title="Representa o domínio de Senha.">Senha</a>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>true Se as credenciais estiverem corretas. </dd>
 <dd>
-false Se as credenciais forem inválidas. </dd></dl>
-</li>
-</ul>
+false Se as credenciais forem invalidas ou a conta nao existir. </dd></dl>
 
 <p>Implementado por <a class="el" href="class_m_s_a.html#abddcfffa465e112cf1c8556dc14dd139">MSA</a>.</p>
 
@@ -213,7 +211,7 @@ false Se as credenciais forem inválidas. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_i_s_a.html">ISA</a></li>
-    <li class="footer">Gerado em Quarta, 24 de Junho de 2026 02:36:56 para projetoTP1 por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
