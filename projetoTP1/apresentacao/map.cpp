@@ -151,8 +151,8 @@ void MAP::menuProjetos(const Email& emailUsuarioLogado) {
                     cout << "Nome: " << p.getNome().getNome() << endl;
                     cout << "Inicio: " << formatarData(p.getInicio().getData()) << endl;
                     cout << "Termino: " << formatarData(p.getTermino().getData()) << endl;
-                    cout << "Product Owner: " << p.getProductOwner().getEmail() << endl;
-                    cout << "Scrum Master: " << p.getScrumMaster().getEmail() << endl;
+                    cout << "PROPRIETARIO DE PRODUTO: " << p.getProductOwner().getEmail() << endl;
+                    cout << "MESTRE SCRUM: " << p.getScrumMaster().getEmail() << endl;
                 } else cout << "\nProjeto nao encontrado no sistema." << endl;
             } catch (const invalid_argument& e) { cout << "\nErro: Codigo invalido." << endl; }
             cout << "\nPressione ENTER para continuar."; cin.get();
