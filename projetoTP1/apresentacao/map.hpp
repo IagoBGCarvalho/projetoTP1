@@ -17,6 +17,7 @@ private:
     void menuProjetos(const Email& emailUsuarioLogado);
     void menuSprints(const Email& emailUsuarioLogado);
     void menuHistorias(const Email& emailUsuarioLogado);
+    bool menuPessoa(const Email& emailUsuarioLogado);
 
 public:
     /**

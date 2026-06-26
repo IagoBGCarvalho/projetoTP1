@@ -31,32 +31,35 @@
 	"../dominios/dominios.hpp"
 	"../entidades/entidades.hpp"
 
-1782352690 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_apresentacao.hpp
+1782430750 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_apresentacao.hpp
 	"interfaces_servico.hpp"
 	"../dominios/dominios.hpp"
 
-1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_servico.hpp
+1782412501 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_servico.hpp
+	<vector>
 
 1782328335 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\dominios\dominios.hpp
 	<string>
 
-1779518307 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\entidades\entidades.hpp
+1782430750 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\entidades\entidades.hpp
 	"../dominios/dominios.hpp"
 
-1782391908 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.cpp
+1782435903 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.cpp
 	"map.hpp"
 	<iostream>
 	<string>
 	<stdexcept>
 	<cstdlib>
+	<vector>
+	<algorithm>
 
-1782391564 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.hpp
+1782434944 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\apresentacao\map.hpp
 	"../interfaces/interfaces_apresentacao.hpp"
 	"../interfaces/interfaces_servico.hpp"
 	"../dominios/dominios.hpp"
 	"../entidades/entidades.hpp"
 
-1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\dominios\dominios.cpp
+1782412501 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\dominios\dominios.cpp
 	<string>
 	<stdexcept>
 	<cctype>
@@ -79,8 +82,8 @@
 	"../interfaces/interfaces_dados.hpp"
 	"../entidades/entidades.hpp"
 
-1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_dados.hpp
-	"../entidades/entidades.hpp"
+1782412501 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\interfaces\interfaces_dados.hpp
+	<vector>
 
 1782328336 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msc.cpp
 	"msc.hpp"
@@ -90,10 +93,10 @@
 	"../interfaces/interfaces_dados.hpp"
 	"../entidades/entidades.hpp"
 
-1782328336 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msp.cpp
+1782412501 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msp.cpp
 	"msp.hpp"
 
-1782328336 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msp.hpp
+1782412501 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\service\msp.hpp
 	"../interfaces/interfaces_servico.hpp"
 	"../interfaces/interfaces_dados.hpp"
 	"../entidades/entidades.hpp"
@@ -176,8 +179,10 @@
 	<sys/uio.h>
 	<math.h>
 
-1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_pessoa.cpp
+1782412501 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_pessoa.cpp
 	"md_pessoa.hpp"
+	"../entidades/entidades.hpp"
+	"../dominios/dominios.hpp"
 	<iostream>
 
 1782337298 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_pessoa.hpp
@@ -188,16 +193,19 @@
 1780514856 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\sqlite3.h
 	<stdarg.h>
 
-1782328335 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_projeto.cpp
+1782433387 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_projeto.cpp
 	"md_projeto.hpp"
+	"../entidades/entidades.hpp"
+	"../dominios/dominios.hpp"
 	<iostream>
 
-1782337297 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_projeto.hpp
+1782412501 d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\data\md_projeto.hpp
 	"../interfaces/interfaces_dados.hpp"
 	"../sqlite3.h"
 	<string>
+	<vector>
 
-1782392166 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\main.cpp
+1782430750 source:d:\unb\tp1\projeto tp1 2\projetotp1\projetotp1\main.cpp
 	<iostream>
 	<string>
 	<stdexcept>

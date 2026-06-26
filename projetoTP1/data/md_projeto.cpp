@@ -49,6 +49,8 @@ void MDProjeto::inicializarBanco() {
     sqlite3_exec(db, sqlProjetos.c_str(), nullptr, nullptr, nullptr);
     sqlite3_exec(db, sqlHistorias.c_str(), nullptr, nullptr, nullptr);
     sqlite3_exec(db, sqlSprints.c_str(), nullptr, nullptr, nullptr);
+    sqlite3_exec(db, "ALTER TABLE HISTORIA_DE_USUARIO ADD COLUMN codigo_projeto TEXT;", nullptr, nullptr, nullptr);
+    sqlite3_exec(db, "ALTER TABLE HISTORIA_DE_USUARIO ADD COLUMN codigo_sprint TEXT;", nullptr, nullptr, nullptr);
 }
 
 // CRUD: Projeto

@@ -38,7 +38,7 @@ bool MAC::executar() {
         cout << "Digite sua senha: ";
         getline(cin, senhaDigitada);
 
-        cout << "Digite seu papel (Ex: Mestre Scrum, Desenvolvedor): ";
+        cout << "Digite seu papel: ";
         getline(cin, papelDigitado);
 
         try {

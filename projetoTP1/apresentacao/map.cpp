@@ -36,7 +36,8 @@ bool MAP::executar(const Email& emailUsuarioLogado) {
         cout << " 1 - Gestao de Projetos" << endl;
         cout << " 2 - Gestao de Sprints" << endl;
         cout << " 3 - Gestao de Historias de Usuario" << endl;
-        cout << " 4 - Logout (Sair da conta)" << endl;
+        cout << " 4 - Minha Conta (Pessoa)" << endl;
+        cout << " 5 - Logout (Sair da conta)" << endl;
         cout << "========================================" << endl;
         cout << "Escolha um modulo: ";
 
@@ -46,6 +47,12 @@ bool MAP::executar(const Email& emailUsuarioLogado) {
         else if (opcao == "2") menuSprints(emailUsuarioLogado);
         else if (opcao == "3") menuHistorias(emailUsuarioLogado);
         else if (opcao == "4") {
+            if (menuPessoa(emailUsuarioLogado)) {
+                cout << "\nConta excluida. Realizando logout automatico...\n" << endl;
+                deslogar = true;
+            }
+        }
+        else if (opcao == "5") {
             cout << "\nRealizando logout...\n" << endl;
             deslogar = true;
         } else {
@@ -95,27 +102,28 @@ void MAP::menuProjetos(const Email& emailUsuarioLogado) {
             cout << "E-mail da pessoa a associar ao projeto: "; getline(cin, emailMembroStr);
 
             try {
-                // Removemos o replace que estava quebrando o dominio. O dado passa puro.
                 codigo.setCodigo(codigoDigitado); nome.setNome(nomeDigitado);
                 inicio.setData(dataInicioDigitada); termino.setData(dataTerminoDigitada);
 
                 novoProjeto.setCodigo(codigo); novoProjeto.setNome(nome);
                 novoProjeto.setInicio(inicio); novoProjeto.setTermino(termino);
 
-                // LÓGICA INTELIGENTE DE ATRIBUIÇÃO DE PAPÉIS
                 Email emailMembro; emailMembro.setEmail(emailMembroStr);
                 Pessoa eu, outro;
 
                 if (this->servicoCadastro->ler(emailUsuarioLogado, eu) && this->servicoCadastro->ler(emailMembro, outro)) {
                     string meuPapel = eu.getPapel().getPapel();
 
-                    // Se eu sou o Product Owner, a outra pessoa será o Scrum Master, e vice-versa.
-                    if (meuPapel == "Product Owner" || meuPapel == "Proprietario de Produto") {
+                    if (meuPapel == "PROPRIETARIO DE PRODUTO") {
                         novoProjeto.setProductOwner(emailUsuarioLogado);
                         novoProjeto.setScrumMaster(emailMembro);
-                    } else {
+                    } else if (meuPapel == "MESTRE SCRUM") {
                         novoProjeto.setScrumMaster(emailUsuarioLogado);
                         novoProjeto.setProductOwner(emailMembro);
+                    } else {
+                        cout << "\nErro: Apenas Product Owner ou Mestre Scrum podem criar projetos.\n" << endl;
+                        cout << "Pressione ENTER para continuar."; cin.get();
+                        continue;
                     }
 
                     if (this->servicoProjeto->cadastrarProjeto(novoProjeto)) cout << "\n>>> Projeto registado com sucesso! <<<\n" << endl;
@@ -551,3 +559,103 @@ void MAP::menuHistorias(const Email& emailUsuarioLogado) {
         else { cout << "\nOpcao invalida. Pressione ENTER."; cin.get(); }
     }
 }
+
+bool MAP::menuPessoa(const Email& emailUsuarioLogado) {
+    string opcao; bool voltar = false;
+
+    while (!voltar) {
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
+
+        cout << "========================================" << endl;
+        cout << "          GESTAO DE PESSOA              " << endl;
+        cout << "========================================" << endl;
+        cout << " 1. Ver meus dados" << endl;
+        cout << " 2. Atualizar meus dados" << endl;
+        cout << " 3. Excluir minha conta" << endl;
+        cout << " 4. Voltar ao Painel Principal" << endl;
+        cout << "========================================" << endl;
+        cout << "Escolha uma opcao: "; getline(cin, opcao);
+
+        if (opcao == "1") {
+            Pessoa p;
+            if (this->servicoCadastro->ler(emailUsuarioLogado, p)) {
+                cout << "\n>>> Meus Dados <<<" << endl;
+                cout << "Email: " << p.getEmail().getEmail() << endl;
+                cout << "Nome:  " << p.getNome().getNome() << endl;
+                cout << "Papel: " << p.getPapel().getPapel() << endl;
+            } else {
+                cout << "\nErro: Nao foi possivel recuperar os dados." << endl;
+            }
+            cout << "\nPressione ENTER para continuar."; cin.get();
+        }
+        else if (opcao == "2") {
+            string nomeStr, senhaStr;
+            Nome novoNome; Senha novaSenha; Pessoa pAtualizada;
+
+            // Lê os dados atuais para preservar email e papel (não editáveis)
+            Pessoa pAtual;
+            if (!this->servicoCadastro->ler(emailUsuarioLogado, pAtual)) {
+                cout << "\nErro: Nao foi possivel recuperar os dados atuais." << endl;
+                cout << "Pressione ENTER para continuar."; cin.get();
+                continue;
+            }
+
+            cout << "\n--- ATUALIZAR DADOS ---" << endl;
+            cout << "NOVO Nome (atual: " << pAtual.getNome().getNome() << "): ";
+            getline(cin, nomeStr);
+            cout << "NOVA Senha: ";
+            getline(cin, senhaStr);
+
+            try {
+                novoNome.setNome(nomeStr);
+                novaSenha.setSenha(senhaStr);
+
+                pAtualizada.setEmail(emailUsuarioLogado);
+                pAtualizada.setNome(novoNome);
+                pAtualizada.setSenha(novaSenha);
+                pAtualizada.setPapel(pAtual.getPapel()); // papel não muda
+
+                if (this->servicoCadastro->atualizar(pAtualizada)) {
+                    cout << "\n>>> Dados atualizados com sucesso! <<<\n" << endl;
+                } else {
+                    cout << "\nErro ao atualizar os dados.\n" << endl;
+                }
+            } catch (const invalid_argument& e) {
+                cout << "\nErro de validacao: " << e.what() << endl;
+            }
+            cout << "Pressione ENTER para continuar."; cin.get();
+        }
+        else if (opcao == "3") {
+            cout << "\n--- EXCLUIR CONTA ---" << endl;
+            cout << "Tem certeza que deseja excluir sua conta? Esta acao e irreversivel. (S/N): ";
+            string confirmacao; getline(cin, confirmacao);
+
+            if (confirmacao == "S" || confirmacao == "s") {
+                if (this->servicoCadastro->excluir(emailUsuarioLogado)) {
+                    cout << "\n>>> Conta excluida com sucesso. Voce sera deslogado. <<<\n" << endl;
+                    cout << "Pressione ENTER para continuar."; cin.get();
+                    return true;
+                } else {
+                    cout << "\nErro ao excluir a conta.\n" << endl;
+                    cout << "Pressione ENTER para continuar."; cin.get();
+                }
+            } else {
+                cout << "\nOperacao cancelada." << endl;
+                cout << "Pressione ENTER para continuar."; cin.get();
+            }
+        }
+        else if (opcao == "4") {
+            voltar = true;
+        }
+        else {
+            cout << "\nOpcao invalida. Pressione ENTER."; cin.get();
+        }
+    }
+
+    return false;
+}
+
