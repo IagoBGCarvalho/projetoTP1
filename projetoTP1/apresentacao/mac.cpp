@@ -52,9 +52,8 @@ bool MAC::executar() {
             novaPessoa.setSenha(senha);
             novaPessoa.setPapel(papel);
 
-            // Envia a entidade preenchida para a camada de negócio (Serviço)
             if (this->servicoCadastro->cadastrar(novaPessoa)) {
-                cout << "\n>>> Cadastro realizado com sucesso! Cuenta criada. <<<\n" << endl;
+                cout << "\n>>> Cadastro realizado com sucesso! Conta criada. <<<\n" << endl;
                 break;
             } else {
                 cout << "\nErro no cadastro: E-mail ja cadastrado no sistema.\nTente novamente.\n" << endl;

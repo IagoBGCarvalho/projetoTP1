@@ -410,7 +410,6 @@ void MAP::menuHistorias(const Email& emailUsuarioLogado) {
                 acao.setTexto(acaoStr); valor.setTexto(valorStr);
                 estimativa.setTempo(stoi(estimativaStr)); prioridade.setPrioridade(prioridadeStr);
 
-                // Formato correto de estado adicionado
                 estado.setEstado("A FAZER");
 
                 novaHistoria.setCodigo(codigo); novaHistoria.setCodigoProjeto(codigoProj);
