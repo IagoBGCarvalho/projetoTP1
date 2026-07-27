@@ -26,44 +26,13 @@ Projetar, codificar e documentar um sistema completo aplicando conceitos de prog
 * **SQLite / Memória** - Armazenamento de dados suportado por banco de dados relacional ou estruturas em memória (fila, pilha).
 
 ## Estrutura do Projeto
-ProjetoTP1/
-├── apresentacao/          # Camada de apresentação (interface com o usuário)
-│   ├── maa.cpp / maa.hpp
-│   ├── mac.cpp / mac.hpp
-│   └── map.cpp / map.hpp
-├── service/               # Camada de serviço (lógica de negócio)
-│   ├── msa.cpp / msa.hpp
-│   ├── msc.cpp / msc.hpp
-│   └── msp.cpp / msp.hpp
-├── dominios/              # Classes de domínio (validações)
-│   └── dominios.cpp / dominios.hpp
-├── entidades/             # Classes entidade
-│   └── entidades.cpp / entidades.hpp
-├── interfaces/            # Classes abstratas (métodos virtuais puros)
-│   ├── interfaces_apresentacao.hpp
-│   ├── interfaces_dados.hpp
-│   └── interfaces_servico.hpp
-├── data/                  # Estruturas de dados / persistência
-│   ├── md_pessoa.cpp / md_pessoa.hpp
-│   └── md_projeto.cpp / md_projeto.hpp
-├── modelagem/             # Diagramas UML e documentação de arquitetura
-│   ├── Modelagem Projeto TP 1.drawio
-│   ├── Modelagem Projeto TP 1.png
-│   └── Diagrama do modelo de arquitetura e descrição textual do propósito de cada módulo e interface.pdf
-├── doxygen/               # Documentação HTML gerada automaticamente
-├── main.cpp
-├── sqlite3.c / sqlite3.h  # Biblioteca SQLite (amalgamation)
-├── projetoTP1.cbp         # Projeto Code::Blocks
-├── Apresentação Projeto TP1.pdf
-└── LINK_DO_VIDEO.txt
-
 O sistema é decomposto em no mínimo quatro módulos que interagem por meio de serviços especificados em interfaces:
 
-* `/Dominios` - Classes domínio com atributos acessados via métodos set e get, contendo validações rigorosas.
-* `/Entidades` - Classes entidade compostas por atributos que são instâncias das classes domínio.
-* `/Apresentacao` - Camada responsável pela interface com o usuário (gráfica ou texto) e validação dos dados de entrada.
-* `/Servico` - Camada responsável pela lógica de negócio e pelo armazenamento estruturado dos dados.
-* `/Interfaces` - Declarações por meio de classes abstratas compostas por métodos virtuais puros.
+* `/dominios` - Classes domínio com atributos acessados via métodos set e get, contendo validações rigorosas.
+* `/entidades` - Classes entidade compostas por atributos que são instâncias das classes domínio.
+* `/apresentacao` - Camada responsável pela interface com o usuário (gráfica ou texto) e validação dos dados de entrada.
+* `/service` - Camada responsável pela lógica de negócio e pelo armazenamento estruturado dos dados.
+* `/interfaces` - Declarações por meio de classes abstratas compostas por métodos virtuais puros.
 
 ## Como Usar e Executar
 
